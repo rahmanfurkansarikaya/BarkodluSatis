@@ -20,5 +20,13 @@
   </EntityType>
   <EntityContainer Name="BarkodDbEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Urun" EntityType="Self.Urun" />
+    <EntitySet Name="Terazi" EntityType="BarkodDbModel.Terazi" />
   </EntityContainer>
+  <EntityType Name="Terazi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TeraziOnEk" Type="Int32" />
+  </EntityType>
 </Schema>
