@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.gridUrunler = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lButonId = new System.Windows.Forms.Label();
+            this.chTumu = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tUrunAra = new System.Windows.Forms.TextBox();
-            this.chTumu = new System.Windows.Forms.CheckBox();
-            this.lButonId = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.gridUrunler = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -68,47 +68,40 @@
             this.splitContainer1.SplitterDistance = 121;
             this.splitContainer1.TabIndex = 0;
             // 
-            // gridUrunler
+            // label3
             // 
-            this.gridUrunler.AllowUserToAddRows = false;
-            this.gridUrunler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridUrunler.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.gridUrunler.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridUrunler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridUrunler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridUrunler.EnableHeadersVisualStyles = false;
-            this.gridUrunler.Location = new System.Drawing.Point(0, 0);
-            this.gridUrunler.Name = "gridUrunler";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridUrunler.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridUrunler.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
-            this.gridUrunler.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.gridUrunler.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
-            this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
-            this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.gridUrunler.RowTemplate.Height = 28;
-            this.gridUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridUrunler.Size = new System.Drawing.Size(800, 325);
-            this.gridUrunler.TabIndex = 2;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label3.Location = new System.Drawing.Point(8, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Buton Numarası :";
+            // 
+            // lButonId
+            // 
+            this.lButonId.AutoSize = true;
+            this.lButonId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lButonId.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lButonId.Location = new System.Drawing.Point(134, 24);
+            this.lButonId.Name = "lButonId";
+            this.lButonId.Size = new System.Drawing.Size(76, 20);
+            this.lButonId.TabIndex = 7;
+            this.lButonId.Text = "Buton No";
+            // 
+            // chTumu
+            // 
+            this.chTumu.AutoSize = true;
+            this.chTumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chTumu.ForeColor = System.Drawing.Color.DarkCyan;
+            this.chTumu.Location = new System.Drawing.Point(256, 83);
+            this.chTumu.Name = "chTumu";
+            this.chTumu.Size = new System.Drawing.Size(171, 24);
+            this.chTumu.TabIndex = 6;
+            this.chTumu.Text = "Tüm Ürünleri Göster";
+            this.chTumu.UseVisualStyleBackColor = true;
+            this.chTumu.CheckedChanged += new System.EventHandler(this.chTumu_CheckedChanged);
             // 
             // label2
             // 
@@ -130,37 +123,48 @@
             this.tUrunAra.TabIndex = 4;
             this.tUrunAra.TextChanged += new System.EventHandler(this.tUrunAra_TextChanged);
             // 
-            // chTumu
+            // gridUrunler
             // 
-            this.chTumu.AutoSize = true;
-            this.chTumu.Location = new System.Drawing.Point(256, 90);
-            this.chTumu.Name = "chTumu";
-            this.chTumu.Size = new System.Drawing.Size(120, 17);
-            this.chTumu.TabIndex = 6;
-            this.chTumu.Text = "Tüm Ürünleri Göster";
-            this.chTumu.UseVisualStyleBackColor = true;
-            // 
-            // lButonId
-            // 
-            this.lButonId.AutoSize = true;
-            this.lButonId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lButonId.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lButonId.Location = new System.Drawing.Point(134, 24);
-            this.lButonId.Name = "lButonId";
-            this.lButonId.Size = new System.Drawing.Size(76, 20);
-            this.lButonId.TabIndex = 7;
-            this.lButonId.Text = "Buton No";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label3.Location = new System.Drawing.Point(8, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Buton Numarası :";
+            this.gridUrunler.AllowUserToAddRows = false;
+            this.gridUrunler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridUrunler.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.gridUrunler.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridUrunler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridUrunler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridUrunler.EnableHeadersVisualStyles = false;
+            this.gridUrunler.Location = new System.Drawing.Point(0, 0);
+            this.gridUrunler.Name = "gridUrunler";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridUrunler.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.gridUrunler.RowHeadersVisible = false;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(3);
+            this.gridUrunler.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.gridUrunler.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
+            this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
+            this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridUrunler.RowTemplate.Height = 28;
+            this.gridUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridUrunler.Size = new System.Drawing.Size(800, 325);
+            this.gridUrunler.TabIndex = 2;
+            this.gridUrunler.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridUrunler_CellContentDoubleClick);
             // 
             // fHizliButonUrunEkle
             // 

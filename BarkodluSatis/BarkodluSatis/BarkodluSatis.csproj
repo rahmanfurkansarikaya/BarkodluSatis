@@ -160,10 +160,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BarkodDb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="BarkodDb_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>BarkodDb.mdf</DependentUpon>
     </Content>
     <Content Include="Model1.Context.tt">

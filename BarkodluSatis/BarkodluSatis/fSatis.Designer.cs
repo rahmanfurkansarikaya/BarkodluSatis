@@ -50,11 +50,15 @@
             this.Miktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Toplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sil = new System.Windows.Forms.DataGridViewImageColumn();
             this.UrunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KdvTutari = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AlisFiyati = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Aciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.bKartNakit = new System.Windows.Forms.Button();
+            this.bKart = new System.Windows.Forms.Button();
+            this.bNakit = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tGenelToplam = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -124,10 +128,6 @@
             this.button52 = new System.Windows.Forms.Button();
             this.button53 = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Sil = new System.Windows.Forms.DataGridViewImageColumn();
-            this.bKartNakit = new System.Windows.Forms.Button();
-            this.bKart = new System.Windows.Forms.Button();
-            this.bNakit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -356,6 +356,12 @@
             this.Toplam.HeaderText = "Toplam";
             this.Toplam.Name = "Toplam";
             // 
+            // Sil
+            // 
+            this.Sil.HeaderText = "Sil";
+            this.Sil.Image = global::BarkodluSatis.Properties.Resources.remove;
+            this.Sil.Name = "Sil";
+            // 
             // UrunGrup
             // 
             this.UrunGrup.HeaderText = "Ürün Grup";
@@ -399,6 +405,60 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(819, 136);
             this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // bKartNakit
+            // 
+            this.bKartNakit.BackColor = System.Drawing.Color.Olive;
+            this.bKartNakit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bKartNakit.FlatAppearance.BorderColor = System.Drawing.Color.Olive;
+            this.bKartNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bKartNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bKartNakit.ForeColor = System.Drawing.Color.White;
+            this.bKartNakit.Image = global::BarkodluSatis.Properties.Resources.wallet;
+            this.bKartNakit.Location = new System.Drawing.Point(327, 1);
+            this.bKartNakit.Margin = new System.Windows.Forms.Padding(1);
+            this.bKartNakit.Name = "bKartNakit";
+            this.bKartNakit.Size = new System.Drawing.Size(161, 134);
+            this.bKartNakit.TabIndex = 2;
+            this.bKartNakit.Text = "NAKİT\r\nKART\r\n(F3)";
+            this.bKartNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bKartNakit.UseVisualStyleBackColor = false;
+            // 
+            // bKart
+            // 
+            this.bKart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.bKart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bKart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.bKart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bKart.ForeColor = System.Drawing.Color.White;
+            this.bKart.Image = global::BarkodluSatis.Properties.Resources.debit_card;
+            this.bKart.Location = new System.Drawing.Point(164, 1);
+            this.bKart.Margin = new System.Windows.Forms.Padding(1);
+            this.bKart.Name = "bKart";
+            this.bKart.Size = new System.Drawing.Size(161, 134);
+            this.bKart.TabIndex = 1;
+            this.bKart.Text = "KART\r\n(F2)";
+            this.bKart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bKart.UseVisualStyleBackColor = false;
+            // 
+            // bNakit
+            // 
+            this.bNakit.BackColor = System.Drawing.Color.Tomato;
+            this.bNakit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bNakit.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.bNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bNakit.ForeColor = System.Drawing.Color.White;
+            this.bNakit.Image = global::BarkodluSatis.Properties.Resources.turkish_lira;
+            this.bNakit.Location = new System.Drawing.Point(1, 1);
+            this.bNakit.Margin = new System.Windows.Forms.Padding(1);
+            this.bNakit.Name = "bNakit";
+            this.bNakit.Size = new System.Drawing.Size(161, 134);
+            this.bNakit.TabIndex = 0;
+            this.bNakit.Text = "NAKİT\r\n(F1)";
+            this.bNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bNakit.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
@@ -612,6 +672,7 @@
             this.bH25.Text = "bHizli";
             this.bH25.UseVisualStyleBackColor = false;
             this.bH25.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH25.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH24
             // 
@@ -629,6 +690,7 @@
             this.bH24.Text = "bHizli";
             this.bH24.UseVisualStyleBackColor = false;
             this.bH24.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH24.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH23
             // 
@@ -646,6 +708,7 @@
             this.bH23.Text = "bHizli";
             this.bH23.UseVisualStyleBackColor = false;
             this.bH23.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH23.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH22
             // 
@@ -663,6 +726,7 @@
             this.bH22.Text = "bHizli";
             this.bH22.UseVisualStyleBackColor = false;
             this.bH22.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH22.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH21
             // 
@@ -680,6 +744,7 @@
             this.bH21.Text = "bHizli";
             this.bH21.UseVisualStyleBackColor = false;
             this.bH21.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH21.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH20
             // 
@@ -697,6 +762,7 @@
             this.bH20.Text = "bHizli";
             this.bH20.UseVisualStyleBackColor = false;
             this.bH20.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH20.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH19
             // 
@@ -714,6 +780,7 @@
             this.bH19.Text = "bHizli";
             this.bH19.UseVisualStyleBackColor = false;
             this.bH19.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH19.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH18
             // 
@@ -731,6 +798,7 @@
             this.bH18.Text = "bHizli";
             this.bH18.UseVisualStyleBackColor = false;
             this.bH18.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH18.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH17
             // 
@@ -748,6 +816,7 @@
             this.bH17.Text = "bHizli";
             this.bH17.UseVisualStyleBackColor = false;
             this.bH17.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH17.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH16
             // 
@@ -765,6 +834,7 @@
             this.bH16.Text = "bHizli";
             this.bH16.UseVisualStyleBackColor = false;
             this.bH16.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH15
             // 
@@ -782,6 +852,7 @@
             this.bH15.Text = "bHizli";
             this.bH15.UseVisualStyleBackColor = false;
             this.bH15.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH15.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH14
             // 
@@ -799,6 +870,7 @@
             this.bH14.Text = "bHizli";
             this.bH14.UseVisualStyleBackColor = false;
             this.bH14.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH13
             // 
@@ -816,6 +888,7 @@
             this.bH13.Text = "bHizli";
             this.bH13.UseVisualStyleBackColor = false;
             this.bH13.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH12
             // 
@@ -833,6 +906,7 @@
             this.bH12.Text = "bHizli";
             this.bH12.UseVisualStyleBackColor = false;
             this.bH12.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH11
             // 
@@ -850,6 +924,7 @@
             this.bH11.Text = "bHizli";
             this.bH11.UseVisualStyleBackColor = false;
             this.bH11.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH10
             // 
@@ -867,6 +942,7 @@
             this.bH10.Text = "bHizli";
             this.bH10.UseVisualStyleBackColor = false;
             this.bH10.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH9
             // 
@@ -884,6 +960,7 @@
             this.bH9.Text = "bHizli";
             this.bH9.UseVisualStyleBackColor = false;
             this.bH9.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH8
             // 
@@ -901,6 +978,7 @@
             this.bH8.Text = "bHizli";
             this.bH8.UseVisualStyleBackColor = false;
             this.bH8.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH7
             // 
@@ -918,6 +996,7 @@
             this.bH7.Text = "bHizli";
             this.bH7.UseVisualStyleBackColor = false;
             this.bH7.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH6
             // 
@@ -935,6 +1014,7 @@
             this.bH6.Text = "bHizli";
             this.bH6.UseVisualStyleBackColor = false;
             this.bH6.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH5
             // 
@@ -952,6 +1032,7 @@
             this.bH5.Text = "bHizli";
             this.bH5.UseVisualStyleBackColor = false;
             this.bH5.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH4
             // 
@@ -969,6 +1050,7 @@
             this.bH4.Text = "bHizli";
             this.bH4.UseVisualStyleBackColor = false;
             this.bH4.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH3
             // 
@@ -986,6 +1068,7 @@
             this.bH3.Text = "bHizli";
             this.bH3.UseVisualStyleBackColor = false;
             this.bH3.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH2
             // 
@@ -1003,6 +1086,7 @@
             this.bH2.Text = "bHizli";
             this.bH2.UseVisualStyleBackColor = false;
             this.bH2.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // bH1
             // 
@@ -1020,6 +1104,7 @@
             this.bH1.Text = "bHizli";
             this.bH1.UseVisualStyleBackColor = false;
             this.bH1.Click += new System.EventHandler(this.HizliButonClick);
+            this.bH1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // tableLayoutPanel5
             // 
@@ -1567,66 +1652,6 @@
             this.dataGridViewImageColumn1.Image = global::BarkodluSatis.Properties.Resources.remove;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 162;
-            // 
-            // Sil
-            // 
-            this.Sil.HeaderText = "Sil";
-            this.Sil.Image = global::BarkodluSatis.Properties.Resources.remove;
-            this.Sil.Name = "Sil";
-            // 
-            // bKartNakit
-            // 
-            this.bKartNakit.BackColor = System.Drawing.Color.Olive;
-            this.bKartNakit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bKartNakit.FlatAppearance.BorderColor = System.Drawing.Color.Olive;
-            this.bKartNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bKartNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bKartNakit.ForeColor = System.Drawing.Color.White;
-            this.bKartNakit.Image = global::BarkodluSatis.Properties.Resources.wallet;
-            this.bKartNakit.Location = new System.Drawing.Point(327, 1);
-            this.bKartNakit.Margin = new System.Windows.Forms.Padding(1);
-            this.bKartNakit.Name = "bKartNakit";
-            this.bKartNakit.Size = new System.Drawing.Size(161, 134);
-            this.bKartNakit.TabIndex = 2;
-            this.bKartNakit.Text = "NAKİT\r\nKART\r\n(F3)";
-            this.bKartNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bKartNakit.UseVisualStyleBackColor = false;
-            // 
-            // bKart
-            // 
-            this.bKart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.bKart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bKart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.bKart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bKart.ForeColor = System.Drawing.Color.White;
-            this.bKart.Image = global::BarkodluSatis.Properties.Resources.debit_card;
-            this.bKart.Location = new System.Drawing.Point(164, 1);
-            this.bKart.Margin = new System.Windows.Forms.Padding(1);
-            this.bKart.Name = "bKart";
-            this.bKart.Size = new System.Drawing.Size(161, 134);
-            this.bKart.TabIndex = 1;
-            this.bKart.Text = "KART\r\n(F2)";
-            this.bKart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bKart.UseVisualStyleBackColor = false;
-            // 
-            // bNakit
-            // 
-            this.bNakit.BackColor = System.Drawing.Color.Tomato;
-            this.bNakit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bNakit.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.bNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bNakit.ForeColor = System.Drawing.Color.White;
-            this.bNakit.Image = global::BarkodluSatis.Properties.Resources.turkish_lira;
-            this.bNakit.Location = new System.Drawing.Point(1, 1);
-            this.bNakit.Margin = new System.Windows.Forms.Padding(1);
-            this.bNakit.Name = "bNakit";
-            this.bNakit.Size = new System.Drawing.Size(161, 134);
-            this.bNakit.TabIndex = 0;
-            this.bNakit.Text = "NAKİT\r\n(F1)";
-            this.bNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bNakit.UseVisualStyleBackColor = false;
             // 
             // fSatis
             // 

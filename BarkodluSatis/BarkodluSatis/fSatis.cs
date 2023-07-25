@@ -143,18 +143,51 @@ namespace BarkodluSatis
         private void HizliButonClick(object sender, EventArgs e)
         {
             Button b = (Button)sender;
+            int butonid = Convert.ToInt16(b.Name.ToString().Substring(2, b.Name.Length - 2));
             if (b.Text.ToString().StartsWith("-"))
             {
-                MessageBox.Show("Ürün Ekleme Sayfasını Aç");
+                fHizliButonUrunEkle f = new fHizliButonUrunEkle();
+                f.lButonId.Text = butonid.ToString();
+                f.ShowDialog();
             }
             else
             {
-                int butonid = Convert.ToInt16(b.Name.ToString().Substring(2, b.Name.Length - 2));
                 var urunbarkod = db.HizliUrun.Where(a => a.Id == butonid).Select(a => a.Barkod).FirstOrDefault();
                 var urun = db.Urun.Where(a => a.Barkod == urunbarkod).FirstOrDefault();
                 UrunGetirListeye(urun, urunbarkod, 1);
                 GenelToplam();
             }
+        }
+
+        private void bh_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                Button b = (Button)sender;
+                if (!b.Text.StartsWith("-"))
+                {
+                    int butonid = Convert.ToInt16(b.Name.ToString().Substring(2, b.Name.Length - 2));
+                    ContextMenuStrip s = new ContextMenuStrip();
+                    ToolStripMenuItem sil = new ToolStripMenuItem();
+                    sil.Text = "Temizle - Buton No:" + butonid.ToString();
+                    sil.Click += Sil_Click;
+                    s.Items.Add(sil);
+                    this.ContextMenuStrip = s;
+                }
+            }
+        }
+
+        private void Sil_Click(object sender, EventArgs e)
+        {
+            int butonid = Convert.ToInt16(sender.ToString().Substring(19, sender.ToString().Length - 19));
+            var guncelle = db.HizliUrun.Find(butonid);
+            guncelle.Barkod = "-";
+            guncelle.UrunAd = "-";
+            guncelle.Fiyat = 0;
+            db.SaveChanges();
+            double fiyat = 0;
+            Button b = this.Controls.Find("bH" + butonid, true).FirstOrDefault() as Button;
+            b.Text = "-" + "\n" + fiyat.ToString("C2");
         }
     }
 }

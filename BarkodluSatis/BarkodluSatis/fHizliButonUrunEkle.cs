@@ -27,5 +27,40 @@ namespace BarkodluSatis
 
             }
         }
+
+        private void gridUrunler_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gridUrunler.Rows.Count > 0)
+            {
+                string barkod = gridUrunler.CurrentRow.Cells["Barkod"].Value.ToString();
+                string urunad = gridUrunler.CurrentRow.Cells["UrunAd"].Value.ToString();
+                double fiyat = Convert.ToDouble(gridUrunler.CurrentRow.Cells["SatisFiyat"].Value.ToString());
+                int id = Convert.ToInt16(lButonId.Text);
+                var guncellenecek = db.HizliUrun.Find(id);
+                guncellenecek.Barkod = barkod;
+                guncellenecek.UrunAd = urunad;
+                guncellenecek.Fiyat = fiyat;
+                db.SaveChanges();
+                MessageBox.Show("Buton Güncellendi");
+                fSatis f = (fSatis)Application.OpenForms["fSatis"];
+                if (f != null)
+                {
+                    Button b = f.Controls.Find("bH" + id, true).FirstOrDefault() as Button;
+                    b.Text = urunad + "\n" + fiyat.ToString("C2");
+                }
+            }
+        }
+
+        private void chTumu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chTumu.Checked)
+            {
+                gridUrunler.DataSource = db.Urun.ToList();
+            }
+            else
+            {
+                gridUrunler.DataSource = null;
+            }
+        }
     }
 }
