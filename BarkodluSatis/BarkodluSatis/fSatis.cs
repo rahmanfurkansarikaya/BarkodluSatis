@@ -120,5 +120,41 @@ namespace BarkodluSatis
                 tBarkod.Focus();
             }
         }
+
+        private void fSatis_Load(object sender, EventArgs e)
+        {
+            HizliButonDoldur();
+        }
+
+        private void HizliButonDoldur()
+        {
+            var hizliurun = db.HizliUrun.ToList();
+            foreach (var item in hizliurun)
+            {
+                Button bH = this.Controls.Find("bH" + item.Id, true).FirstOrDefault() as Button;
+                if (bH != null)
+                {
+                    double fiyat = Islemler.DoubleYap(item.Fiyat.ToString());
+                    bH.Text = item.UrunAd + "\n" + fiyat.ToString("C2");
+                }
+            }
+        }
+
+        private void HizliButonClick(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.Text.ToString().StartsWith("-"))
+            {
+                MessageBox.Show("Ürün Ekleme Sayfasını Aç");
+            }
+            else
+            {
+                int butonid = Convert.ToInt16(b.Name.ToString().Substring(2, b.Name.Length - 2));
+                var urunbarkod = db.HizliUrun.Where(a => a.Id == butonid).Select(a => a.Barkod).FirstOrDefault();
+                var urun = db.Urun.Where(a => a.Barkod == urunbarkod).FirstOrDefault();
+                UrunGetirListeye(urun, urunbarkod, 1);
+                GenelToplam();
+            }
+        }
     }
 }

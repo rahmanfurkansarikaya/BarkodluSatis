@@ -21,6 +21,7 @@
   <EntityContainer Name="BarkodDbEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Urun" EntityType="Self.Urun" />
     <EntitySet Name="Terazi" EntityType="BarkodDbModel.Terazi" />
+    <EntitySet Name="HizliUrun" EntityType="BarkodDbModel.HizliUrun" />
   </EntityContainer>
   <EntityType Name="Terazi">
     <Key>
@@ -28,5 +29,14 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TeraziOnEk" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HizliUrun">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Barkod" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UrunAd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="Double" />
   </EntityType>
 </Schema>

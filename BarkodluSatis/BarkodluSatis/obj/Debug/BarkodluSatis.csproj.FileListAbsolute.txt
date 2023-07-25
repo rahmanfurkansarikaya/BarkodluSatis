@@ -16,3 +16,4 @@ C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\bin\D
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\bin\Debug\EntityFramework.xml
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.csproj.CopyComplete
+C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fHizliButonUrunEkle.resources
