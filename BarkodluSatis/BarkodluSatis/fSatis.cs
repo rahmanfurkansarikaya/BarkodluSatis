@@ -321,5 +321,140 @@ namespace BarkodluSatis
             tNumarator.Clear();
             gridSatisListesi.Rows.Clear();
         }
+
+        public void SatisYap(string odemesekli)
+        {
+            int satirsayisi = gridSatisListesi.Rows.Count;
+            bool satisiade = chSatisIadeIslemi.Checked;
+            double alisfiyattoplam = 0;
+            if (satirsayisi > 0)
+            {
+                int? islemno = db.Islem.First().IslemNo;
+                Satis satis = new Satis();
+                for (int i = 0; i < satirsayisi; i++)
+                {
+                    satis.IslemNo = islemno;
+                    satis.UrunAd = gridSatisListesi.Rows[i].Cells["UrunAdi"].Value.ToString();
+                    satis.UrunGrup = gridSatisListesi.Rows[i].Cells["UrunGrup"].Value.ToString();
+                    satis.Barkod = gridSatisListesi.Rows[i].Cells["Barkod"].Value.ToString();
+                    satis.Birim = gridSatisListesi.Rows[i].Cells["Birim"].Value.ToString();
+                    satis.AlisFiyat = Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["AlisFiyati"].Value.ToString());
+                    satis.SatisFiyat = Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Fiyat"].Value.ToString());
+                    satis.Miktar = Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Miktar"].Value.ToString());
+                    satis.Toplam = Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Toplam"].Value.ToString());
+                    satis.KdvTutari = Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["KdvTutari"].Value.ToString()) * Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Miktar"].Value.ToString());
+                    satis.OdemeSekli = odemesekli;
+                    satis.Iade = satisiade;
+                    satis.Tarih = DateTime.Now;
+                    satis.Kullanici = lKullanici.Text;
+                    db.Satis.Add(satis);
+                    db.SaveChanges();
+                    if (!satisiade)
+                    {
+                        Islemler.StokAzalt(gridSatisListesi.Rows[i].Cells["Barkod"].Value.ToString(), Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Miktar"].Value.ToString()));
+                    }
+                    else
+                    {
+                        Islemler.StokArtir(gridSatisListesi.Rows[i].Cells["Barkod"].Value.ToString(), Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Miktar"].Value.ToString()));
+                    }
+                    alisfiyattoplam += Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["AlisFiyati"].Value.ToString());
+                }
+
+                IslemOzet io = new IslemOzet();
+                io.IslemNo = islemno;
+                io.Iade = satisiade;
+                io.AlisFiyatToplam = alisfiyattoplam;
+                io.Gelir = false;
+                io.Gider = false;
+                if (!satisiade)
+                {
+                    io.Aciklama = odemesekli + " Satış";
+                }
+                else
+                {
+                    io.Aciklama = "İade işlemi (" + odemesekli + ")";
+                }
+                io.OdemeSekli = odemesekli;
+                io.Kullanici = lKullanici.Text;
+                io.Tarih = DateTime.Now;
+                switch (odemesekli)
+                {
+                    case "Nakit":
+                        io.Nakit = Islemler.DoubleYap(tGenelToplam.Text);
+                        io.Kart = 0; break;
+                    case "Kart":
+                        io.Nakit = 0;
+                        io.Kart = Islemler.DoubleYap(tGenelToplam.Text); break;
+                    case "Kart-Nakit":
+                        io.Nakit = Islemler.DoubleYap(lNakit.Text);
+                        io.Kart = Islemler.DoubleYap(lKart.Text); break;
+                }
+                db.IslemOzet.Add(io);
+                db.SaveChanges();
+
+                var islemnoartir = db.Islem.First();
+                islemnoartir.IslemNo += 1;
+                db.SaveChanges();
+                MessageBox.Show("Yazdırma İşlemi Yap");
+                Temizle();
+            }
+        }
+
+        private void bNakit_Click(object sender, EventArgs e)
+        {
+            SatisYap("Nakit");
+        }
+
+        private void bKart_Click(object sender, EventArgs e)
+        {
+            SatisYap("Kart");
+        }
+
+        private void bKartNakit_Click(object sender, EventArgs e)
+        {
+            fNakitKart f = new fNakitKart();
+            f.ShowDialog();
+        }
+
+        private void tBarkod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) == false && e.KeyChar != (char)08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tMiktar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) == false && e.KeyChar != (char)08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tNumarator_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) == false && e.KeyChar != (char)08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void fSatis_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                SatisYap("Nakit");
+            }
+            if (e.KeyCode == Keys.F2)
+            {
+                SatisYap("Kart");
+            }
+            if (e.KeyCode == Keys.F3)
+            {
+                fNakitKart f = new fNakitKart();
+                f.ShowDialog();
+            }
+        }
     }
 }

@@ -9,6 +9,50 @@
     <Property Name="UrunAd" Type="nvarchar" MaxLength="100" />
     <Property Name="Fiyat" Type="float" />
   </EntityType>
+  <EntityType Name="Islem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IslemNo" Type="int" />
+  </EntityType>
+  <EntityType Name="IslemOzet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IslemNo" Type="int" />
+    <Property Name="Iade" Type="bit" />
+    <Property Name="OdemeSekli" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nakit" Type="float" />
+    <Property Name="Kart" Type="float" />
+    <Property Name="Gelir" Type="bit" />
+    <Property Name="Gider" Type="bit" />
+    <Property Name="AlisFiyatToplam" Type="float" />
+    <Property Name="Aciklama" Type="nvarchar" MaxLength="500" />
+    <Property Name="Tarih" Type="datetime" />
+    <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Satis">
+    <Key>
+      <PropertyRef Name="SatisId" />
+    </Key>
+    <Property Name="SatisId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IslemNo" Type="int" />
+    <Property Name="UrunAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="Barkod" Type="nvarchar" MaxLength="50" />
+    <Property Name="UrunGrup" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birim" Type="nvarchar" MaxLength="50" />
+    <Property Name="AlisFiyat" Type="float" />
+    <Property Name="SatisFiyat" Type="float" />
+    <Property Name="Miktar" Type="float" />
+    <Property Name="Toplam" Type="float" />
+    <Property Name="KdvTutari" Type="float" />
+    <Property Name="OdemeSekli" Type="nvarchar" MaxLength="50" />
+    <Property Name="Iade" Type="bit" />
+    <Property Name="Tarih" Type="datetime" />
+    <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Terazi">
     <Key>
       <PropertyRef Name="Id" />
@@ -36,6 +80,9 @@
   </EntityType>
   <EntityContainer Name="BarkodDbModelStoreContainer">
     <EntitySet Name="HizliUrun" EntityType="Self.HizliUrun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Islem" EntityType="Self.Islem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IslemOzet" EntityType="Self.IslemOzet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Satis" EntityType="Self.Satis" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Terazi" EntityType="Self.Terazi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,15 +50,11 @@
             this.Miktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Toplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sil = new System.Windows.Forms.DataGridViewImageColumn();
             this.UrunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KdvTutari = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AlisFiyati = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Aciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.bKartNakit = new System.Windows.Forms.Button();
-            this.bKart = new System.Windows.Forms.Button();
-            this.bNakit = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tGenelToplam = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -127,7 +123,14 @@
             this.button51 = new System.Windows.Forms.Button();
             this.bAdet = new System.Windows.Forms.Button();
             this.bTemizle = new System.Windows.Forms.Button();
+            this.lKullanici = new System.Windows.Forms.Label();
+            this.lKart = new System.Windows.Forms.Label();
+            this.lNakit = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Sil = new System.Windows.Forms.DataGridViewImageColumn();
+            this.bKartNakit = new System.Windows.Forms.Button();
+            this.bKart = new System.Windows.Forms.Button();
+            this.bNakit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -189,6 +192,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lNakit);
+            this.panel1.Controls.Add(this.lKart);
+            this.panel1.Controls.Add(this.lKullanici);
             this.panel1.Controls.Add(this.chSatisIadeIslemi);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -247,6 +253,7 @@
             this.tBarkod.Size = new System.Drawing.Size(185, 26);
             this.tBarkod.TabIndex = 0;
             this.tBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tBarkod_KeyDown);
+            this.tBarkod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBarkod_KeyPress);
             // 
             // tMiktar
             // 
@@ -258,6 +265,7 @@
             this.tMiktar.TabStop = false;
             this.tMiktar.Text = "1";
             this.tMiktar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tMiktar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tMiktar_KeyPress);
             // 
             // gridSatisListesi
             // 
@@ -266,15 +274,15 @@
             this.gridSatisListesi.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.gridSatisListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSatisListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSatisListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle43.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSatisListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
             this.gridSatisListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridSatisListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Barkod,
@@ -292,19 +300,19 @@
             this.gridSatisListesi.EnableHeadersVisualStyles = false;
             this.gridSatisListesi.Location = new System.Drawing.Point(3, 103);
             this.gridSatisListesi.Name = "gridSatisListesi";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSatisListesi.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle48.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSatisListesi.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
             this.gridSatisListesi.RowHeadersVisible = false;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(3);
-            this.gridSatisListesi.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle49.Padding = new System.Windows.Forms.Padding(3);
+            this.gridSatisListesi.RowsDefaultCellStyle = dataGridViewCellStyle49;
             this.gridSatisListesi.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.gridSatisListesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.gridSatisListesi.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -326,41 +334,35 @@
             // 
             // Birim
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Birim.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Birim.DefaultCellStyle = dataGridViewCellStyle44;
             this.Birim.HeaderText = "Birim";
             this.Birim.Name = "Birim";
             // 
             // Miktar
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Miktar.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Miktar.DefaultCellStyle = dataGridViewCellStyle45;
             this.Miktar.HeaderText = "Miktar";
             this.Miktar.Name = "Miktar";
             // 
             // Fiyat
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Fiyat.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle46.Format = "C2";
+            dataGridViewCellStyle46.NullValue = null;
+            this.Fiyat.DefaultCellStyle = dataGridViewCellStyle46;
             this.Fiyat.HeaderText = "Fiyat";
             this.Fiyat.Name = "Fiyat";
             // 
             // Toplam
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Toplam.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle47.Format = "C2";
+            dataGridViewCellStyle47.NullValue = null;
+            this.Toplam.DefaultCellStyle = dataGridViewCellStyle47;
             this.Toplam.HeaderText = "Toplam";
             this.Toplam.Name = "Toplam";
-            // 
-            // Sil
-            // 
-            this.Sil.HeaderText = "Sil";
-            this.Sil.Image = global::BarkodluSatis.Properties.Resources.remove;
-            this.Sil.Name = "Sil";
             // 
             // UrunGrup
             // 
@@ -405,60 +407,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(819, 136);
             this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // bKartNakit
-            // 
-            this.bKartNakit.BackColor = System.Drawing.Color.Olive;
-            this.bKartNakit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bKartNakit.FlatAppearance.BorderColor = System.Drawing.Color.Olive;
-            this.bKartNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bKartNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bKartNakit.ForeColor = System.Drawing.Color.White;
-            this.bKartNakit.Image = global::BarkodluSatis.Properties.Resources.wallet;
-            this.bKartNakit.Location = new System.Drawing.Point(327, 1);
-            this.bKartNakit.Margin = new System.Windows.Forms.Padding(1);
-            this.bKartNakit.Name = "bKartNakit";
-            this.bKartNakit.Size = new System.Drawing.Size(161, 134);
-            this.bKartNakit.TabIndex = 2;
-            this.bKartNakit.Text = "NAKİT\r\nKART\r\n(F3)";
-            this.bKartNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bKartNakit.UseVisualStyleBackColor = false;
-            // 
-            // bKart
-            // 
-            this.bKart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.bKart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bKart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.bKart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bKart.ForeColor = System.Drawing.Color.White;
-            this.bKart.Image = global::BarkodluSatis.Properties.Resources.debit_card;
-            this.bKart.Location = new System.Drawing.Point(164, 1);
-            this.bKart.Margin = new System.Windows.Forms.Padding(1);
-            this.bKart.Name = "bKart";
-            this.bKart.Size = new System.Drawing.Size(161, 134);
-            this.bKart.TabIndex = 1;
-            this.bKart.Text = "KART\r\n(F2)";
-            this.bKart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bKart.UseVisualStyleBackColor = false;
-            // 
-            // bNakit
-            // 
-            this.bNakit.BackColor = System.Drawing.Color.Tomato;
-            this.bNakit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bNakit.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.bNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bNakit.ForeColor = System.Drawing.Color.White;
-            this.bNakit.Image = global::BarkodluSatis.Properties.Resources.turkish_lira;
-            this.bNakit.Location = new System.Drawing.Point(1, 1);
-            this.bNakit.Margin = new System.Windows.Forms.Padding(1);
-            this.bNakit.Name = "bNakit";
-            this.bNakit.Size = new System.Drawing.Size(161, 134);
-            this.bNakit.TabIndex = 0;
-            this.bNakit.Text = "NAKİT\r\n(F1)";
-            this.bNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bNakit.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
@@ -546,9 +494,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 18);
+            this.label3.Size = new System.Drawing.Size(60, 18);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Ödenen (F12)";
+            this.label3.Text = "Ödenen";
             // 
             // tableLayoutPanel12
             // 
@@ -1276,6 +1224,7 @@
             this.tNumarator.Size = new System.Drawing.Size(346, 29);
             this.tNumarator.TabIndex = 2;
             this.tNumarator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tNumarator.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tNumarator_KeyPress);
             // 
             // tableLayoutPanel8
             // 
@@ -1549,7 +1498,7 @@
             this.bDigerUrun.Name = "bDigerUrun";
             this.bDigerUrun.Size = new System.Drawing.Size(131, 48);
             this.bDigerUrun.TabIndex = 0;
-            this.bDigerUrun.Text = "Diğer Ürün";
+            this.bDigerUrun.Text = "İşlem Beklet";
             this.bDigerUrun.UseVisualStyleBackColor = false;
             this.bDigerUrun.Click += new System.EventHandler(this.bDigerUrun_Click);
             // 
@@ -1670,12 +1619,107 @@
             this.bTemizle.UseVisualStyleBackColor = false;
             this.bTemizle.Click += new System.EventHandler(this.bTemizle_Click);
             // 
+            // lKullanici
+            // 
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.ForeColor = System.Drawing.Color.Black;
+            this.lKullanici.Location = new System.Drawing.Point(411, 34);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(62, 13);
+            this.lKullanici.TabIndex = 5;
+            this.lKullanici.Text = "KULLANICI";
+            // 
+            // lKart
+            // 
+            this.lKart.AutoSize = true;
+            this.lKart.ForeColor = System.Drawing.Color.Black;
+            this.lKart.Location = new System.Drawing.Point(591, 34);
+            this.lKart.Name = "lKart";
+            this.lKart.Size = new System.Drawing.Size(26, 13);
+            this.lKart.TabIndex = 6;
+            this.lKart.Text = "Kart";
+            this.lKart.Visible = false;
+            // 
+            // lNakit
+            // 
+            this.lNakit.AutoSize = true;
+            this.lNakit.ForeColor = System.Drawing.Color.Black;
+            this.lNakit.Location = new System.Drawing.Point(591, 57);
+            this.lNakit.Name = "lNakit";
+            this.lNakit.Size = new System.Drawing.Size(32, 13);
+            this.lNakit.TabIndex = 7;
+            this.lNakit.Text = "Nakit";
+            this.lNakit.Visible = false;
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.HeaderText = "Sil";
             this.dataGridViewImageColumn1.Image = global::BarkodluSatis.Properties.Resources.remove;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 162;
+            // 
+            // Sil
+            // 
+            this.Sil.HeaderText = "Sil";
+            this.Sil.Image = global::BarkodluSatis.Properties.Resources.remove;
+            this.Sil.Name = "Sil";
+            // 
+            // bKartNakit
+            // 
+            this.bKartNakit.BackColor = System.Drawing.Color.Olive;
+            this.bKartNakit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bKartNakit.FlatAppearance.BorderColor = System.Drawing.Color.Olive;
+            this.bKartNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bKartNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bKartNakit.ForeColor = System.Drawing.Color.White;
+            this.bKartNakit.Image = global::BarkodluSatis.Properties.Resources.wallet;
+            this.bKartNakit.Location = new System.Drawing.Point(327, 1);
+            this.bKartNakit.Margin = new System.Windows.Forms.Padding(1);
+            this.bKartNakit.Name = "bKartNakit";
+            this.bKartNakit.Size = new System.Drawing.Size(161, 134);
+            this.bKartNakit.TabIndex = 2;
+            this.bKartNakit.Text = "NAKİT\r\nKART\r\n(F3)";
+            this.bKartNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bKartNakit.UseVisualStyleBackColor = false;
+            this.bKartNakit.Click += new System.EventHandler(this.bKartNakit_Click);
+            // 
+            // bKart
+            // 
+            this.bKart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.bKart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bKart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.bKart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bKart.ForeColor = System.Drawing.Color.White;
+            this.bKart.Image = global::BarkodluSatis.Properties.Resources.debit_card;
+            this.bKart.Location = new System.Drawing.Point(164, 1);
+            this.bKart.Margin = new System.Windows.Forms.Padding(1);
+            this.bKart.Name = "bKart";
+            this.bKart.Size = new System.Drawing.Size(161, 134);
+            this.bKart.TabIndex = 1;
+            this.bKart.Text = "KART\r\n(F2)";
+            this.bKart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bKart.UseVisualStyleBackColor = false;
+            this.bKart.Click += new System.EventHandler(this.bKart_Click);
+            // 
+            // bNakit
+            // 
+            this.bNakit.BackColor = System.Drawing.Color.Tomato;
+            this.bNakit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bNakit.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.bNakit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bNakit.ForeColor = System.Drawing.Color.White;
+            this.bNakit.Image = global::BarkodluSatis.Properties.Resources.turkish_lira;
+            this.bNakit.Location = new System.Drawing.Point(1, 1);
+            this.bNakit.Margin = new System.Windows.Forms.Padding(1);
+            this.bNakit.Name = "bNakit";
+            this.bNakit.Size = new System.Drawing.Size(161, 134);
+            this.bNakit.TabIndex = 0;
+            this.bNakit.Text = "NAKİT\r\n(F1)";
+            this.bNakit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bNakit.UseVisualStyleBackColor = false;
+            this.bNakit.Click += new System.EventHandler(this.bNakit_Click);
             // 
             // fSatis
             // 
@@ -1684,9 +1728,11 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1620, 780);
             this.Controls.Add(this.splitContainer1);
+            this.KeyPreview = true;
             this.Name = "fSatis";
             this.Text = "BARKODLU SATIŞ";
             this.Load += new System.EventHandler(this.fSatis_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.fSatis_KeyDown);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1793,7 +1839,6 @@
         private System.Windows.Forms.Button bTemizle;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox tGenelToplam;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
@@ -1813,6 +1858,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn KdvTutari;
         private System.Windows.Forms.DataGridViewTextBoxColumn AlisFiyati;
         private System.Windows.Forms.DataGridViewTextBoxColumn Aciklama;
+        private System.Windows.Forms.Label lKullanici;
+        public System.Windows.Forms.Label lNakit;
+        public System.Windows.Forms.Label lKart;
+        public System.Windows.Forms.TextBox tGenelToplam;
     }
 }
 
