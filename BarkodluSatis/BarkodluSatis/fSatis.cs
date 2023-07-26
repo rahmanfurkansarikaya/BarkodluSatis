@@ -124,6 +124,15 @@ namespace BarkodluSatis
         private void fSatis_Load(object sender, EventArgs e)
         {
             HizliButonDoldur();
+            b5.Text = 5.ToString("C2");
+            b10.Text = 10.ToString("C2");
+            b20.Text = 20.ToString("C2");
+            b50.Text = 50.ToString("C2");
+            b100.Text = 100.ToString("C2");
+            b200.Text = 200.ToString("C2");
+            tGenelToplam.Text = 0.ToString("C2");
+            tParaUstu.Text = 0.ToString("C2");
+            tOdenen.Text = 0.ToString("C2");
         }
 
         private void HizliButonDoldur()
@@ -154,7 +163,7 @@ namespace BarkodluSatis
             {
                 var urunbarkod = db.HizliUrun.Where(a => a.Id == butonid).Select(a => a.Barkod).FirstOrDefault();
                 var urun = db.Urun.Where(a => a.Barkod == urunbarkod).FirstOrDefault();
-                UrunGetirListeye(urun, urunbarkod, 1);
+                UrunGetirListeye(urun, urunbarkod, Convert.ToDouble(tMiktar.Text));
                 GenelToplam();
             }
         }
@@ -188,6 +197,77 @@ namespace BarkodluSatis
             double fiyat = 0;
             Button b = this.Controls.Find("bH" + butonid, true).FirstOrDefault() as Button;
             b.Text = "-" + "\n" + fiyat.ToString("C2");
+        }
+
+        private void bNx_Click(Object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.Text == ",")
+            {
+                int virgül = tNumarator.Text.Count(x => x == ',');
+                if (virgül < 1)
+                {
+                    tNumarator.Text += b.Text;
+                }
+            }
+            else if (b.Text == "<")
+            {
+                if (tNumarator.Text.Length > 0)
+                {
+                    tNumarator.Text = tNumarator.Text.Substring(0, tNumarator.Text.Length - 1);
+                }
+            }
+            else
+            {
+                tNumarator.Text += b.Text;
+            }
+        }
+
+        private void bAdet_Click(object sender, EventArgs e)
+        {
+            if (tNumarator.Text != "")
+            {
+                tMiktar.Text = tNumarator.Text;
+                tNumarator.Clear();
+                tBarkod.Clear();
+                tBarkod.Focus();
+            }
+        }
+
+        private void bOdenen_Click(object sender, EventArgs e)
+        {
+            if (tNumarator.Text != "")
+            {
+                double sonuc = Islemler.DoubleYap(tNumarator.Text) - Islemler.DoubleYap(tGenelToplam.Text);
+                tParaUstu.Text = sonuc.ToString("C2");
+                tNumarator.Clear();
+                tBarkod.Focus();
+            }
+        }
+
+        private void bBarkod_Click(object sender, EventArgs e)
+        {
+            if (tNumarator.Text != "")
+            {
+                if (db.Urun.Any(a => a.Barkod == tNumarator.Text))
+                {
+                    var urun = db.Urun.Where(a => a.Barkod == tNumarator.Text).FirstOrDefault();
+                    UrunGetirListeye(urun, tNumarator.Text, Convert.ToDouble(tMiktar.Text));
+                    tNumarator.Clear();
+                    tBarkod.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Ürün ekleme sayfasını aç");
+                }
+            }
+        }
+
+        private void ParaUstuHesapla_Click(object sender, EventArgs e) 
+        {
+            Button b = (Button)sender;
+            double sonuc = Islemler.DoubleYap(b.Text) - Islemler.DoubleYap(tGenelToplam.Text);
+            tParaUstu.Text = sonuc.ToString("C2");
         }
     }
 }
