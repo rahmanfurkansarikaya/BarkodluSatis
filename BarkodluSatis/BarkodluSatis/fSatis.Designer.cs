@@ -122,11 +122,11 @@
             this.bDigerUrun = new System.Windows.Forms.Button();
             this.button47 = new System.Windows.Forms.Button();
             this.bBarkod = new System.Windows.Forms.Button();
-            this.button49 = new System.Windows.Forms.Button();
+            this.bIade = new System.Windows.Forms.Button();
             this.bOdenen = new System.Windows.Forms.Button();
             this.button51 = new System.Windows.Forms.Button();
             this.bAdet = new System.Windows.Forms.Button();
-            this.button53 = new System.Windows.Forms.Button();
+            this.bTemizle = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -1519,11 +1519,11 @@
             this.tableLayoutPanel9.Controls.Add(this.bDigerUrun, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.button47, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.bBarkod, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.button49, 1, 1);
+            this.tableLayoutPanel9.Controls.Add(this.bIade, 1, 1);
             this.tableLayoutPanel9.Controls.Add(this.bOdenen, 0, 2);
             this.tableLayoutPanel9.Controls.Add(this.button51, 1, 2);
             this.tableLayoutPanel9.Controls.Add(this.bAdet, 0, 3);
-            this.tableLayoutPanel9.Controls.Add(this.button53, 1, 3);
+            this.tableLayoutPanel9.Controls.Add(this.bTemizle, 1, 3);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(531, 0);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
@@ -1551,6 +1551,7 @@
             this.bDigerUrun.TabIndex = 0;
             this.bDigerUrun.Text = "Diğer Ürün";
             this.bDigerUrun.UseVisualStyleBackColor = false;
+            this.bDigerUrun.Click += new System.EventHandler(this.bDigerUrun_Click);
             // 
             // button47
             // 
@@ -1585,21 +1586,22 @@
             this.bBarkod.UseVisualStyleBackColor = false;
             this.bBarkod.Click += new System.EventHandler(this.bBarkod_Click);
             // 
-            // button49
+            // bIade
             // 
-            this.button49.BackColor = System.Drawing.Color.DimGray;
-            this.button49.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button49.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.button49.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button49.ForeColor = System.Drawing.Color.White;
-            this.button49.Location = new System.Drawing.Point(134, 51);
-            this.button49.Margin = new System.Windows.Forms.Padding(1);
-            this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(131, 48);
-            this.button49.TabIndex = 3;
-            this.button49.Text = "İade İşlemleri";
-            this.button49.UseVisualStyleBackColor = false;
+            this.bIade.BackColor = System.Drawing.Color.DimGray;
+            this.bIade.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bIade.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bIade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bIade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bIade.ForeColor = System.Drawing.Color.White;
+            this.bIade.Location = new System.Drawing.Point(134, 51);
+            this.bIade.Margin = new System.Windows.Forms.Padding(1);
+            this.bIade.Name = "bIade";
+            this.bIade.Size = new System.Drawing.Size(131, 48);
+            this.bIade.TabIndex = 3;
+            this.bIade.Text = "İade";
+            this.bIade.UseVisualStyleBackColor = false;
+            this.bIade.Click += new System.EventHandler(this.bIade_Click);
             // 
             // bOdenen
             // 
@@ -1651,21 +1653,22 @@
             this.bAdet.UseVisualStyleBackColor = false;
             this.bAdet.Click += new System.EventHandler(this.bAdet_Click);
             // 
-            // button53
+            // bTemizle
             // 
-            this.button53.BackColor = System.Drawing.Color.DimGray;
-            this.button53.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button53.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.button53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button53.ForeColor = System.Drawing.Color.White;
-            this.button53.Location = new System.Drawing.Point(134, 151);
-            this.button53.Margin = new System.Windows.Forms.Padding(1);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(131, 50);
-            this.button53.TabIndex = 7;
-            this.button53.Text = "Temizle";
-            this.button53.UseVisualStyleBackColor = false;
+            this.bTemizle.BackColor = System.Drawing.Color.DimGray;
+            this.bTemizle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bTemizle.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.bTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bTemizle.ForeColor = System.Drawing.Color.White;
+            this.bTemizle.Location = new System.Drawing.Point(134, 151);
+            this.bTemizle.Margin = new System.Windows.Forms.Padding(1);
+            this.bTemizle.Name = "bTemizle";
+            this.bTemizle.Size = new System.Drawing.Size(131, 50);
+            this.bTemizle.TabIndex = 7;
+            this.bTemizle.Text = "Temizle";
+            this.bTemizle.UseVisualStyleBackColor = false;
+            this.bTemizle.Click += new System.EventHandler(this.bTemizle_Click);
             // 
             // dataGridViewImageColumn1
             // 
@@ -1783,11 +1786,11 @@
         private System.Windows.Forms.Button bDigerUrun;
         private System.Windows.Forms.Button button47;
         private System.Windows.Forms.Button bBarkod;
-        private System.Windows.Forms.Button button49;
+        private System.Windows.Forms.Button bIade;
         private System.Windows.Forms.Button bOdenen;
         private System.Windows.Forms.Button button51;
         private System.Windows.Forms.Button bAdet;
-        private System.Windows.Forms.Button button53;
+        private System.Windows.Forms.Button bTemizle;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox tGenelToplam;
