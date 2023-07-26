@@ -18,21 +18,27 @@ namespace BarkodluSatis
 
         public static void StokAzalt(string barkod, double miktar)
         {
-            using (var db = new BarkodDbEntities())
+            if (barkod != "1111111111116")
             {
-                var urunbilgi = db.Urun.SingleOrDefault(x => x.Barkod == barkod);
-                urunbilgi.Miktar -= miktar;
-                db.SaveChanges();
+                using (var db = new BarkodDbEntities())
+                {
+                    var urunbilgi = db.Urun.SingleOrDefault(x => x.Barkod == barkod);
+                    urunbilgi.Miktar -= miktar;
+                    db.SaveChanges();
+                }
             }
         }
 
         public static void StokArtir(string barkod, double miktar)
         {
-            using (var db = new BarkodDbEntities())
+            if (barkod != "1111111111116")
             {
-                var urunbilgi = db.Urun.SingleOrDefault(x => x.Barkod == barkod);
-                urunbilgi.Miktar += miktar;
-                db.SaveChanges();
+                using (var db = new BarkodDbEntities())
+                {
+                    var urunbilgi = db.Urun.SingleOrDefault(x => x.Barkod == barkod);
+                    urunbilgi.Miktar += miktar;
+                    db.SaveChanges();
+                }
             }
         }
     }

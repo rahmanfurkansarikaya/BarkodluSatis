@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -241,6 +242,7 @@ namespace BarkodluSatis
             {
                 double sonuc = Islemler.DoubleYap(tNumarator.Text) - Islemler.DoubleYap(tGenelToplam.Text);
                 tParaUstu.Text = sonuc.ToString("C2");
+                tOdenen.Text = Islemler.DoubleYap(tNumarator.Text).ToString("C2");
                 tNumarator.Clear();
                 tBarkod.Focus();
             }
@@ -268,6 +270,7 @@ namespace BarkodluSatis
         {
             Button b = (Button)sender;
             double sonuc = Islemler.DoubleYap(b.Text) - Islemler.DoubleYap(tGenelToplam.Text);
+            bOdenen.Text = Islemler.DoubleYap(b.Text).ToString("C2");
             tParaUstu.Text = sonuc.ToString("C2");
         }
 
@@ -282,6 +285,7 @@ namespace BarkodluSatis
                 gridSatisListesi.Rows[satirsayisi].Cells["UrunGrup"].Value = "Barkodsuz Ürün";
                 gridSatisListesi.Rows[satirsayisi].Cells["Birim"].Value = "Adet";
                 gridSatisListesi.Rows[satirsayisi].Cells["Miktar"].Value = 1;
+                gridSatisListesi.Rows[satirsayisi].Cells["AlisFiyati"].Value = 0;
                 gridSatisListesi.Rows[satirsayisi].Cells["Fiyat"].Value = Convert.ToDouble(tNumarator.Text);
                 gridSatisListesi.Rows[satirsayisi].Cells["KdvTutari"].Value = 0;
                 gridSatisListesi.Rows[satirsayisi].Cells["Toplam"].Value = Convert.ToDouble(tNumarator.Text);
@@ -454,6 +458,57 @@ namespace BarkodluSatis
             {
                 fNakitKart f = new fNakitKart();
                 f.ShowDialog();
+            }
+        }
+
+        private void bIslemBeklet_Click(object sender, EventArgs e)
+        {
+            if (bIslemBeklet.Text == "İşlem Beklet")
+            {
+                Bekle();
+                bIslemBeklet.BackColor = System.Drawing.Color.OrangeRed;
+                bIslemBeklet.Text = "İşlem Bekliyor";
+                gridSatisListesi.Rows.Clear();
+            }
+            else
+            {
+                BeklemedenCik();
+                bIslemBeklet.BackColor = System.Drawing.Color.DarkGray;
+                bIslemBeklet.Text = "İşlem Beklet";
+                gridBekle.Rows.Clear();
+            }
+        }
+        private void Bekle()
+        {
+            int satir = gridSatisListesi.Rows.Count;
+            int sutun = gridSatisListesi.Columns.Count;
+            if (satir > 0)
+            {
+                for (int i = 0; i < satir; i++)
+                {
+                    gridBekle.Rows.Add();
+                    for (int j = 0; j < sutun-1; j++)
+                    {
+                        gridBekle.Rows[i].Cells[j].Value = gridSatisListesi.Rows[i].Cells[j].Value;
+                    }
+                }
+            }
+        }
+
+        private void BeklemedenCik()
+        {
+            int satir = gridBekle.Rows.Count;
+            int sutun = gridBekle.Columns.Count;
+            if (satir > 0)
+            {
+                for (int i = 0; i < satir; i++)
+                {
+                    gridSatisListesi.Rows.Add();
+                    for (int j = 0; j < sutun - 1; j++)
+                    {
+                        gridSatisListesi.Rows[i].Cells[j].Value = gridBekle.Rows[i].Cells[j].Value;
+                    }
+                }
             }
         }
     }
