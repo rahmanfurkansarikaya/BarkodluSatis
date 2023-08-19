@@ -57,7 +57,9 @@ namespace BarkodluSatis
                         else
                         {
                             Console.Beep(900, 1200);
-                            MessageBox.Show("Ürün Ekleme Sayfası");
+                            fUrunGiris f = new fUrunGiris();
+                            f.tBarkod.Text = barkod;
+                            f.ShowDialog();
                         }
                     }
                 }
@@ -487,7 +489,7 @@ namespace BarkodluSatis
                 for (int i = 0; i < satir; i++)
                 {
                     gridBekle.Rows.Add();
-                    for (int j = 0; j < sutun-1; j++)
+                    for (int j = 0; j < sutun - 1; j++)
                     {
                         gridBekle.Rows[i].Cells[j].Value = gridSatisListesi.Rows[i].Cells[j].Value;
                     }
