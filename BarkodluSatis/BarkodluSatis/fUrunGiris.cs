@@ -79,6 +79,12 @@ namespace BarkodluSatis
                     urun.Kullanici = lKullanici.Text;
                     db.Urun.Add(urun);
                     db.SaveChanges();
+                    if (tBarkod.Text.Length == 8)
+                    {
+                        var ozelbarkod = db.Barkod.First();
+                        ozelbarkod.BarkodNo += 1;
+                        db.SaveChanges();
+                    }
                     Temizle();
                     gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(10).ToList();
                 }
@@ -119,6 +125,40 @@ namespace BarkodluSatis
         private void fUrunGiris_Load(object sender, EventArgs e)
         {
             tUrunSayisi.Text = db.Urun.Count().ToString();
+            GrupDoldur();
+        }
+        public void GrupDoldur()
+        {
+            cmbUrunGrubu.DisplayMember = "UrunGrupAd";
+            cmbUrunGrubu.ValueMember = "Id";
+            cmbUrunGrubu.DataSource = db.UrunGrup.OrderBy(a => a.UrunGrupAd).ToList();
+        }
+        private void bUrunGrubuEkle_Click(object sender, EventArgs e)
+        {
+            fUrunGrubuEkle f = new fUrunGrubuEkle();
+            f.ShowDialog();
+        }
+
+        private void bBarkodOlustur_Click(object sender, EventArgs e)
+        {
+            var barkodno = db.Barkod.First();
+            int karakter = barkodno.BarkodNo.ToString().Length;
+            string sifirlar = string.Empty;
+            for (int i = 0; i < 8 - karakter; i++)
+            {
+                sifirlar = sifirlar + "0";
+            }
+            string olusanbarkod = sifirlar + barkodno.BarkodNo.ToString();
+            tBarkod.Text = olusanbarkod;
+            tUrunAdi.Focus();
+        }
+
+        private void tSatisFiyati_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) == false && e.KeyChar != (char)08 && e.KeyChar != (char)44 && e.KeyChar != (char)45)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

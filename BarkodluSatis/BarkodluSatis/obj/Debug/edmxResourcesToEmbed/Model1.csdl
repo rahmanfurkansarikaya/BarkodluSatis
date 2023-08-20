@@ -25,6 +25,8 @@
     <EntitySet Name="Islem" EntityType="BarkodDbModel.Islem" />
     <EntitySet Name="IslemOzet" EntityType="BarkodDbModel.IslemOzet" />
     <EntitySet Name="Satis" EntityType="BarkodDbModel.Satis" />
+    <EntitySet Name="UrunGrup" EntityType="BarkodDbModel.UrunGrup" />
+    <EntitySet Name="Barkod" EntityType="BarkodDbModel.Barkod" />
   </EntityContainer>
   <EntityType Name="Terazi">
     <Key>
@@ -85,5 +87,19 @@
     <Property Name="Iade" Type="Boolean" />
     <Property Name="Tarih" Type="DateTime" Precision="3" />
     <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UrunGrup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrunGrupAd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Barkod">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BarkodNo" Type="Int32" />
   </EntityType>
 </Schema>

@@ -70,6 +70,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barkod.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="deneme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +102,12 @@
     </Compile>
     <Compile Include="fUrunGiris.Designer.cs">
       <DependentUpon>fUrunGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUrunGrubuEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUrunGrubuEkle.Designer.cs">
+      <DependentUpon>fUrunGrubuEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="HizliUrun.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -137,6 +146,9 @@
     <Compile Include="Urun.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="UrunGrup.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="deneme.resx">
       <DependentUpon>deneme.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fUrunGiris.resx">
       <DependentUpon>fUrunGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUrunGrubuEkle.resx">
+      <DependentUpon>fUrunGrubuEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
