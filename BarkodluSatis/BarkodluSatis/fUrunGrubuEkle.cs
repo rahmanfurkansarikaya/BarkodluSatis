@@ -51,5 +51,23 @@ namespace BarkodluSatis
             listUrunGrup.ValueMember = "Id";
             listUrunGrup.DataSource = db.UrunGrup.OrderBy(a => a.UrunGrupAd).ToList();
         }
+
+        private void bSil_Click(object sender, EventArgs e)
+        {
+            int grupid = Convert.ToInt32(listUrunGrup.SelectedValue.ToString());
+            string grupad = listUrunGrup.Text;
+            DialogResult onay = MessageBox.Show(grupad + " Ürün Grubunu Silmek İstiyor Musunuz?","Silme İşleme",MessageBoxButtons.YesNo);
+            if (onay == DialogResult.Yes)
+            {
+                var grup = db.UrunGrup.FirstOrDefault(x => x.Id == grupid);
+                db.UrunGrup.Remove(grup);
+                db.SaveChanges();
+                GrupDoldur();
+                tUrunGrupAd.Focus();
+                MessageBox.Show(grupad + " Ürün Grubu Silindi");
+                fUrunGiris f = (fUrunGiris)Application.OpenForms["fUrunGiris"];
+                f.GrupDoldur();
+            }
+        }
     }
 }

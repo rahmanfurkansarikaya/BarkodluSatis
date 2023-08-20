@@ -33,6 +33,7 @@
             this.tUrunGrupAd = new BarkodluSatis.tStandart();
             this.listUrunGrup = new System.Windows.Forms.ListBox();
             this.bEkle = new BarkodluSatis.bStandart();
+            this.bSil = new BarkodluSatis.bStandart();
             this.SuspendLayout();
             // 
             // lStandart1
@@ -67,21 +68,39 @@
             // 
             // bEkle
             // 
-            this.bEkle.BackColor = System.Drawing.Color.Tomato;
-            this.bEkle.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.bEkle.BackColor = System.Drawing.Color.OliveDrab;
+            this.bEkle.FlatAppearance.BorderColor = System.Drawing.Color.OliveDrab;
             this.bEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bEkle.ForeColor = System.Drawing.Color.White;
             this.bEkle.Image = ((System.Drawing.Image)(resources.GetObject("bEkle.Image")));
-            this.bEkle.Location = new System.Drawing.Point(16, 253);
+            this.bEkle.Location = new System.Drawing.Point(137, 253);
             this.bEkle.Margin = new System.Windows.Forms.Padding(1);
             this.bEkle.Name = "bEkle";
-            this.bEkle.Size = new System.Drawing.Size(250, 67);
+            this.bEkle.Size = new System.Drawing.Size(129, 67);
             this.bEkle.TabIndex = 0;
             this.bEkle.Text = "Ekle";
             this.bEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bEkle.UseVisualStyleBackColor = false;
             this.bEkle.Click += new System.EventHandler(this.bEkle_Click);
+            // 
+            // bSil
+            // 
+            this.bSil.BackColor = System.Drawing.Color.Maroon;
+            this.bSil.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.bSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bSil.ForeColor = System.Drawing.Color.White;
+            this.bSil.Image = ((System.Drawing.Image)(resources.GetObject("bSil.Image")));
+            this.bSil.Location = new System.Drawing.Point(16, 253);
+            this.bSil.Margin = new System.Windows.Forms.Padding(1);
+            this.bSil.Name = "bSil";
+            this.bSil.Size = new System.Drawing.Size(119, 67);
+            this.bSil.TabIndex = 0;
+            this.bSil.Text = "Sil";
+            this.bSil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bSil.UseVisualStyleBackColor = false;
+            this.bSil.Click += new System.EventHandler(this.bSil_Click);
             // 
             // fUrunGrubuEkle
             // 
@@ -89,6 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(283, 341);
+            this.Controls.Add(this.bSil);
             this.Controls.Add(this.bEkle);
             this.Controls.Add(this.listUrunGrup);
             this.Controls.Add(this.tUrunGrupAd);
@@ -108,5 +128,6 @@
         private tStandart tUrunGrupAd;
         private System.Windows.Forms.ListBox listUrunGrup;
         private bStandart bEkle;
+        private bStandart bSil;
     }
 }
