@@ -27,6 +27,7 @@
     <EntitySet Name="Satis" EntityType="BarkodDbModel.Satis" />
     <EntitySet Name="UrunGrup" EntityType="BarkodDbModel.UrunGrup" />
     <EntitySet Name="Barkod" EntityType="BarkodDbModel.Barkod" />
+    <EntitySet Name="StokHareket" EntityType="BarkodDbModel.StokHareket" />
   </EntityContainer>
   <EntityType Name="Terazi">
     <Key>
@@ -101,5 +102,18 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="BarkodNo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="StokHareket">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Barkod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UrunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Miktar" Type="Double" />
+    <Property Name="UrunGrup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

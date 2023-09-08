@@ -104,5 +104,23 @@ namespace BarkodluSatis
                 }
             }
         }
+
+        public static void StokHareket(string barkod,string urunad,string birim,double miktar,string urungrup,string kullanici)
+        {
+            using (var db = new BarkodDbEntities())
+            {
+                StokHareket sh = new StokHareket();
+                sh.Barkod = barkod;
+                sh.UrunAd = urunad;
+                sh.Birim = birim;
+                sh.Miktar = miktar;
+                sh.UrunGrup = urungrup;
+                sh.Kullanici = kullanici;
+                sh.Tarih = DateTime.Now;
+                db.StokHareket.Add(sh);
+                db.SaveChanges();
+            }
+        }
+ 
     }
 }

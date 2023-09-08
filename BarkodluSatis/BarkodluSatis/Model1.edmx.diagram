@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="BarkodDbModel.Satis" Width="1.5" PointX="9.625" PointY="0.75" />
         <EntityTypeShape EntityType="BarkodDbModel.UrunGrup" Width="1.5" PointX="2.5" PointY="2.375" />
         <EntityTypeShape EntityType="BarkodDbModel.Barkod" Width="1.5" PointX="6.125" PointY="2.375" />
+        <EntityTypeShape EntityType="BarkodDbModel.StokHareket" Width="1.5" PointX="11.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

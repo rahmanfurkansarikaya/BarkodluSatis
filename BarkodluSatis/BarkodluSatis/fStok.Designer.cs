@@ -51,7 +51,7 @@
             this.lStandart2 = new BarkodluSatis.lStandart();
             this.tUrunAra = new BarkodluSatis.tStandart();
             this.lStandart6 = new BarkodluSatis.lStandart();
-            this.gridUrunler = new BarkodluSatis.gridOzel();
+            this.gridListe = new BarkodluSatis.gridOzel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -64,7 +64,7 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridListe)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -102,6 +102,7 @@
             // 
             // cmbIslemTuru
             // 
+            this.cmbIslemTuru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIslemTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbIslemTuru.FormattingEnabled = true;
             this.cmbIslemTuru.Items.AddRange(new object[] {
@@ -150,6 +151,7 @@
             // 
             // cmbUrunGrubu
             // 
+            this.cmbUrunGrubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbUrunGrubu.FormattingEnabled = true;
             this.cmbUrunGrubu.Location = new System.Drawing.Point(4, 35);
@@ -211,7 +213,7 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.gridUrunler);
+            this.splitContainer2.Panel2.Controls.Add(this.gridListe);
             this.splitContainer2.Size = new System.Drawing.Size(697, 476);
             this.splitContainer2.SplitterDistance = 59;
             this.splitContainer2.TabIndex = 0;
@@ -243,6 +245,7 @@
             this.bAra.Text = "Ara";
             this.bAra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bAra.UseVisualStyleBackColor = false;
+            this.bAra.Click += new System.EventHandler(this.bAra_Click);
             // 
             // lStandart5
             // 
@@ -308,13 +311,13 @@
             this.lStandart6.TabIndex = 0;
             this.lStandart6.Text = "Ürün Ara";
             // 
-            // gridUrunler
+            // gridListe
             // 
-            this.gridUrunler.AllowUserToAddRows = false;
-            this.gridUrunler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridUrunler.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.gridUrunler.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridUrunler.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gridListe.AllowUserToAddRows = false;
+            this.gridListe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridListe.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.gridListe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridListe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -323,15 +326,15 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridUrunler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridUrunler.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridUrunler.EnableHeadersVisualStyles = false;
-            this.gridUrunler.Location = new System.Drawing.Point(0, 0);
-            this.gridUrunler.Name = "gridUrunler";
-            this.gridUrunler.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridUrunler.RowHeadersVisible = false;
+            this.gridListe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridListe.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gridListe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridListe.EnableHeadersVisualStyles = false;
+            this.gridListe.Location = new System.Drawing.Point(0, 0);
+            this.gridListe.Name = "gridListe";
+            this.gridListe.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridListe.RowHeadersVisible = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -340,15 +343,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridUrunler.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridUrunler.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
-            this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
-            this.gridUrunler.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.gridUrunler.RowTemplate.Height = 28;
-            this.gridUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridUrunler.Size = new System.Drawing.Size(697, 413);
-            this.gridUrunler.TabIndex = 1;
-            this.gridUrunler.TabStop = false;
+            this.gridListe.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.gridListe.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
+            this.gridListe.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
+            this.gridListe.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridListe.RowTemplate.Height = 28;
+            this.gridListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridListe.Size = new System.Drawing.Size(697, 413);
+            this.gridListe.TabIndex = 1;
+            this.gridListe.TabStop = false;
             // 
             // fStok
             // 
@@ -359,6 +362,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "fStok";
             this.Text = "Stok İşlemleri";
+            this.Load += new System.EventHandler(this.fStok_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -376,7 +380,7 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridListe)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,6 +407,6 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private tStandart tUrunAra;
         private lStandart lStandart6;
-        private gridOzel gridUrunler;
+        private gridOzel gridListe;
     }
 }

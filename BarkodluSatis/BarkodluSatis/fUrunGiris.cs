@@ -85,10 +85,11 @@ namespace BarkodluSatis
                         ozelbarkod.BarkodNo += 1;
                         db.SaveChanges();
                     }
-                    Temizle();
                     gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(20).ToList();
                     Islemler.GridDuzenle(gridUrunler);
                 }
+                Islemler.StokHareket(tBarkod.Text, tUrunAdi.Text, "Adet", Convert.ToDouble(tMiktar.Text), cmbUrunGrubu.Text, lKullanici.Text);
+                Temizle();
             }
             else
             {
@@ -178,7 +179,7 @@ namespace BarkodluSatis
                     var urun = db.Urun.Find(urunid);
                     db.Urun.Remove(urun);
                     db.SaveChanges();
-                    var hizliurun = db.HizliUrun.Where(x=> x.Barkod == barkod).SingleOrDefault();
+                    var hizliurun = db.HizliUrun.Where(x => x.Barkod == barkod).SingleOrDefault();
                     hizliurun.Barkod = "-";
                     hizliurun.UrunAd = "-";
                     hizliurun.Fiyat = 0;
