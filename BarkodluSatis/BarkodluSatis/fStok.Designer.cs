@@ -299,6 +299,7 @@
             this.tUrunAra.Name = "tUrunAra";
             this.tUrunAra.Size = new System.Drawing.Size(250, 26);
             this.tUrunAra.TabIndex = 1;
+            this.tUrunAra.TextChanged += new System.EventHandler(this.tUrunAra_TextChanged);
             // 
             // lStandart6
             // 
@@ -314,6 +315,7 @@
             // gridListe
             // 
             this.gridListe.AllowUserToAddRows = false;
+            this.gridListe.AllowUserToDeleteRows = false;
             this.gridListe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridListe.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.gridListe.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -333,6 +335,7 @@
             this.gridListe.EnableHeadersVisualStyles = false;
             this.gridListe.Location = new System.Drawing.Point(0, 0);
             this.gridListe.Name = "gridListe";
+            this.gridListe.ReadOnly = true;
             this.gridListe.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridListe.RowHeadersVisible = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -361,6 +364,7 @@
             this.ClientSize = new System.Drawing.Size(970, 476);
             this.Controls.Add(this.splitContainer1);
             this.Name = "fStok";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stok İşlemleri";
             this.Load += new System.EventHandler(this.fStok_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
