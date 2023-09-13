@@ -149,6 +149,9 @@
     <Compile Include="Nesnelerim.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sabit.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Satis.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

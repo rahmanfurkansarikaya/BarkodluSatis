@@ -363,7 +363,7 @@ namespace BarkodluSatis
                     {
                         Islemler.StokArtir(gridSatisListesi.Rows[i].Cells["Barkod"].Value.ToString(), Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Miktar"].Value.ToString()));
                     }
-                    alisfiyattoplam += Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["AlisFiyati"].Value.ToString());
+                    alisfiyattoplam += Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["AlisFiyati"].Value.ToString()) * Islemler.DoubleYap(gridSatisListesi.Rows[i].Cells["Miktar"].Value.ToString());
                 }
 
                 IslemOzet io = new IslemOzet();
@@ -511,6 +511,18 @@ namespace BarkodluSatis
                         gridSatisListesi.Rows[i].Cells[j].Value = gridBekle.Rows[i].Cells[j].Value;
                     }
                 }
+            }
+        }
+
+        private void chSatisIadeIslemi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chSatisIadeIslemi.Checked)
+            {
+                chSatisIadeIslemi.Text = "İade Yapılıyor";
+            }
+            else
+            {
+                chSatisIadeIslemi.Text = "Satış Yapılıyor";
             }
         }
     }

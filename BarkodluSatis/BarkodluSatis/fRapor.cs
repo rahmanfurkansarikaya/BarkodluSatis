@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,50 @@ namespace BarkodluSatis
         public fRapor()
         {
             InitializeComponent();
+        }
+
+        private void bGoster_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            DateTime baslangic = DateTime.Parse(dtBaslangic.Value.ToShortDateString());
+            DateTime bitis = DateTime.Parse(dtBitis.Value.ToShortDateString());
+            bitis = bitis.AddDays(1);
+            using (var db = new BarkodDbEntities())
+            {
+                if (listFiltrelemeTuru.SelectedIndex == 0) //Tümünü Getir
+                {
+                    db.IslemOzet.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis).OrderByDescending(x => x.Tarih).Load();
+                    var islemozet = db.IslemOzet.Local.ToBindingList();
+                    gridListe.DataSource = islemozet;
+
+                    tSatisNakit.Text = Convert.ToDouble(islemozet.Where(x => x.Iade == false && x.Gelir == false && x.Gider == false).Sum(x => x.Nakit)).ToString("C2");
+                    tSatisKart.Text = Convert.ToDouble(islemozet.Where(x => x.Iade == false && x.Gelir == false && x.Gider == false).Sum(x => x.Kart)).ToString("C2");
+
+                    tIadeNakit.Text = Convert.ToDouble(islemozet.Where(x => x.Iade == true).Sum(x => x.Nakit)).ToString("C2");
+                    tIadeKart.Text = Convert.ToDouble(islemozet.Where(x => x.Iade == true).Sum(x => x.Kart)).ToString("C2");
+
+                    tGelirNakit.Text = Convert.ToDouble(islemozet.Where(x => x.Gelir == true).Sum(x => x.Nakit)).ToString("C2");
+                    tGelirKart.Text = Convert.ToDouble(islemozet.Where(x => x.Gelir == true).Sum(x => x.Kart)).ToString("C2");
+
+                    tGiderNakit.Text = Convert.ToDouble(islemozet.Where(x => x.Gider == true).Sum(x => x.Nakit)).ToString("C2");
+                    tGiderKart.Text = Convert.ToDouble(islemozet.Where(x => x.Gider == true).Sum(x => x.Kart)).ToString("C2");
+
+                    db.Satis.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis).Load();
+                    var satistablosu = db.Satis.Local.ToBindingList();
+                    double kdvtutarisatis = Islemler.DoubleYap(satistablosu.Where(x => x.Iade == false).Sum(x => x.KdvTutari).ToString());
+                    double kdvtutariiade = Islemler.DoubleYap(satistablosu.Where(x => x.Iade == true).Sum(x => x.KdvTutari).ToString());
+                    tKdvToplam.Text = (kdvtutarisatis - kdvtutariiade).ToString("C2");
+                }
+            }
+
+
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void fRapor_Load(object sender, EventArgs e)
+        {
+            listFiltrelemeTuru.SelectedIndex = 0;
+            tKartKomisyon.Text = Islemler.KartKomisyon().ToString();
         }
     }
 }

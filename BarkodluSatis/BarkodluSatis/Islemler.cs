@@ -105,7 +105,7 @@ namespace BarkodluSatis
             }
         }
 
-        public static void StokHareket(string barkod,string urunad,string birim,double miktar,string urungrup,string kullanici)
+        public static void StokHareket(string barkod, string urunad, string birim, double miktar, string urungrup, string kullanici)
         {
             using (var db = new BarkodDbEntities())
             {
@@ -121,6 +121,23 @@ namespace BarkodluSatis
                 db.SaveChanges();
             }
         }
- 
+
+        public static int KartKomisyon()
+        {
+            int sonuc = 0;
+            using (var db = new BarkodDbEntities())
+            {
+                if (db.Sabit.Any())
+                {
+                    sonuc = Convert.ToInt16(db.Sabit.First().KartKomisyon);
+                }
+                else
+                {
+                    sonuc = 0;
+                }
+            }
+            return sonuc;
+        }
+
     }
 }
