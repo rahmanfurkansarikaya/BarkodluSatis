@@ -91,6 +91,12 @@
     <Compile Include="fNakitKart.Designer.cs">
       <DependentUpon>fNakitKart.cs</DependentUpon>
     </Compile>
+    <Compile Include="fRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRapor.Designer.cs">
+      <DependentUpon>fRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="fSatis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fNakitKart.resx">
       <DependentUpon>fNakitKart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRapor.resx">
+      <DependentUpon>fRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fSatis.resx">
       <DependentUpon>fSatis.cs</DependentUpon>
