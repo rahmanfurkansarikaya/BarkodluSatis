@@ -50,9 +50,29 @@ namespace BarkodluSatis
                     double kdvtutariiade = Islemler.DoubleYap(satistablosu.Where(x => x.Iade == true).Sum(x => x.KdvTutari).ToString());
                     tKdvToplam.Text = (kdvtutarisatis - kdvtutariiade).ToString("C2");
                 }
+                else if (listFiltrelemeTuru.SelectedIndex == 1) //Satışlar
+                {
+                    db.IslemOzet.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis && x.Iade == false && x.Gelir == false && x.Gider == false).Load();
+                    var islemozet = db.IslemOzet.Local.ToBindingList();
+                    gridListe.DataSource = islemozet;
+                }
+                else if (listFiltrelemeTuru.SelectedIndex == 2) //İadeler
+                {
+                    db.IslemOzet.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis && x.Iade == true).Load();
+                    gridListe.DataSource = db.IslemOzet.Local.ToBindingList();
+                }
+                else if (listFiltrelemeTuru.SelectedIndex == 3) //Gelirler
+                {
+                    db.IslemOzet.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis && x.Gelir == true).Load();
+                    gridListe.DataSource = db.IslemOzet.Local.ToBindingList();
+                }
+                else if (listFiltrelemeTuru.SelectedIndex == 4) //Giderler
+                {
+                    db.IslemOzet.Where(x => x.Tarih >= baslangic && x.Tarih <= bitis && x.Gider == true).Load();
+                    gridListe.DataSource = db.IslemOzet.Local.ToBindingList();
+                }
             }
-
-
+            Islemler.GridDuzenle(gridListe);
             Cursor.Current = Cursors.Default;
         }
 
@@ -60,6 +80,19 @@ namespace BarkodluSatis
         {
             listFiltrelemeTuru.SelectedIndex = 0;
             tKartKomisyon.Text = Islemler.KartKomisyon().ToString();
+        }
+
+        private void gridListe_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 2 || e.ColumnIndex == 6 || e.ColumnIndex == 7)
+            {
+                if (e.Value is bool)
+                {
+                    bool value = (bool)e.Value;
+                    e.Value = (value) ? "Evet" : "Hayır";
+                    e.FormattingApplied = true;
+                }
+            }
         }
     }
 }

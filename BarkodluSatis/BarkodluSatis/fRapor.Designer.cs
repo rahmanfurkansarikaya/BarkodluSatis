@@ -29,14 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fRapor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.bGiderEkle = new System.Windows.Forms.Button();
             this.bGelirEkle = new System.Windows.Forms.Button();
-            this.dtBitis = new System.Windows.Forms.DateTimePicker();
-            this.dtBaslangic = new System.Windows.Forms.DateTimePicker();
-            this.listFiltrelemeTuru = new System.Windows.Forms.ListBox();
             this.lStandart15 = new BarkodluSatis.lStandart();
             this.tGiderKart = new BarkodluSatis.tNumeric();
             this.lStandart12 = new BarkodluSatis.lStandart();
@@ -62,8 +59,11 @@
             this.lStandart3 = new BarkodluSatis.lStandart();
             this.lStandart2 = new BarkodluSatis.lStandart();
             this.bGoster = new BarkodluSatis.bStandart();
+            this.dtBitis = new System.Windows.Forms.DateTimePicker();
             this.lStandart5 = new BarkodluSatis.lStandart();
+            this.dtBaslangic = new System.Windows.Forms.DateTimePicker();
             this.lStandart4 = new BarkodluSatis.lStandart();
+            this.listFiltrelemeTuru = new System.Windows.Forms.ListBox();
             this.lStandart1 = new BarkodluSatis.lStandart();
             this.gridListe = new BarkodluSatis.gridOzel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -147,40 +147,6 @@
             this.bGelirEkle.Size = new System.Drawing.Size(66, 50);
             this.bGelirEkle.TabIndex = 13;
             this.bGelirEkle.UseVisualStyleBackColor = false;
-            // 
-            // dtBitis
-            // 
-            this.dtBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtBitis.Location = new System.Drawing.Point(160, 121);
-            this.dtBitis.Name = "dtBitis";
-            this.dtBitis.Size = new System.Drawing.Size(233, 26);
-            this.dtBitis.TabIndex = 7;
-            // 
-            // dtBaslangic
-            // 
-            this.dtBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtBaslangic.Location = new System.Drawing.Point(160, 70);
-            this.dtBaslangic.Name = "dtBaslangic";
-            this.dtBaslangic.Size = new System.Drawing.Size(233, 26);
-            this.dtBaslangic.TabIndex = 5;
-            // 
-            // listFiltrelemeTuru
-            // 
-            this.listFiltrelemeTuru.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.listFiltrelemeTuru.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listFiltrelemeTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listFiltrelemeTuru.FormattingEnabled = true;
-            this.listFiltrelemeTuru.ItemHeight = 20;
-            this.listFiltrelemeTuru.Items.AddRange(new object[] {
-            "Tümü",
-            "Satışlar",
-            "İade",
-            "Gelir (Satış Hariç)",
-            "Gider (İade Hariç)"});
-            this.listFiltrelemeTuru.Location = new System.Drawing.Point(17, 37);
-            this.listFiltrelemeTuru.Name = "listFiltrelemeTuru";
-            this.listFiltrelemeTuru.Size = new System.Drawing.Size(133, 120);
-            this.listFiltrelemeTuru.TabIndex = 1;
             // 
             // lStandart15
             // 
@@ -464,6 +430,14 @@
             this.bGoster.UseVisualStyleBackColor = false;
             this.bGoster.Click += new System.EventHandler(this.bGoster_Click);
             // 
+            // dtBitis
+            // 
+            this.dtBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtBitis.Location = new System.Drawing.Point(160, 121);
+            this.dtBitis.Name = "dtBitis";
+            this.dtBitis.Size = new System.Drawing.Size(233, 26);
+            this.dtBitis.TabIndex = 7;
+            // 
             // lStandart5
             // 
             this.lStandart5.AutoSize = true;
@@ -475,6 +449,14 @@
             this.lStandart5.TabIndex = 6;
             this.lStandart5.Text = "Bitiş Tarihi";
             // 
+            // dtBaslangic
+            // 
+            this.dtBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtBaslangic.Location = new System.Drawing.Point(160, 70);
+            this.dtBaslangic.Name = "dtBaslangic";
+            this.dtBaslangic.Size = new System.Drawing.Size(233, 26);
+            this.dtBaslangic.TabIndex = 5;
+            // 
             // lStandart4
             // 
             this.lStandart4.AutoSize = true;
@@ -485,6 +467,24 @@
             this.lStandart4.Size = new System.Drawing.Size(120, 20);
             this.lStandart4.TabIndex = 4;
             this.lStandart4.Text = "Başlangıç Tarihi";
+            // 
+            // listFiltrelemeTuru
+            // 
+            this.listFiltrelemeTuru.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listFiltrelemeTuru.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listFiltrelemeTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listFiltrelemeTuru.FormattingEnabled = true;
+            this.listFiltrelemeTuru.ItemHeight = 20;
+            this.listFiltrelemeTuru.Items.AddRange(new object[] {
+            "Tümü",
+            "Satışlar",
+            "İade",
+            "Gelir (Satış Hariç)",
+            "Gider (İade Hariç)"});
+            this.listFiltrelemeTuru.Location = new System.Drawing.Point(17, 37);
+            this.listFiltrelemeTuru.Name = "listFiltrelemeTuru";
+            this.listFiltrelemeTuru.Size = new System.Drawing.Size(133, 120);
+            this.listFiltrelemeTuru.TabIndex = 1;
             // 
             // lStandart1
             // 
@@ -505,33 +505,33 @@
             this.gridListe.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.gridListe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridListe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridListe.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridListe.DefaultCellStyle = dataGridViewCellStyle1;
             this.gridListe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridListe.EnableHeadersVisualStyles = false;
             this.gridListe.Location = new System.Drawing.Point(0, 0);
             this.gridListe.Name = "gridListe";
             this.gridListe.ReadOnly = true;
-            this.gridListe.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridListe.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridListe.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListe.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListe.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.gridListe.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.gridListe.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.gridListe.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -540,6 +540,7 @@
             this.gridListe.Size = new System.Drawing.Size(1083, 341);
             this.gridListe.TabIndex = 2;
             this.gridListe.TabStop = false;
+            this.gridListe.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridListe_CellFormatting);
             // 
             // fRapor
             // 

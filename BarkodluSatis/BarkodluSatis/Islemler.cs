@@ -53,6 +53,8 @@ namespace BarkodluSatis
                     {
                         case "Id":
                             dgv.Columns[i].HeaderText = "Numara"; break;
+                        case "IslemNo":
+                            dgv.Columns[i].HeaderText = "İşlem No"; break;
                         case "UrunId":
                             dgv.Columns[i].HeaderText = "Ürün Numarası"; break;
                         case "UrunAd":
@@ -63,6 +65,11 @@ namespace BarkodluSatis
                             dgv.Columns[i].HeaderText = "Ürün Grubu"; break;
                         case "AlisFiyat":
                             dgv.Columns[i].HeaderText = "Alış Fiyatı";
+                            dgv.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                            dgv.Columns[i].DefaultCellStyle.Format = "C2";
+                            break;
+                        case "AlisFiyatToplam":
+                            dgv.Columns[i].HeaderText = "Alış Fiyat Toplam";
                             dgv.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                             dgv.Columns[i].DefaultCellStyle.Format = "C2";
                             break;
