@@ -79,6 +79,12 @@
     <Compile Include="deneme.Designer.cs">
       <DependentUpon>deneme.cs</DependentUpon>
     </Compile>
+    <Compile Include="fGelirGider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGelirGider.Designer.cs">
+      <DependentUpon>fGelirGider.cs</DependentUpon>
+    </Compile>
     <Compile Include="fHizliButonUrunEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </Compile>
     <EmbeddedResource Include="deneme.resx">
       <DependentUpon>deneme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGelirGider.resx">
+      <DependentUpon>fGelirGider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fHizliButonUrunEkle.resx">
       <DependentUpon>fHizliButonUrunEkle.cs</DependentUpon>

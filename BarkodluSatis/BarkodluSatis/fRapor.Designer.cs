@@ -66,6 +66,7 @@
             this.listFiltrelemeTuru = new System.Windows.Forms.ListBox();
             this.lStandart1 = new BarkodluSatis.lStandart();
             this.gridListe = new BarkodluSatis.gridOzel();
+            this.lKullanici = new BarkodluSatis.lStandart();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -83,6 +84,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lKullanici);
             this.splitContainer1.Panel1.Controls.Add(this.bGiderEkle);
             this.splitContainer1.Panel1.Controls.Add(this.bGelirEkle);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart15);
@@ -135,6 +137,7 @@
             this.bGiderEkle.Size = new System.Drawing.Size(66, 50);
             this.bGiderEkle.TabIndex = 13;
             this.bGiderEkle.UseVisualStyleBackColor = false;
+            this.bGiderEkle.Click += new System.EventHandler(this.bGiderEkle_Click);
             // 
             // bGelirEkle
             // 
@@ -147,6 +150,7 @@
             this.bGelirEkle.Size = new System.Drawing.Size(66, 50);
             this.bGelirEkle.TabIndex = 13;
             this.bGelirEkle.UseVisualStyleBackColor = false;
+            this.bGelirEkle.Click += new System.EventHandler(this.bGelirEkle_Click);
             // 
             // lStandart15
             // 
@@ -542,6 +546,17 @@
             this.gridListe.TabStop = false;
             this.gridListe.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridListe_CellFormatting);
             // 
+            // lKullanici
+            // 
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lKullanici.Location = new System.Drawing.Point(17, 164);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(66, 20);
+            this.lKullanici.TabIndex = 14;
+            this.lKullanici.Text = "Kullanıcı";
+            // 
             // fRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -600,5 +615,6 @@
         private System.Windows.Forms.Button bGelirEkle;
         private System.Windows.Forms.Button bGiderEkle;
         private gridOzel gridListe;
+        private lStandart lKullanici;
     }
 }
