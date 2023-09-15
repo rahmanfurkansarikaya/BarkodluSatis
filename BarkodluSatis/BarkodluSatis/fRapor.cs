@@ -111,5 +111,19 @@ namespace BarkodluSatis
             f.kullanici = lKullanici.Text;
             f.ShowDialog();
         }
+
+        private void detayGösterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (gridListe.Rows.Count>0)
+            {
+                int islemno = Convert.ToInt32(gridListe.CurrentRow.Cells["IslemNo"].Value.ToString());
+                if (islemno != 0)
+                {
+                    fDetayGoster f = new fDetayGoster();
+                    f.islemno = islemno;
+                    f.ShowDialog();
+                }
+            }
+        }
     }
 }

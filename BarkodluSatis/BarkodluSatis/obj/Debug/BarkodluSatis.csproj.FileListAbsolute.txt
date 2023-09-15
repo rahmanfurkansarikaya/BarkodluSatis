@@ -24,3 +24,4 @@ C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\D
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fStok.resources
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fRapor.resources
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fGelirGider.resources
+C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fDetayGoster.resources

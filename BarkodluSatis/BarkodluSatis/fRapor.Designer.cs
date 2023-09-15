@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fRapor));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lKullanici = new BarkodluSatis.lStandart();
             this.bGiderEkle = new System.Windows.Forms.Button();
             this.bGelirEkle = new System.Windows.Forms.Button();
             this.lStandart15 = new BarkodluSatis.lStandart();
@@ -66,12 +68,14 @@
             this.listFiltrelemeTuru = new System.Windows.Forms.ListBox();
             this.lStandart1 = new BarkodluSatis.lStandart();
             this.gridListe = new BarkodluSatis.gridOzel();
-            this.lKullanici = new BarkodluSatis.lStandart();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.detayGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridListe)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -125,6 +129,17 @@
             this.splitContainer1.Size = new System.Drawing.Size(1083, 537);
             this.splitContainer1.SplitterDistance = 192;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // lKullanici
+            // 
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lKullanici.Location = new System.Drawing.Point(17, 164);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(66, 20);
+            this.lKullanici.TabIndex = 14;
+            this.lKullanici.Text = "Kullanıcı";
             // 
             // bGiderEkle
             // 
@@ -519,6 +534,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridListe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridListe.ContextMenuStrip = this.contextMenuStrip1;
             this.gridListe.DefaultCellStyle = dataGridViewCellStyle1;
             this.gridListe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridListe.EnableHeadersVisualStyles = false;
@@ -546,16 +562,19 @@
             this.gridListe.TabStop = false;
             this.gridListe.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridListe_CellFormatting);
             // 
-            // lKullanici
+            // contextMenuStrip1
             // 
-            this.lKullanici.AutoSize = true;
-            this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lKullanici.Location = new System.Drawing.Point(17, 164);
-            this.lKullanici.Name = "lKullanici";
-            this.lKullanici.Size = new System.Drawing.Size(66, 20);
-            this.lKullanici.TabIndex = 14;
-            this.lKullanici.Text = "Kullanıcı";
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.detayGösterToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // detayGösterToolStripMenuItem
+            // 
+            this.detayGösterToolStripMenuItem.Name = "detayGösterToolStripMenuItem";
+            this.detayGösterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.detayGösterToolStripMenuItem.Text = "Detay Göster";
+            this.detayGösterToolStripMenuItem.Click += new System.EventHandler(this.detayGösterToolStripMenuItem_Click);
             // 
             // fRapor
             // 
@@ -574,6 +593,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridListe)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -616,5 +636,7 @@
         private System.Windows.Forms.Button bGiderEkle;
         private gridOzel gridListe;
         private lStandart lKullanici;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem detayGösterToolStripMenuItem;
     }
 }
