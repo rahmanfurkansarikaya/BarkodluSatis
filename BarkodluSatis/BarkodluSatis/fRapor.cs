@@ -125,5 +125,23 @@ namespace BarkodluSatis
                 }
             }
         }
+
+        private void bRaporAl_Click(object sender, EventArgs e)
+        {
+            Raporlar.Baslik = "GENEL RAPOR";
+            Raporlar.SatisKart = tSatisKart.Text;
+            Raporlar.SatisNakit = tSatisNakit.Text;
+            Raporlar.IadeKart = tIadeKart.Text;
+            Raporlar.IadeNakit = tIadeNakit.Text;
+            Raporlar.GelirKart = tGelirKart.Text;
+            Raporlar.GelirNakit = tGelirNakit.Text;
+            Raporlar.GiderKart = tGiderKart.Text;
+            Raporlar.GiderNakit = tGiderNakit.Text;
+            Raporlar.TarihBaslangic = dtBaslangic.Value.ToShortDateString();
+            Raporlar.TarihBitis = dtBitis.Value.ToShortDateString();
+            Raporlar.KdvToplam = tKdvToplam.Text;
+            Raporlar.KartKomisyon = tKartKomisyon.Text;
+            Raporlar.RaporSayfasiRaporu(gridListe);
+        }
     }
 }
