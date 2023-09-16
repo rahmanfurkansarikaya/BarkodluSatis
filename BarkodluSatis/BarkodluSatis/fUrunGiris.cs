@@ -32,6 +32,14 @@ namespace BarkodluSatis
                     tSatisFiyati.Text = urun.SatisFiyat.ToString();
                     tMiktar.Text = urun.Miktar.ToString();
                     tKdvOrani.Text = urun.KdvOrani.ToString();
+                    if (urun.Birim == "Kg")
+                    {
+                        chUrunTipi.Checked = true;
+                    }
+                    else
+                    {
+                        chUrunTipi.Checked = false;
+                    }
                 }
                 else
                 {
@@ -55,7 +63,14 @@ namespace BarkodluSatis
                     guncelle.KdvOrani = Convert.ToInt32(tKdvOrani.Text);
                     guncelle.KdvTutari = Math.Round(Islemler.DoubleYap(tSatisFiyati.Text) * Convert.ToInt32(tKdvOrani.Text) / 100, 2);
                     guncelle.Miktar += Convert.ToDouble(tMiktar.Text);
-                    guncelle.Birim = "Adet";
+                    if (chUrunTipi.Checked)
+                    {
+                        guncelle.Birim = "Kg";
+                    }
+                    else
+                    {
+                        guncelle.Birim = "Adet";
+                    }
                     guncelle.Tarih = DateTime.Now;
                     guncelle.Kullanici = lKullanici.Text;
                     db.SaveChanges();
@@ -74,7 +89,14 @@ namespace BarkodluSatis
                     urun.KdvOrani = Convert.ToInt32(tKdvOrani.Text);
                     urun.KdvTutari = Math.Round(Islemler.DoubleYap(tSatisFiyati.Text) * Convert.ToInt32(tKdvOrani.Text) / 100, 2);
                     urun.Miktar = Convert.ToDouble(tMiktar.Text);
-                    urun.Birim = "Adet";
+                    if (chUrunTipi.Checked)
+                    {
+                        urun.Birim = "Kg";
+                    }
+                    else
+                    {
+                        urun.Birim = "Adet";
+                    }
                     urun.Tarih = DateTime.Now;
                     urun.Kullanici = lKullanici.Text;
                     db.Urun.Add(urun);
@@ -123,6 +145,7 @@ namespace BarkodluSatis
             tMiktar.Text = "0";
             tKdvOrani.Text = "0";
             tBarkod.Focus();
+            chUrunTipi.Checked = false;
         }
 
         private void fUrunGiris_Load(object sender, EventArgs e)
@@ -188,6 +211,44 @@ namespace BarkodluSatis
                     gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(20).ToList();
                     Islemler.GridDuzenle(gridUrunler);
                     tBarkod.Focus();
+                }
+            }
+        }
+
+        private void chUrunTipi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chUrunTipi.Checked)
+            {
+                chUrunTipi.Text = "Gramajlı Ürün İşlemi";
+                bBarkodOlustur.Enabled = false;
+            }
+            else
+            {
+                chUrunTipi.Text = "Barkodlu Ürün İşlemi";
+                bBarkodOlustur.Enabled = true;
+            }
+        }
+
+        private void düzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (gridUrunler.Rows.Count > 0)
+            {
+                tBarkod.Text = gridUrunler.CurrentRow.Cells["Barkod"].Value.ToString();
+                tUrunAdi.Text = gridUrunler.CurrentRow.Cells["UrunAd"].Value.ToString();
+                tAciklama.Text = gridUrunler.CurrentRow.Cells["Aciklama"].Value.ToString();
+                cmbUrunGrubu.Text = gridUrunler.CurrentRow.Cells["UrunGrup"].Value.ToString();
+                tAlisFiyati.Text = gridUrunler.CurrentRow.Cells["AlisFiyat"].Value.ToString();
+                tSatisFiyati.Text = gridUrunler.CurrentRow.Cells["SatisFiyat"].Value.ToString();
+                tSatisFiyati.Text = gridUrunler.CurrentRow.Cells["KdvOrani"].Value.ToString();
+                tMiktar.Text = gridUrunler.CurrentRow.Cells["Miktar"].Value.ToString();
+                string birim = gridUrunler.CurrentRow.Cells["Birim"].Value.ToString();
+                if (birim == "Kg")
+                {
+                    chUrunTipi.Checked = true;
+                }
+                else
+                {
+                    chUrunTipi.Checked = false;
                 }
             }
         }
