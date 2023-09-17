@@ -258,6 +258,9 @@
     <EmbeddedResource Include="rpGenelRapor.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="rpStokIzleme.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="rpStokUrun.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -270,6 +273,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\IslemOzet.datasource" />
+    <None Include="Properties\DataSources\StokHareket.datasource" />
     <None Include="Properties\DataSources\Urun.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

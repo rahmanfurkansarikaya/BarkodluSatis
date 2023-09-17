@@ -81,7 +81,7 @@ namespace BarkodluSatis
 
         private void tUrunAra_TextChanged(object sender, EventArgs e)
         {
-            if (tUrunAra.Text.Length>=2)
+            if (tUrunAra.Text.Length >= 2)
             {
                 string urunad = tUrunAra.Text;
                 using (var db = new BarkodDbEntities())
@@ -103,10 +103,20 @@ namespace BarkodluSatis
 
         private void bRaporAl_Click(object sender, EventArgs e)
         {
-            Raporlar.Baslik = cmbIslemTuru.Text + " Raporu";
-            Raporlar.TarihBaslangic = dateBaslangic.Value.ToShortDateString();
-            Raporlar.TarihBitis = dateBitis.Value.ToShortDateString();
-            Raporlar.StokRaporu(gridListe);
+            if (cmbIslemTuru.SelectedIndex == 0)
+            {
+                Raporlar.Baslik = cmbIslemTuru.Text + " Raporu";
+                Raporlar.TarihBaslangic = dateBaslangic.Value.ToShortDateString();
+                Raporlar.TarihBitis = dateBitis.Value.ToShortDateString();
+                Raporlar.StokRaporu(gridListe);
+            }
+            else if(cmbIslemTuru.SelectedIndex == 1)
+            {
+                Raporlar.Baslik = cmbIslemTuru.Text + " Raporu";
+                Raporlar.TarihBaslangic = dateBaslangic.Value.ToShortDateString();
+                Raporlar.TarihBitis = dateBitis.Value.ToShortDateString();
+                Raporlar.StokIzlemeRaporu(gridListe);
+            }
         }
     }
 }
