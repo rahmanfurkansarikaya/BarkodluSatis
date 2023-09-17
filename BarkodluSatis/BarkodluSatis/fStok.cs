@@ -100,5 +100,13 @@ namespace BarkodluSatis
                 Islemler.GridDuzenle(gridListe);
             }
         }
+
+        private void bRaporAl_Click(object sender, EventArgs e)
+        {
+            Raporlar.Baslik = cmbIslemTuru.Text + " Raporu";
+            Raporlar.TarihBaslangic = dateBaslangic.Value.ToShortDateString();
+            Raporlar.TarihBitis = dateBitis.Value.ToShortDateString();
+            Raporlar.StokRaporu(gridListe);
+        }
     }
 }

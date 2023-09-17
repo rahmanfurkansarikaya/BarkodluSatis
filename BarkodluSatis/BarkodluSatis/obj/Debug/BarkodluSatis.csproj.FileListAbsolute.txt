@@ -101,3 +101,4 @@ C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\bin\D
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fRaporGoster.resources
+C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\bin\Debug\rpStokUrun.rdlc
