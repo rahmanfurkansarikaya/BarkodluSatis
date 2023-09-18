@@ -104,6 +104,12 @@
     <Compile Include="deneme.Designer.cs">
       <DependentUpon>deneme.cs</DependentUpon>
     </Compile>
+    <Compile Include="fBaslangic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBaslangic.Designer.cs">
+      <DependentUpon>fBaslangic.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDetayGoster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </Compile>
     <EmbeddedResource Include="deneme.resx">
       <DependentUpon>deneme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBaslangic.resx">
+      <DependentUpon>fBaslangic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fDetayGoster.resx">
       <DependentUpon>fDetayGoster.cs</DependentUpon>

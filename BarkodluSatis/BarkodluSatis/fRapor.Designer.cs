@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fRapor));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fRapor));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.bRaporAl = new BarkodluSatis.bStandart();
             this.lKullanici = new BarkodluSatis.lStandart();
             this.bGiderEkle = new System.Windows.Forms.Button();
             this.bGelirEkle = new System.Windows.Forms.Button();
@@ -70,7 +71,6 @@
             this.gridListe = new BarkodluSatis.gridOzel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.detayGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bRaporAl = new BarkodluSatis.bStandart();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -128,16 +128,36 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridListe);
-            this.splitContainer1.Size = new System.Drawing.Size(1083, 537);
-            this.splitContainer1.SplitterDistance = 232;
+            this.splitContainer1.Size = new System.Drawing.Size(1083, 578);
+            this.splitContainer1.SplitterDistance = 265;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // bRaporAl
+            // 
+            this.bRaporAl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bRaporAl.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.bRaporAl.FlatAppearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
+            this.bRaporAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bRaporAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bRaporAl.ForeColor = System.Drawing.Color.White;
+            this.bRaporAl.Image = ((System.Drawing.Image)(resources.GetObject("bRaporAl.Image")));
+            this.bRaporAl.Location = new System.Drawing.Point(930, 200);
+            this.bRaporAl.Margin = new System.Windows.Forms.Padding(1);
+            this.bRaporAl.Name = "bRaporAl";
+            this.bRaporAl.Size = new System.Drawing.Size(134, 63);
+            this.bRaporAl.TabIndex = 15;
+            this.bRaporAl.Text = "Rapor Al";
+            this.bRaporAl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bRaporAl.UseVisualStyleBackColor = false;
+            this.bRaporAl.Click += new System.EventHandler(this.bRaporAl_Click);
             // 
             // lKullanici
             // 
+            this.lKullanici.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lKullanici.AutoSize = true;
             this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lKullanici.Location = new System.Drawing.Point(355, 161);
+            this.lKullanici.Location = new System.Drawing.Point(926, 179);
             this.lKullanici.Name = "lKullanici";
             this.lKullanici.Size = new System.Drawing.Size(66, 20);
             this.lKullanici.TabIndex = 14;
@@ -559,7 +579,7 @@
             this.gridListe.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.gridListe.RowTemplate.Height = 28;
             this.gridListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridListe.Size = new System.Drawing.Size(1083, 301);
+            this.gridListe.Size = new System.Drawing.Size(1083, 309);
             this.gridListe.TabIndex = 2;
             this.gridListe.TabStop = false;
             this.gridListe.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridListe_CellFormatting);
@@ -578,30 +598,12 @@
             this.detayGösterToolStripMenuItem.Text = "Detay Göster";
             this.detayGösterToolStripMenuItem.Click += new System.EventHandler(this.detayGösterToolStripMenuItem_Click);
             // 
-            // bRaporAl
-            // 
-            this.bRaporAl.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.bRaporAl.FlatAppearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
-            this.bRaporAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bRaporAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bRaporAl.ForeColor = System.Drawing.Color.White;
-            this.bRaporAl.Image = ((System.Drawing.Image)(resources.GetObject("bRaporAl.Image")));
-            this.bRaporAl.Location = new System.Drawing.Point(16, 161);
-            this.bRaporAl.Margin = new System.Windows.Forms.Padding(1);
-            this.bRaporAl.Name = "bRaporAl";
-            this.bRaporAl.Size = new System.Drawing.Size(134, 63);
-            this.bRaporAl.TabIndex = 15;
-            this.bRaporAl.Text = "Rapor Al";
-            this.bRaporAl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bRaporAl.UseVisualStyleBackColor = false;
-            this.bRaporAl.Click += new System.EventHandler(this.bRaporAl_Click);
-            // 
             // fRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1083, 537);
+            this.ClientSize = new System.Drawing.Size(1083, 578);
             this.Controls.Add(this.splitContainer1);
             this.Name = "fRapor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -655,9 +657,9 @@
         private System.Windows.Forms.Button bGelirEkle;
         private System.Windows.Forms.Button bGiderEkle;
         private gridOzel gridListe;
-        private lStandart lKullanici;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem detayGösterToolStripMenuItem;
         private bStandart bRaporAl;
+        internal lStandart lKullanici;
     }
 }
