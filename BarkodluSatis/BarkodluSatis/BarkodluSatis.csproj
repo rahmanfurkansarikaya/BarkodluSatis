@@ -116,6 +116,12 @@
     <Compile Include="fDetayGoster.Designer.cs">
       <DependentUpon>fDetayGoster.cs</DependentUpon>
     </Compile>
+    <Compile Include="fFiyatGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fFiyatGuncelle.Designer.cs">
+      <DependentUpon>fFiyatGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="fGelirGider.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fDetayGoster.resx">
       <DependentUpon>fDetayGoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fFiyatGuncelle.resx">
+      <DependentUpon>fFiyatGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fGelirGider.resx">
       <DependentUpon>fGelirGider.cs</DependentUpon>
