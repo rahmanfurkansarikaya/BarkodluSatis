@@ -29,6 +29,7 @@
     <EntitySet Name="Barkod" EntityType="BarkodDbModel.Barkod" />
     <EntitySet Name="StokHareket" EntityType="BarkodDbModel.StokHareket" />
     <EntitySet Name="Sabit" EntityType="BarkodDbModel.Sabit" />
+    <EntitySet Name="Kullanici" EntityType="BarkodDbModel.Kullanici" />
   </EntityContainer>
   <EntityType Name="Terazi">
     <Key>
@@ -123,5 +124,23 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="KartKomisyon" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EPosta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Satis" Type="Boolean" />
+    <Property Name="Rapor" Type="Boolean" />
+    <Property Name="Stok" Type="Boolean" />
+    <Property Name="UrunGiris" Type="Boolean" />
+    <Property Name="Ayarlar" Type="Boolean" />
+    <Property Name="FiyatGuncelle" Type="Boolean" />
+    <Property Name="Yedekleme" Type="Boolean" />
   </EntityType>
 </Schema>

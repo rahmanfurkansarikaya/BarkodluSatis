@@ -105,3 +105,4 @@ C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\bin\D
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\bin\Debug\rpStokIzleme.rdlc
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fBaslangic.resources
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fFiyatGuncelle.resources
+C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fAyarlar.resources

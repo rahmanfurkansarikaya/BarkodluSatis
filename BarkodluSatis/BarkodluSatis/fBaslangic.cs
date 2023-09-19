@@ -65,5 +65,13 @@ namespace BarkodluSatis
             f.ShowDialog();
             Cursor.Current = Cursors.Default;
         }
+
+        private void bAyarlar_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            fAyarlar f = new fAyarlar();
+            f.ShowDialog();
+            Cursor.Current = Cursors.Default;
+        }
     }
 }

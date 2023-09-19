@@ -40,6 +40,24 @@
     <Property Name="Tarih" Type="datetime" />
     <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdSoyad" Type="nvarchar" MaxLength="100" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+    <Property Name="EPosta" Type="nvarchar" MaxLength="50" />
+    <Property Name="KullaniciAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sifre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Satis" Type="bit" />
+    <Property Name="Rapor" Type="bit" />
+    <Property Name="Stok" Type="bit" />
+    <Property Name="UrunGiris" Type="bit" />
+    <Property Name="Ayarlar" Type="bit" />
+    <Property Name="FiyatGuncelle" Type="bit" />
+    <Property Name="Yedekleme" Type="bit" />
+  </EntityType>
   <EntityType Name="Sabit">
     <Key>
       <PropertyRef Name="Id" />
@@ -117,6 +135,7 @@
     <EntitySet Name="HizliUrun" EntityType="Self.HizliUrun" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Islem" EntityType="Self.Islem" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="IslemOzet" EntityType="Self.IslemOzet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kullanici" EntityType="Self.Kullanici" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Sabit" EntityType="Self.Sabit" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Satis" EntityType="Self.Satis" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StokHareket" EntityType="Self.StokHareket" Schema="dbo" store:Type="Tables" />

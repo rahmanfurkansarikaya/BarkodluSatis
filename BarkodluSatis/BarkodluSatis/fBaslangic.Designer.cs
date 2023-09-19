@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fBaslangic));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lKullanici = new System.Windows.Forms.Label();
-            this.lIsyeri = new System.Windows.Forms.Label();
             this.bCikis = new System.Windows.Forms.Button();
             this.bKullaniciDegistir = new System.Windows.Forms.Button();
             this.bYedekleme = new System.Windows.Forms.Button();
@@ -41,6 +39,8 @@
             this.bStok = new System.Windows.Forms.Button();
             this.bGenelRapor = new System.Windows.Forms.Button();
             this.bSatisIslemi = new System.Windows.Forms.Button();
+            this.lKullanici = new System.Windows.Forms.Label();
+            this.lIsyeri = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,28 +67,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(801, 402);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // lKullanici
-            // 
-            this.lKullanici.AutoSize = true;
-            this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lKullanici.ForeColor = System.Drawing.Color.White;
-            this.lKullanici.Location = new System.Drawing.Point(31, 452);
-            this.lKullanici.Name = "lKullanici";
-            this.lKullanici.Size = new System.Drawing.Size(66, 20);
-            this.lKullanici.TabIndex = 1;
-            this.lKullanici.Text = "Kullanıcı";
-            // 
-            // lIsyeri
-            // 
-            this.lIsyeri.AutoSize = true;
-            this.lIsyeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lIsyeri.ForeColor = System.Drawing.Color.White;
-            this.lIsyeri.Location = new System.Drawing.Point(31, 15);
-            this.lIsyeri.Name = "lIsyeri";
-            this.lIsyeri.Size = new System.Drawing.Size(66, 20);
-            this.lIsyeri.TabIndex = 2;
-            this.lIsyeri.Text = "Kullanıcı";
             // 
             // bCikis
             // 
@@ -176,6 +154,7 @@
             this.bAyarlar.Text = "AYARLAR";
             this.bAyarlar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bAyarlar.UseVisualStyleBackColor = false;
+            this.bAyarlar.Click += new System.EventHandler(this.bAyarlar_Click);
             // 
             // bUrunGiris
             // 
@@ -248,6 +227,28 @@
             this.bSatisIslemi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bSatisIslemi.UseVisualStyleBackColor = false;
             this.bSatisIslemi.Click += new System.EventHandler(this.bSatisIslemi_Click);
+            // 
+            // lKullanici
+            // 
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lKullanici.ForeColor = System.Drawing.Color.White;
+            this.lKullanici.Location = new System.Drawing.Point(31, 452);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(66, 20);
+            this.lKullanici.TabIndex = 1;
+            this.lKullanici.Text = "Kullanıcı";
+            // 
+            // lIsyeri
+            // 
+            this.lIsyeri.AutoSize = true;
+            this.lIsyeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lIsyeri.ForeColor = System.Drawing.Color.White;
+            this.lIsyeri.Location = new System.Drawing.Point(31, 15);
+            this.lIsyeri.Name = "lIsyeri";
+            this.lIsyeri.Size = new System.Drawing.Size(66, 20);
+            this.lIsyeri.TabIndex = 2;
+            this.lIsyeri.Text = "Kullanıcı";
             // 
             // fBaslangic
             // 

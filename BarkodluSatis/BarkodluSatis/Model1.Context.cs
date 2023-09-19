@@ -35,5 +35,6 @@ namespace BarkodluSatis
         public virtual DbSet<Barkod> Barkod { get; set; }
         public virtual DbSet<StokHareket> StokHareket { get; set; }
         public virtual DbSet<Sabit> Sabit { get; set; }
+        public virtual DbSet<Kullanici> Kullanici { get; set; }
     }
 }
