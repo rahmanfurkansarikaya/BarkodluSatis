@@ -118,6 +118,12 @@
     <EntitySetMapping Name="Sabit">
       <EntityTypeMapping TypeName="BarkodDbModel.Sabit">
         <MappingFragment StoreEntitySet="Sabit">
+          <ScalarProperty Name="Eposta" ColumnName="Eposta" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Unvan" ColumnName="Unvan" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Yazici" ColumnName="Yazici" />
           <ScalarProperty Name="KartKomisyon" ColumnName="KartKomisyon" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>

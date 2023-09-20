@@ -150,5 +150,25 @@ namespace BarkodluSatis
             return sonuc;
         }
 
+        public static void SabitVarsiyilan()
+        {
+            using (var db = new BarkodDbEntities())
+            {
+                if (!db.Sabit.Any())
+                {
+                    Sabit s = new Sabit();
+                    s.KartKomisyon = 0;
+                    s.Yazici = false;
+                    s.AdSoyad = "admin";
+                    s.Unvan = "admin";
+                    s.Adres = "adres";
+                    s.Telefon = "telefon";
+                    s.Eposta = "eposta";
+                    db.Sabit.Add(s);
+                    db.SaveChanges();
+                }
+            }
+        }
+
     }
 }

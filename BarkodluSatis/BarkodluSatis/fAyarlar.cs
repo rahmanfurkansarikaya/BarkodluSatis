@@ -168,7 +168,38 @@ namespace BarkodluSatis
         {
             using (var db = new BarkodDbEntities())
             {
-                gridListeKullanici.DataSource = db.Kullanici.Select(x => new { x.Id,x.AdSoyad, x.KullaniciAd, x.Telefon }).ToList();
+                if (db.Kullanici.Any())
+                {
+                    gridListeKullanici.DataSource = db.Kullanici.Select(x => new { x.Id, x.AdSoyad, x.KullaniciAd, x.Telefon }).ToList();
+                }
+                Islemler.SabitVarsiyilan();
+                var yazici = db.Sabit.FirstOrDefault();
+                chYazmaDurumu.Checked = (bool)yazici.Yazici;
+            }
+        }
+
+        private void chYazmaDurumu_CheckedChanged(object sender, EventArgs e)
+        {
+            using (var db = new BarkodDbEntities())
+            {
+                if (chYazmaDurumu.Checked)
+                {
+
+                    Islemler.SabitVarsiyilan();
+                    var ayarla = db.Sabit.FirstOrDefault();
+                    ayarla.Yazici = true;
+                    db.SaveChanges();
+                    chYazmaDurumu.Text = "Yazma Durumu Aktif";
+
+                }
+                else
+                {
+                    Islemler.SabitVarsiyilan();
+                    var ayarla = db.Sabit.FirstOrDefault();
+                    ayarla.Yazici = false;
+                    db.SaveChanges();
+                    chYazmaDurumu.Text = "Yazma Durumu Pasif";
+                }
             }
         }
     }
