@@ -49,6 +49,11 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chYazmaDurumu = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.bKartKomisyonAyarla = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbTeraziOnEk = new System.Windows.Forms.ComboBox();
+            this.bTeraziOnEkKaydet = new System.Windows.Forms.Button();
             this.lKullaniciId = new BarkodluSatis.lStandart();
             this.lStandart8 = new BarkodluSatis.lStandart();
             this.bIptal = new BarkodluSatis.bStandart();
@@ -66,7 +71,12 @@
             this.lStandart2 = new BarkodluSatis.lStandart();
             this.lStandart1 = new BarkodluSatis.lStandart();
             this.gridListeKullanici = new BarkodluSatis.gridOzel();
+            this.tTeraziOnEk = new BarkodluSatis.tNumeric();
+            this.lStandart11 = new BarkodluSatis.lStandart();
+            this.lStandart10 = new BarkodluSatis.lStandart();
+            this.tKartKomisyon = new BarkodluSatis.tNumeric();
             this.lStandart9 = new BarkodluSatis.lStandart();
+            this.bTeraziOnEkSil = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -76,6 +86,8 @@
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridListeKullanici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -251,6 +263,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.panel3);
+            this.tabPage2.Controls.Add(this.lStandart11);
+            this.tabPage2.Controls.Add(this.lStandart10);
+            this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.lStandart9);
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -267,7 +283,7 @@
             this.panel1.Controls.Add(this.chYazmaDurumu);
             this.panel1.Location = new System.Drawing.Point(22, 74);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 222);
+            this.panel1.Size = new System.Drawing.Size(183, 69);
             this.panel1.TabIndex = 0;
             // 
             // chYazmaDurumu
@@ -286,6 +302,64 @@
             this.chYazmaDurumu.Text = "Yazma Durumu Pasif";
             this.chYazmaDurumu.UseVisualStyleBackColor = false;
             this.chYazmaDurumu.CheckedChanged += new System.EventHandler(this.chYazmaDurumu_CheckedChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.bKartKomisyonAyarla);
+            this.panel2.Controls.Add(this.tKartKomisyon);
+            this.panel2.Location = new System.Drawing.Point(228, 74);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(183, 69);
+            this.panel2.TabIndex = 2;
+            // 
+            // bKartKomisyonAyarla
+            // 
+            this.bKartKomisyonAyarla.BackColor = System.Drawing.Color.YellowGreen;
+            this.bKartKomisyonAyarla.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.bKartKomisyonAyarla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bKartKomisyonAyarla.Image = ((System.Drawing.Image)(resources.GetObject("bKartKomisyonAyarla.Image")));
+            this.bKartKomisyonAyarla.Location = new System.Drawing.Point(105, 3);
+            this.bKartKomisyonAyarla.Name = "bKartKomisyonAyarla";
+            this.bKartKomisyonAyarla.Size = new System.Drawing.Size(66, 35);
+            this.bKartKomisyonAyarla.TabIndex = 14;
+            this.bKartKomisyonAyarla.UseVisualStyleBackColor = false;
+            this.bKartKomisyonAyarla.Click += new System.EventHandler(this.bKartKomisyonAyarla_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.tTeraziOnEk);
+            this.panel3.Controls.Add(this.bTeraziOnEkSil);
+            this.panel3.Controls.Add(this.bTeraziOnEkKaydet);
+            this.panel3.Controls.Add(this.cmbTeraziOnEk);
+            this.panel3.Location = new System.Drawing.Point(434, 74);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(201, 90);
+            this.panel3.TabIndex = 4;
+            // 
+            // cmbTeraziOnEk
+            // 
+            this.cmbTeraziOnEk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbTeraziOnEk.FormattingEnabled = true;
+            this.cmbTeraziOnEk.Location = new System.Drawing.Point(3, 7);
+            this.cmbTeraziOnEk.Name = "cmbTeraziOnEk";
+            this.cmbTeraziOnEk.Size = new System.Drawing.Size(115, 28);
+            this.cmbTeraziOnEk.TabIndex = 0;
+            // 
+            // bTeraziOnEkKaydet
+            // 
+            this.bTeraziOnEkKaydet.BackColor = System.Drawing.Color.YellowGreen;
+            this.bTeraziOnEkKaydet.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.bTeraziOnEkKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTeraziOnEkKaydet.Image = ((System.Drawing.Image)(resources.GetObject("bTeraziOnEkKaydet.Image")));
+            this.bTeraziOnEkKaydet.Location = new System.Drawing.Point(124, 45);
+            this.bTeraziOnEkKaydet.Name = "bTeraziOnEkKaydet";
+            this.bTeraziOnEkKaydet.Size = new System.Drawing.Size(68, 35);
+            this.bTeraziOnEkKaydet.TabIndex = 15;
+            this.bTeraziOnEkKaydet.UseVisualStyleBackColor = false;
+            this.bTeraziOnEkKaydet.Click += new System.EventHandler(this.bTeraziOnEkKaydet_Click);
             // 
             // lKullaniciId
             // 
@@ -514,6 +588,48 @@
             this.gridListeKullanici.TabIndex = 3;
             this.gridListeKullanici.TabStop = false;
             // 
+            // tTeraziOnEk
+            // 
+            this.tTeraziOnEk.BackColor = System.Drawing.Color.White;
+            this.tTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tTeraziOnEk.Location = new System.Drawing.Point(3, 48);
+            this.tTeraziOnEk.Name = "tTeraziOnEk";
+            this.tTeraziOnEk.Size = new System.Drawing.Size(115, 26);
+            this.tTeraziOnEk.TabIndex = 16;
+            this.tTeraziOnEk.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lStandart11
+            // 
+            this.lStandart11.AutoSize = true;
+            this.lStandart11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart11.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart11.Location = new System.Drawing.Point(434, 48);
+            this.lStandart11.Name = "lStandart11";
+            this.lStandart11.Size = new System.Drawing.Size(136, 20);
+            this.lStandart11.TabIndex = 3;
+            this.lStandart11.Text = "Terazi Ön Ek Ayar";
+            // 
+            // lStandart10
+            // 
+            this.lStandart10.AutoSize = true;
+            this.lStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart10.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart10.Location = new System.Drawing.Point(229, 48);
+            this.lStandart10.Name = "lStandart10";
+            this.lStandart10.Size = new System.Drawing.Size(110, 20);
+            this.lStandart10.TabIndex = 3;
+            this.lStandart10.Text = "Kart Komisyon";
+            // 
+            // tKartKomisyon
+            // 
+            this.tKartKomisyon.BackColor = System.Drawing.Color.White;
+            this.tKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tKartKomisyon.Location = new System.Drawing.Point(4, 6);
+            this.tKartKomisyon.Name = "tKartKomisyon";
+            this.tKartKomisyon.Size = new System.Drawing.Size(95, 26);
+            this.tKartKomisyon.TabIndex = 0;
+            this.tKartKomisyon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // lStandart9
             // 
             this.lStandart9.AutoSize = true;
@@ -524,6 +640,19 @@
             this.lStandart9.Size = new System.Drawing.Size(126, 20);
             this.lStandart9.TabIndex = 1;
             this.lStandart9.Text = "Yazıcı Aktif/Pasif";
+            // 
+            // bTeraziOnEkSil
+            // 
+            this.bTeraziOnEkSil.BackColor = System.Drawing.Color.Firebrick;
+            this.bTeraziOnEkSil.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.bTeraziOnEkSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTeraziOnEkSil.Image = ((System.Drawing.Image)(resources.GetObject("bTeraziOnEkSil.Image")));
+            this.bTeraziOnEkSil.Location = new System.Drawing.Point(124, 4);
+            this.bTeraziOnEkSil.Name = "bTeraziOnEkSil";
+            this.bTeraziOnEkSil.Size = new System.Drawing.Size(68, 35);
+            this.bTeraziOnEkSil.TabIndex = 15;
+            this.bTeraziOnEkSil.UseVisualStyleBackColor = false;
+            this.bTeraziOnEkSil.Click += new System.EventHandler(this.bTeraziOnEkSil_Click);
             // 
             // fAyarlar
             // 
@@ -548,6 +677,10 @@
             this.tabPage2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridListeKullanici)).EndInit();
             this.ResumeLayout(false);
 
@@ -590,5 +723,15 @@
         private lStandart lStandart9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox chYazmaDurumu;
+        private lStandart lStandart10;
+        private System.Windows.Forms.Panel panel2;
+        private tNumeric tKartKomisyon;
+        private System.Windows.Forms.Button bKartKomisyonAyarla;
+        private System.Windows.Forms.Panel panel3;
+        private lStandart lStandart11;
+        private System.Windows.Forms.Button bTeraziOnEkKaydet;
+        private System.Windows.Forms.ComboBox cmbTeraziOnEk;
+        private tNumeric tTeraziOnEk;
+        private System.Windows.Forms.Button bTeraziOnEkSil;
     }
 }
