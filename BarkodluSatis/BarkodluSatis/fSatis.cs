@@ -139,6 +139,11 @@ namespace BarkodluSatis
             tGenelToplam.Text = 0.ToString("C2");
             tParaUstu.Text = 0.ToString("C2");
             tOdenen.Text = 0.ToString("C2");
+            using (var db = new BarkodDbEntities())
+            {
+                var sabit = db.Sabit.FirstOrDefault();
+                chYazdirmaDurumu.Checked = Convert.ToBoolean(sabit.Yazici);
+            }
         }
 
         private void HizliButonDoldur()
@@ -403,7 +408,12 @@ namespace BarkodluSatis
                 var islemnoartir = db.Islem.First();
                 islemnoartir.IslemNo += 1;
                 db.SaveChanges();
-                MessageBox.Show("Yazdırma İşlemi Yap");
+                if (chYazdirmaDurumu.Checked)
+                {
+                    //Yazdır...
+                    Yazdir yazdir = new Yazdir(islemno);
+                    yazdir.YazdirmayaBasla();
+                }
                 Temizle();
             }
         }
