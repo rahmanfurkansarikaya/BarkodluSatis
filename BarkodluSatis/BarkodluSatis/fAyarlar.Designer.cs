@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAyarlar));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -65,6 +65,16 @@
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lStandart24 = new BarkodluSatis.lStandart();
+            this.lStandart23 = new BarkodluSatis.lStandart();
+            this.lStandart22 = new BarkodluSatis.lStandart();
+            this.tIsyeriEposta = new BarkodluSatis.tStandart();
+            this.tIsyeriAdSoyad = new BarkodluSatis.tStandart();
+            this.tIsyeriAdres = new BarkodluSatis.tStandart();
+            this.tIsyeriUnvan = new BarkodluSatis.tStandart();
+            this.tIsyeriTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.lStandart20 = new BarkodluSatis.lStandart();
+            this.lStandart21 = new BarkodluSatis.lStandart();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lStandart9 = new BarkodluSatis.lStandart();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -82,16 +92,16 @@
             this.lStandart19 = new BarkodluSatis.lStandart();
             this.bStandart1 = new BarkodluSatis.bStandart();
             this.lStandart18 = new BarkodluSatis.lStandart();
-            this.lStandart21 = new BarkodluSatis.lStandart();
-            this.lStandart20 = new BarkodluSatis.lStandart();
-            this.tIsyeriTelefon = new System.Windows.Forms.MaskedTextBox();
-            this.tIsyeriUnvan = new BarkodluSatis.tStandart();
-            this.tIsyeriAdres = new BarkodluSatis.tStandart();
-            this.tIsyeriAdSoyad = new BarkodluSatis.tStandart();
-            this.tIsyeriEposta = new BarkodluSatis.tStandart();
-            this.lStandart22 = new BarkodluSatis.lStandart();
-            this.lStandart23 = new BarkodluSatis.lStandart();
-            this.lStandart24 = new BarkodluSatis.lStandart();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.bYedekleme = new System.Windows.Forms.Button();
+            this.lStandart16 = new BarkodluSatis.lStandart();
+            this.lStandart15 = new BarkodluSatis.lStandart();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lStandart14 = new BarkodluSatis.lStandart();
+            this.lStandart12 = new BarkodluSatis.lStandart();
+            this.bYedektenYukle = new BarkodluSatis.bStandart();
+            this.lStandart13 = new BarkodluSatis.lStandart();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -106,12 +116,16 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -447,34 +461,34 @@
             this.gridListeKullanici.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.gridListeKullanici.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridListeKullanici.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListeKullanici.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListeKullanici.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridListeKullanici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridListeKullanici.ContextMenuStrip = this.contextMenuStrip1;
-            this.gridListeKullanici.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridListeKullanici.DefaultCellStyle = dataGridViewCellStyle1;
             this.gridListeKullanici.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridListeKullanici.EnableHeadersVisualStyles = false;
             this.gridListeKullanici.Location = new System.Drawing.Point(0, 0);
             this.gridListeKullanici.Name = "gridListeKullanici";
             this.gridListeKullanici.ReadOnly = true;
-            this.gridListeKullanici.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridListeKullanici.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridListeKullanici.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListeKullanici.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListeKullanici.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.gridListeKullanici.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.gridListeKullanici.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.gridListeKullanici.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -517,7 +531,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(977, 520);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "YAZICI-TERAZİ-KOMİSYON-İŞYERİ BİLGİ";
+            this.tabPage2.Text = "YAZICI / TERAZİ / KOMİSYON / İŞYERİ BİLGİ";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel5
@@ -536,6 +550,107 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(304, 364);
             this.panel5.TabIndex = 28;
+            // 
+            // lStandart24
+            // 
+            this.lStandart24.AutoSize = true;
+            this.lStandart24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart24.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart24.Location = new System.Drawing.Point(23, 3);
+            this.lStandart24.Name = "lStandart24";
+            this.lStandart24.Size = new System.Drawing.Size(78, 20);
+            this.lStandart24.TabIndex = 21;
+            this.lStandart24.Text = "Ad Soyad";
+            // 
+            // lStandart23
+            // 
+            this.lStandart23.AutoSize = true;
+            this.lStandart23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart23.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart23.Location = new System.Drawing.Point(23, 233);
+            this.lStandart23.Name = "lStandart23";
+            this.lStandart23.Size = new System.Drawing.Size(62, 20);
+            this.lStandart23.TabIndex = 22;
+            this.lStandart23.Text = "Telefon";
+            // 
+            // lStandart22
+            // 
+            this.lStandart22.AutoSize = true;
+            this.lStandart22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart22.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart22.Location = new System.Drawing.Point(23, 300);
+            this.lStandart22.Name = "lStandart22";
+            this.lStandart22.Size = new System.Drawing.Size(65, 20);
+            this.lStandart22.TabIndex = 23;
+            this.lStandart22.Text = "E Posta";
+            // 
+            // tIsyeriEposta
+            // 
+            this.tIsyeriEposta.BackColor = System.Drawing.Color.White;
+            this.tIsyeriEposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tIsyeriEposta.Location = new System.Drawing.Point(27, 323);
+            this.tIsyeriEposta.Name = "tIsyeriEposta";
+            this.tIsyeriEposta.Size = new System.Drawing.Size(250, 26);
+            this.tIsyeriEposta.TabIndex = 19;
+            // 
+            // tIsyeriAdSoyad
+            // 
+            this.tIsyeriAdSoyad.BackColor = System.Drawing.Color.White;
+            this.tIsyeriAdSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tIsyeriAdSoyad.Location = new System.Drawing.Point(27, 33);
+            this.tIsyeriAdSoyad.Name = "tIsyeriAdSoyad";
+            this.tIsyeriAdSoyad.Size = new System.Drawing.Size(250, 26);
+            this.tIsyeriAdSoyad.TabIndex = 16;
+            // 
+            // tIsyeriAdres
+            // 
+            this.tIsyeriAdres.BackColor = System.Drawing.Color.White;
+            this.tIsyeriAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tIsyeriAdres.Location = new System.Drawing.Point(27, 154);
+            this.tIsyeriAdres.Multiline = true;
+            this.tIsyeriAdres.Name = "tIsyeriAdres";
+            this.tIsyeriAdres.Size = new System.Drawing.Size(250, 76);
+            this.tIsyeriAdres.TabIndex = 16;
+            // 
+            // tIsyeriUnvan
+            // 
+            this.tIsyeriUnvan.BackColor = System.Drawing.Color.White;
+            this.tIsyeriUnvan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tIsyeriUnvan.Location = new System.Drawing.Point(27, 92);
+            this.tIsyeriUnvan.Name = "tIsyeriUnvan";
+            this.tIsyeriUnvan.Size = new System.Drawing.Size(250, 26);
+            this.tIsyeriUnvan.TabIndex = 16;
+            // 
+            // tIsyeriTelefon
+            // 
+            this.tIsyeriTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tIsyeriTelefon.Location = new System.Drawing.Point(27, 259);
+            this.tIsyeriTelefon.Mask = "(999) 000-0000";
+            this.tIsyeriTelefon.Name = "tIsyeriTelefon";
+            this.tIsyeriTelefon.Size = new System.Drawing.Size(250, 26);
+            this.tIsyeriTelefon.TabIndex = 18;
+            // 
+            // lStandart20
+            // 
+            this.lStandart20.AutoSize = true;
+            this.lStandart20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart20.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart20.Location = new System.Drawing.Point(23, 131);
+            this.lStandart20.Name = "lStandart20";
+            this.lStandart20.Size = new System.Drawing.Size(51, 20);
+            this.lStandart20.TabIndex = 24;
+            this.lStandart20.Text = "Adres";
+            // 
+            // lStandart21
+            // 
+            this.lStandart21.AutoSize = true;
+            this.lStandart21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart21.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart21.Location = new System.Drawing.Point(23, 69);
+            this.lStandart21.Name = "lStandart21";
+            this.lStandart21.Size = new System.Drawing.Size(55, 20);
+            this.lStandart21.TabIndex = 25;
+            this.lStandart21.Text = "Ünvan";
             // 
             // panel4
             // 
@@ -740,106 +855,132 @@
             this.lStandart18.TabIndex = 5;
             this.lStandart18.Text = "YAZICI - TERAZİ - KOMİSYON İŞLEMLERİ";
             // 
-            // lStandart21
+            // tabPage3
             // 
-            this.lStandart21.AutoSize = true;
-            this.lStandart21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart21.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart21.Location = new System.Drawing.Point(23, 69);
-            this.lStandart21.Name = "lStandart21";
-            this.lStandart21.Size = new System.Drawing.Size(55, 20);
-            this.lStandart21.TabIndex = 25;
-            this.lStandart21.Text = "Ünvan";
+            this.tabPage3.Controls.Add(this.panel7);
+            this.tabPage3.Controls.Add(this.panel6);
+            this.tabPage3.Controls.Add(this.lStandart13);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(977, 520);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "YEDEKLEME / YÜKLEME";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // lStandart20
+            // panel7
             // 
-            this.lStandart20.AutoSize = true;
-            this.lStandart20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart20.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart20.Location = new System.Drawing.Point(23, 131);
-            this.lStandart20.Name = "lStandart20";
-            this.lStandart20.Size = new System.Drawing.Size(51, 20);
-            this.lStandart20.TabIndex = 24;
-            this.lStandart20.Text = "Adres";
+            this.panel7.Controls.Add(this.bYedekleme);
+            this.panel7.Controls.Add(this.lStandart16);
+            this.panel7.Controls.Add(this.lStandart15);
+            this.panel7.Location = new System.Drawing.Point(34, 79);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(442, 202);
+            this.panel7.TabIndex = 25;
             // 
-            // tIsyeriTelefon
+            // bYedekleme
             // 
-            this.tIsyeriTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tIsyeriTelefon.Location = new System.Drawing.Point(27, 259);
-            this.tIsyeriTelefon.Mask = "(999) 000-0000";
-            this.tIsyeriTelefon.Name = "tIsyeriTelefon";
-            this.tIsyeriTelefon.Size = new System.Drawing.Size(250, 26);
-            this.tIsyeriTelefon.TabIndex = 18;
+            this.bYedekleme.BackColor = System.Drawing.Color.LightSlateGray;
+            this.bYedekleme.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
+            this.bYedekleme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bYedekleme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bYedekleme.ForeColor = System.Drawing.Color.White;
+            this.bYedekleme.Image = ((System.Drawing.Image)(resources.GetObject("bYedekleme.Image")));
+            this.bYedekleme.Location = new System.Drawing.Point(7, 103);
+            this.bYedekleme.Name = "bYedekleme";
+            this.bYedekleme.Size = new System.Drawing.Size(236, 90);
+            this.bYedekleme.TabIndex = 25;
+            this.bYedekleme.Text = "YEDEKLEME\r\n(BACKUP)";
+            this.bYedekleme.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bYedekleme.UseVisualStyleBackColor = false;
+            this.bYedekleme.Click += new System.EventHandler(this.bYedekleme_Click);
             // 
-            // tIsyeriUnvan
+            // lStandart16
             // 
-            this.tIsyeriUnvan.BackColor = System.Drawing.Color.White;
-            this.tIsyeriUnvan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tIsyeriUnvan.Location = new System.Drawing.Point(27, 92);
-            this.tIsyeriUnvan.Name = "tIsyeriUnvan";
-            this.tIsyeriUnvan.Size = new System.Drawing.Size(250, 26);
-            this.tIsyeriUnvan.TabIndex = 16;
+            this.lStandart16.AutoSize = true;
+            this.lStandart16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lStandart16.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart16.Location = new System.Drawing.Point(3, 41);
+            this.lStandart16.Name = "lStandart16";
+            this.lStandart16.Size = new System.Drawing.Size(414, 51);
+            this.lStandart16.TabIndex = 24;
+            this.lStandart16.Text = "Belirli aralıklarla yedek almanızı kesinlikle tavsiye ederiz.\r\nAldığınız bu yedek" +
+    "leri genellikle sistemin yüklü olmadığı sürücüye\r\n(genellikle D sürücüsü) kaydet" +
+    "melisiniz ya da flash diske.\r\n";
             // 
-            // tIsyeriAdres
+            // lStandart15
             // 
-            this.tIsyeriAdres.BackColor = System.Drawing.Color.White;
-            this.tIsyeriAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tIsyeriAdres.Location = new System.Drawing.Point(27, 154);
-            this.tIsyeriAdres.Multiline = true;
-            this.tIsyeriAdres.Name = "tIsyeriAdres";
-            this.tIsyeriAdres.Size = new System.Drawing.Size(250, 76);
-            this.tIsyeriAdres.TabIndex = 16;
+            this.lStandart15.AutoSize = true;
+            this.lStandart15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lStandart15.ForeColor = System.Drawing.Color.SlateGray;
+            this.lStandart15.Location = new System.Drawing.Point(3, 10);
+            this.lStandart15.Name = "lStandart15";
+            this.lStandart15.Size = new System.Drawing.Size(182, 20);
+            this.lStandart15.TabIndex = 23;
+            this.lStandart15.Text = "YEDEKLEME İŞLEMİ";
             // 
-            // tIsyeriAdSoyad
+            // panel6
             // 
-            this.tIsyeriAdSoyad.BackColor = System.Drawing.Color.White;
-            this.tIsyeriAdSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tIsyeriAdSoyad.Location = new System.Drawing.Point(27, 33);
-            this.tIsyeriAdSoyad.Name = "tIsyeriAdSoyad";
-            this.tIsyeriAdSoyad.Size = new System.Drawing.Size(250, 26);
-            this.tIsyeriAdSoyad.TabIndex = 16;
+            this.panel6.Controls.Add(this.lStandart14);
+            this.panel6.Controls.Add(this.lStandart12);
+            this.panel6.Controls.Add(this.bYedektenYukle);
+            this.panel6.Location = new System.Drawing.Point(518, 79);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(442, 202);
+            this.panel6.TabIndex = 24;
             // 
-            // tIsyeriEposta
+            // lStandart14
             // 
-            this.tIsyeriEposta.BackColor = System.Drawing.Color.White;
-            this.tIsyeriEposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tIsyeriEposta.Location = new System.Drawing.Point(27, 323);
-            this.tIsyeriEposta.Name = "tIsyeriEposta";
-            this.tIsyeriEposta.Size = new System.Drawing.Size(250, 26);
-            this.tIsyeriEposta.TabIndex = 19;
+            this.lStandart14.AutoSize = true;
+            this.lStandart14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lStandart14.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart14.Location = new System.Drawing.Point(1, 41);
+            this.lStandart14.Name = "lStandart14";
+            this.lStandart14.Size = new System.Drawing.Size(392, 51);
+            this.lStandart14.TabIndex = 23;
+            this.lStandart14.Text = "Sistem çökmelerine karşı yapacağınız işlemdir.\r\nBarkodlu Satış Programını tekrar " +
+    "kurduktan sonra önceden\r\nalmış olduğunuz yedeği seçerek Restore işlemini yapabil" +
+    "irsiz.";
             // 
-            // lStandart22
+            // lStandart12
             // 
-            this.lStandart22.AutoSize = true;
-            this.lStandart22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart22.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart22.Location = new System.Drawing.Point(23, 300);
-            this.lStandart22.Name = "lStandart22";
-            this.lStandart22.Size = new System.Drawing.Size(65, 20);
-            this.lStandart22.TabIndex = 23;
-            this.lStandart22.Text = "E Posta";
+            this.lStandart12.AutoSize = true;
+            this.lStandart12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lStandart12.ForeColor = System.Drawing.Color.SlateGray;
+            this.lStandart12.Location = new System.Drawing.Point(3, 10);
+            this.lStandart12.Name = "lStandart12";
+            this.lStandart12.Size = new System.Drawing.Size(307, 20);
+            this.lStandart12.TabIndex = 22;
+            this.lStandart12.Text = "YEDEKTEN GERİ YÜKLEME İŞLEMİ";
             // 
-            // lStandart23
+            // bYedektenYukle
             // 
-            this.lStandart23.AutoSize = true;
-            this.lStandart23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart23.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart23.Location = new System.Drawing.Point(23, 233);
-            this.lStandart23.Name = "lStandart23";
-            this.lStandart23.Size = new System.Drawing.Size(62, 20);
-            this.lStandart23.TabIndex = 22;
-            this.lStandart23.Text = "Telefon";
+            this.bYedektenYukle.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.bYedektenYukle.FlatAppearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
+            this.bYedektenYukle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bYedektenYukle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bYedektenYukle.ForeColor = System.Drawing.Color.White;
+            this.bYedektenYukle.Image = ((System.Drawing.Image)(resources.GetObject("bYedektenYukle.Image")));
+            this.bYedektenYukle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bYedektenYukle.Location = new System.Drawing.Point(7, 103);
+            this.bYedektenYukle.Margin = new System.Windows.Forms.Padding(1);
+            this.bYedektenYukle.Name = "bYedektenYukle";
+            this.bYedektenYukle.Size = new System.Drawing.Size(236, 90);
+            this.bYedektenYukle.TabIndex = 21;
+            this.bYedektenYukle.Text = "YEDEKTEN YÜKLE(RESTORE)";
+            this.bYedektenYukle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bYedektenYukle.UseVisualStyleBackColor = false;
             // 
-            // lStandart24
+            // lStandart13
             // 
-            this.lStandart24.AutoSize = true;
-            this.lStandart24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart24.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart24.Location = new System.Drawing.Point(23, 3);
-            this.lStandart24.Name = "lStandart24";
-            this.lStandart24.Size = new System.Drawing.Size(78, 20);
-            this.lStandart24.TabIndex = 21;
-            this.lStandart24.Text = "Ad Soyad";
+            this.lStandart13.AutoSize = true;
+            this.lStandart13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart13.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart13.Location = new System.Drawing.Point(8, 14);
+            this.lStandart13.Name = "lStandart13";
+            this.lStandart13.Size = new System.Drawing.Size(422, 20);
+            this.lStandart13.TabIndex = 23;
+            this.lStandart13.Text = "YEDEKLEME / YEDEKTEN GERİ YÜKLEME İŞLEMLERİ";
             // 
             // fAyarlar
             // 
@@ -873,6 +1014,12 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -939,5 +1086,15 @@
         private System.Windows.Forms.MaskedTextBox tIsyeriTelefon;
         private lStandart lStandart20;
         private lStandart lStandart21;
+        private System.Windows.Forms.TabPage tabPage3;
+        private bStandart bYedektenYukle;
+        private lStandart lStandart12;
+        private System.Windows.Forms.Panel panel6;
+        private lStandart lStandart13;
+        private System.Windows.Forms.Panel panel7;
+        private lStandart lStandart15;
+        private lStandart lStandart14;
+        private lStandart lStandart16;
+        private System.Windows.Forms.Button bYedekleme;
     }
 }

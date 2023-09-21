@@ -37,6 +37,16 @@ namespace BarkodluSatis
             var liste = db.Satis.Where(x => x.IslemNo == IslemNo).ToList();
             if (isyeri != null && liste != null)
             {
+                int kagituzunluk = 120;
+                for (int i = 0; i < liste.Count; i++)
+                {
+                    kagituzunluk += 15;
+                }
+                PaperSize ps58 = new PaperSize("58mm Termal", 220, kagituzunluk + 120);
+                pd.DefaultPageSettings.PaperSize = ps58;
+
+
+
                 Font fontBaslik = new Font("Calibri", 10, FontStyle.Bold);
                 Font fontBilgi = new Font("Calibri", 8, FontStyle.Bold);
                 Font fontIcerikBaslik = new Font("Calibri", 8, FontStyle.Underline);
@@ -66,13 +76,10 @@ namespace BarkodluSatis
                     yukseklik += 15;
                     genelToplam += Convert.ToDouble(item.Toplam);
                 }
-                e.Graphics.DrawString("-------------------------------------------------------------------", fontBilgi, Brushes.Black, new Point(5, yukseklik+15));
-                e.Graphics.DrawString("TOPLAM : " + genelToplam.ToString("C2"),fontBaslik,Brushes.Black,new Point(5,yukseklik+30));
-                e.Graphics.DrawString("-------------------------------------------------------------------", fontBilgi, Brushes.Black, new Point(5, yukseklik+45));
+                e.Graphics.DrawString("-------------------------------------------------------------------", fontBilgi, Brushes.Black, new Point(5, yukseklik));
+                e.Graphics.DrawString("TOPLAM : " + genelToplam.ToString("C2"),fontBaslik,Brushes.Black,new Point(5,yukseklik+20));
+                e.Graphics.DrawString("-------------------------------------------------------------------", fontBilgi, Brushes.Black, new Point(5, yukseklik+40));
                 e.Graphics.DrawString("(Mali Değeri Yoktur)",fontBilgi,Brushes.Black,new Point(5,yukseklik+60));
-
-                PaperSize ps58 = new PaperSize("58mm Termal",220,yukseklik+75);
-                pd.DefaultPageSettings.PaperSize = ps58;
             }
         }
     }

@@ -116,9 +116,10 @@
             this.bYedekleme.Name = "bYedekleme";
             this.bYedekleme.Size = new System.Drawing.Size(261, 128);
             this.bYedekleme.TabIndex = 6;
-            this.bYedekleme.Text = "YEDEKLEME";
+            this.bYedekleme.Text = "YEDEKLEME\r\n(BACKUP)";
             this.bYedekleme.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bYedekleme.UseVisualStyleBackColor = false;
+            this.bYedekleme.Click += new System.EventHandler(this.bYedekleme_Click);
             // 
             // bFiyatGuncelle
             // 

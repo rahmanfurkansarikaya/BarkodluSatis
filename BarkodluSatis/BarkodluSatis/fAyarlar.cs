@@ -317,5 +317,10 @@ namespace BarkodluSatis
                 }
             }
         }
+
+        private void bYedekleme_Click(object sender, EventArgs e)
+        {
+            Islemler.Backup();
+        }
     }
 }

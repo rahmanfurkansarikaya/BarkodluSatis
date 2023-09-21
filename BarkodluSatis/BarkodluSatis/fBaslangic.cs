@@ -73,5 +73,10 @@ namespace BarkodluSatis
             f.ShowDialog();
             Cursor.Current = Cursors.Default;
         }
+
+        private void bYedekleme_Click(object sender, EventArgs e)
+        {
+            Islemler.Backup();
+        }
     }
 }

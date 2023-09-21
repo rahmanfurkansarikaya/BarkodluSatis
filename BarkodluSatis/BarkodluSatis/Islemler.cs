@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace BarkodluSatis
 {
@@ -166,6 +168,37 @@ namespace BarkodluSatis
                     s.Eposta = "eposta";
                     db.Sabit.Add(s);
                     db.SaveChanges();
+                }
+            }
+        }
+
+        public static void Backup()
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Veri Yedek Dosyası|0.bak";
+            save.FileName = "Barkodlu_Satis_Programi_" + DateTime.Now.ToShortDateString();
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    if (File.Exists(save.FileName))
+                    {
+                        File.Delete(save.FileName);
+                    }
+                    var dbHedef = save.FileName;
+                    string dbKaynak = Application.StartupPath + @"\BarkodDb.mdf";
+                    using (var db = new BarkodDbEntities())
+                    {
+                        var cmd = @"BACKUP DATABASE [" + dbKaynak + "] TO DISK = '" + dbHedef + "'";
+                        db.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction,cmd);
+                    }
+                    Cursor.Current = Cursors.Default;
+                    MessageBox.Show("Yedekleme Tamamlandı");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }
