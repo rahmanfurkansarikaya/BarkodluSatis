@@ -185,6 +185,12 @@ namespace BarkodluSatis
                 cmbTeraziOnEk.DisplayMember = "TeraziOnEk";
                 cmbTeraziOnEk.ValueMember = "Id";
                 cmbTeraziOnEk.DataSource = terazionek;
+
+                tIsyeriAdSoyad.Text = sabitler.AdSoyad;
+                tIsyeriUnvan.Text = sabitler.Unvan;
+                tIsyeriAdres.Text = sabitler.Adres;
+                tIsyeriTelefon.Text = sabitler.Telefon;
+                tIsyeriEposta.Text = sabitler.Eposta;
             }
         }
 
@@ -285,6 +291,30 @@ namespace BarkodluSatis
             else
             {
                 MessageBox.Show("Ön Ek Seçiniz");
+            }
+        }
+
+        private void bIsyeriKaydet_Click(object sender, EventArgs e)
+        {
+            if (tIsyeriAdSoyad.Text != "" && tIsyeriUnvan.Text != "" && tIsyeriAdSoyad.Text != "" && tIsyeriTelefon.Text != "")
+            {
+                using (var db = new BarkodDbEntities())
+                {
+                    var isyeri = db.Sabit.FirstOrDefault();
+                    isyeri.AdSoyad = tIsyeriAdSoyad.Text;
+                    isyeri.Unvan = tIsyeriUnvan.Text;
+                    isyeri.Adres = tIsyeriAdres.Text;
+                    isyeri.Telefon = tIsyeriTelefon.Text;
+                    isyeri.Eposta = tIsyeriEposta.Text;
+                    db.SaveChanges();
+                    MessageBox.Show("İş Yeri Bilgileri Kaydedildi");
+                    var yeni = db.Sabit.FirstOrDefault();
+                    tIsyeriAdSoyad.Text = yeni.AdSoyad;
+                    tIsyeriUnvan.Text = yeni.Unvan;
+                    tIsyeriAdres.Text = yeni.Adres;
+                    tIsyeriTelefon.Text = yeni.Telefon;
+                    tIsyeriEposta.Text = yeni.Eposta;
+                }
             }
         }
     }

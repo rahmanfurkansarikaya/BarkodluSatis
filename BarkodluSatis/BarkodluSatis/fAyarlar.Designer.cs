@@ -30,11 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAyarlar));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lKullaniciId = new BarkodluSatis.lStandart();
+            this.lStandart8 = new BarkodluSatis.lStandart();
             this.chYedekleme = new System.Windows.Forms.CheckBox();
             this.chFiyatGuncelle = new System.Windows.Forms.CheckBox();
             this.chStok = new System.Windows.Forms.CheckBox();
@@ -42,24 +44,11 @@
             this.chUrunGiris = new System.Windows.Forms.CheckBox();
             this.chRapor = new System.Windows.Forms.CheckBox();
             this.chSatisEkrani = new System.Windows.Forms.CheckBox();
-            this.tTelefon = new System.Windows.Forms.MaskedTextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.chYazmaDurumu = new System.Windows.Forms.CheckBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bKartKomisyonAyarla = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.cmbTeraziOnEk = new System.Windows.Forms.ComboBox();
-            this.bTeraziOnEkKaydet = new System.Windows.Forms.Button();
-            this.lKullaniciId = new BarkodluSatis.lStandart();
-            this.lStandart8 = new BarkodluSatis.lStandart();
             this.bIptal = new BarkodluSatis.bStandart();
             this.bKaydet = new BarkodluSatis.bStandart();
             this.tSifreTekrar = new BarkodluSatis.tStandart();
             this.lStandart7 = new BarkodluSatis.lStandart();
+            this.tTelefon = new System.Windows.Forms.MaskedTextBox();
             this.tSifre = new BarkodluSatis.tStandart();
             this.lStandart6 = new BarkodluSatis.lStandart();
             this.tKullanici = new BarkodluSatis.tStandart();
@@ -71,24 +60,52 @@
             this.lStandart2 = new BarkodluSatis.lStandart();
             this.lStandart1 = new BarkodluSatis.lStandart();
             this.gridListeKullanici = new BarkodluSatis.gridOzel();
-            this.tTeraziOnEk = new BarkodluSatis.tNumeric();
-            this.lStandart11 = new BarkodluSatis.lStandart();
-            this.lStandart10 = new BarkodluSatis.lStandart();
-            this.tKartKomisyon = new BarkodluSatis.tNumeric();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.lStandart9 = new BarkodluSatis.lStandart();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.chYazmaDurumu = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.bKartKomisyonAyarla = new System.Windows.Forms.Button();
+            this.tKartKomisyon = new BarkodluSatis.tNumeric();
+            this.lStandart10 = new BarkodluSatis.lStandart();
+            this.lStandart11 = new BarkodluSatis.lStandart();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tTeraziOnEk = new BarkodluSatis.tNumeric();
             this.bTeraziOnEkSil = new System.Windows.Forms.Button();
+            this.bTeraziOnEkKaydet = new System.Windows.Forms.Button();
+            this.cmbTeraziOnEk = new System.Windows.Forms.ComboBox();
+            this.lStandart19 = new BarkodluSatis.lStandart();
+            this.bStandart1 = new BarkodluSatis.bStandart();
+            this.lStandart18 = new BarkodluSatis.lStandart();
+            this.lStandart21 = new BarkodluSatis.lStandart();
+            this.lStandart20 = new BarkodluSatis.lStandart();
+            this.tIsyeriTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.tIsyeriUnvan = new BarkodluSatis.tStandart();
+            this.tIsyeriAdres = new BarkodluSatis.tStandart();
+            this.tIsyeriAdSoyad = new BarkodluSatis.tStandart();
+            this.tIsyeriEposta = new BarkodluSatis.tStandart();
+            this.lStandart22 = new BarkodluSatis.lStandart();
+            this.lStandart23 = new BarkodluSatis.lStandart();
+            this.lStandart24 = new BarkodluSatis.lStandart();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridListeKullanici)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridListeKullanici)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -99,7 +116,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1222, 546);
+            this.tabControl1.Size = new System.Drawing.Size(985, 546);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -108,7 +125,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1214, 520);
+            this.tabPage1.Size = new System.Drawing.Size(977, 520);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "KULLANICI";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -150,9 +167,32 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridListeKullanici);
-            this.splitContainer1.Size = new System.Drawing.Size(1208, 514);
+            this.splitContainer1.Size = new System.Drawing.Size(971, 514);
             this.splitContainer1.SplitterDistance = 461;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // lKullaniciId
+            // 
+            this.lKullaniciId.AutoSize = true;
+            this.lKullaniciId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lKullaniciId.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lKullaniciId.Location = new System.Drawing.Point(242, 17);
+            this.lKullaniciId.Name = "lKullaniciId";
+            this.lKullaniciId.Size = new System.Drawing.Size(74, 20);
+            this.lKullaniciId.TabIndex = 17;
+            this.lKullaniciId.Text = "lStandart";
+            this.lKullaniciId.Visible = false;
+            // 
+            // lStandart8
+            // 
+            this.lStandart8.AutoSize = true;
+            this.lStandart8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart8.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart8.Location = new System.Drawing.Point(316, 47);
+            this.lStandart8.Name = "lStandart8";
+            this.lStandart8.Size = new System.Drawing.Size(87, 20);
+            this.lStandart8.TabIndex = 16;
+            this.lStandart8.Text = "YETKİLER";
             // 
             // chYedekleme
             // 
@@ -231,159 +271,6 @@
             this.chSatisEkrani.Text = "Satış Ekranı";
             this.chSatisEkrani.UseVisualStyleBackColor = true;
             // 
-            // tTelefon
-            // 
-            this.tTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tTelefon.Location = new System.Drawing.Point(29, 133);
-            this.tTelefon.Mask = "(999) 000-0000";
-            this.tTelefon.Name = "tTelefon";
-            this.tTelefon.Size = new System.Drawing.Size(250, 26);
-            this.tTelefon.TabIndex = 1;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.düzenleToolStripMenuItem,
-            this.silToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 48);
-            // 
-            // düzenleToolStripMenuItem
-            // 
-            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.düzenleToolStripMenuItem.Text = "Düzenle";
-            this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
-            // 
-            // silToolStripMenuItem
-            // 
-            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.silToolStripMenuItem.Text = "Sil";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Controls.Add(this.lStandart11);
-            this.tabPage2.Controls.Add(this.lStandart10);
-            this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Controls.Add(this.lStandart9);
-            this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1214, 520);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "YAZICI-TERAZİ-KOMİSYON";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.chYazmaDurumu);
-            this.panel1.Location = new System.Drawing.Point(22, 74);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(183, 69);
-            this.panel1.TabIndex = 0;
-            // 
-            // chYazmaDurumu
-            // 
-            this.chYazmaDurumu.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chYazmaDurumu.AutoSize = true;
-            this.chYazmaDurumu.BackColor = System.Drawing.Color.Firebrick;
-            this.chYazmaDurumu.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkOliveGreen;
-            this.chYazmaDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chYazmaDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chYazmaDurumu.ForeColor = System.Drawing.Color.White;
-            this.chYazmaDurumu.Location = new System.Drawing.Point(3, 3);
-            this.chYazmaDurumu.Name = "chYazmaDurumu";
-            this.chYazmaDurumu.Size = new System.Drawing.Size(168, 27);
-            this.chYazmaDurumu.TabIndex = 0;
-            this.chYazmaDurumu.Text = "Yazma Durumu Pasif";
-            this.chYazmaDurumu.UseVisualStyleBackColor = false;
-            this.chYazmaDurumu.CheckedChanged += new System.EventHandler(this.chYazmaDurumu_CheckedChanged);
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.bKartKomisyonAyarla);
-            this.panel2.Controls.Add(this.tKartKomisyon);
-            this.panel2.Location = new System.Drawing.Point(228, 74);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(183, 69);
-            this.panel2.TabIndex = 2;
-            // 
-            // bKartKomisyonAyarla
-            // 
-            this.bKartKomisyonAyarla.BackColor = System.Drawing.Color.YellowGreen;
-            this.bKartKomisyonAyarla.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.bKartKomisyonAyarla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bKartKomisyonAyarla.Image = ((System.Drawing.Image)(resources.GetObject("bKartKomisyonAyarla.Image")));
-            this.bKartKomisyonAyarla.Location = new System.Drawing.Point(105, 3);
-            this.bKartKomisyonAyarla.Name = "bKartKomisyonAyarla";
-            this.bKartKomisyonAyarla.Size = new System.Drawing.Size(66, 35);
-            this.bKartKomisyonAyarla.TabIndex = 14;
-            this.bKartKomisyonAyarla.UseVisualStyleBackColor = false;
-            this.bKartKomisyonAyarla.Click += new System.EventHandler(this.bKartKomisyonAyarla_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.tTeraziOnEk);
-            this.panel3.Controls.Add(this.bTeraziOnEkSil);
-            this.panel3.Controls.Add(this.bTeraziOnEkKaydet);
-            this.panel3.Controls.Add(this.cmbTeraziOnEk);
-            this.panel3.Location = new System.Drawing.Point(434, 74);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(201, 90);
-            this.panel3.TabIndex = 4;
-            // 
-            // cmbTeraziOnEk
-            // 
-            this.cmbTeraziOnEk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbTeraziOnEk.FormattingEnabled = true;
-            this.cmbTeraziOnEk.Location = new System.Drawing.Point(3, 7);
-            this.cmbTeraziOnEk.Name = "cmbTeraziOnEk";
-            this.cmbTeraziOnEk.Size = new System.Drawing.Size(115, 28);
-            this.cmbTeraziOnEk.TabIndex = 0;
-            // 
-            // bTeraziOnEkKaydet
-            // 
-            this.bTeraziOnEkKaydet.BackColor = System.Drawing.Color.YellowGreen;
-            this.bTeraziOnEkKaydet.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
-            this.bTeraziOnEkKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bTeraziOnEkKaydet.Image = ((System.Drawing.Image)(resources.GetObject("bTeraziOnEkKaydet.Image")));
-            this.bTeraziOnEkKaydet.Location = new System.Drawing.Point(124, 45);
-            this.bTeraziOnEkKaydet.Name = "bTeraziOnEkKaydet";
-            this.bTeraziOnEkKaydet.Size = new System.Drawing.Size(68, 35);
-            this.bTeraziOnEkKaydet.TabIndex = 15;
-            this.bTeraziOnEkKaydet.UseVisualStyleBackColor = false;
-            this.bTeraziOnEkKaydet.Click += new System.EventHandler(this.bTeraziOnEkKaydet_Click);
-            // 
-            // lKullaniciId
-            // 
-            this.lKullaniciId.AutoSize = true;
-            this.lKullaniciId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lKullaniciId.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lKullaniciId.Location = new System.Drawing.Point(242, 17);
-            this.lKullaniciId.Name = "lKullaniciId";
-            this.lKullaniciId.Size = new System.Drawing.Size(74, 20);
-            this.lKullaniciId.TabIndex = 17;
-            this.lKullaniciId.Text = "lStandart";
-            this.lKullaniciId.Visible = false;
-            // 
-            // lStandart8
-            // 
-            this.lStandart8.AutoSize = true;
-            this.lStandart8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart8.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart8.Location = new System.Drawing.Point(316, 47);
-            this.lStandart8.Name = "lStandart8";
-            this.lStandart8.Size = new System.Drawing.Size(87, 20);
-            this.lStandart8.TabIndex = 16;
-            this.lStandart8.Text = "YETKİLER";
-            // 
             // bIptal
             // 
             this.bIptal.BackColor = System.Drawing.Color.DimGray;
@@ -439,6 +326,15 @@
             this.lStandart7.Size = new System.Drawing.Size(91, 20);
             this.lStandart7.TabIndex = 12;
             this.lStandart7.Text = "Şifre Tekrar";
+            // 
+            // tTelefon
+            // 
+            this.tTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tTelefon.Location = new System.Drawing.Point(29, 133);
+            this.tTelefon.Mask = "(999) 000-0000";
+            this.tTelefon.Name = "tTelefon";
+            this.tTelefon.Size = new System.Drawing.Size(250, 26);
+            this.tTelefon.TabIndex = 1;
             // 
             // tSifre
             // 
@@ -551,74 +447,168 @@
             this.gridListeKullanici.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.gridListeKullanici.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridListeKullanici.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListeKullanici.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListeKullanici.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridListeKullanici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridListeKullanici.ContextMenuStrip = this.contextMenuStrip1;
-            this.gridListeKullanici.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gridListeKullanici.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridListeKullanici.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridListeKullanici.EnableHeadersVisualStyles = false;
             this.gridListeKullanici.Location = new System.Drawing.Point(0, 0);
             this.gridListeKullanici.Name = "gridListeKullanici";
             this.gridListeKullanici.ReadOnly = true;
-            this.gridListeKullanici.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridListeKullanici.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridListeKullanici.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListeKullanici.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListeKullanici.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridListeKullanici.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.gridListeKullanici.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.gridListeKullanici.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.gridListeKullanici.RowTemplate.Height = 28;
             this.gridListeKullanici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridListeKullanici.Size = new System.Drawing.Size(743, 514);
+            this.gridListeKullanici.Size = new System.Drawing.Size(506, 514);
             this.gridListeKullanici.TabIndex = 3;
             this.gridListeKullanici.TabStop = false;
             // 
-            // tTeraziOnEk
+            // contextMenuStrip1
             // 
-            this.tTeraziOnEk.BackColor = System.Drawing.Color.White;
-            this.tTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tTeraziOnEk.Location = new System.Drawing.Point(3, 48);
-            this.tTeraziOnEk.Name = "tTeraziOnEk";
-            this.tTeraziOnEk.Size = new System.Drawing.Size(115, 26);
-            this.tTeraziOnEk.TabIndex = 16;
-            this.tTeraziOnEk.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.düzenleToolStripMenuItem,
+            this.silToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 48);
             // 
-            // lStandart11
+            // düzenleToolStripMenuItem
             // 
-            this.lStandart11.AutoSize = true;
-            this.lStandart11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart11.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart11.Location = new System.Drawing.Point(434, 48);
-            this.lStandart11.Name = "lStandart11";
-            this.lStandart11.Size = new System.Drawing.Size(136, 20);
-            this.lStandart11.TabIndex = 3;
-            this.lStandart11.Text = "Terazi Ön Ek Ayar";
+            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.düzenleToolStripMenuItem.Text = "Düzenle";
+            this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
             // 
-            // lStandart10
+            // silToolStripMenuItem
             // 
-            this.lStandart10.AutoSize = true;
-            this.lStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart10.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart10.Location = new System.Drawing.Point(229, 48);
-            this.lStandart10.Name = "lStandart10";
-            this.lStandart10.Size = new System.Drawing.Size(110, 20);
-            this.lStandart10.TabIndex = 3;
-            this.lStandart10.Text = "Kart Komisyon";
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.silToolStripMenuItem.Text = "Sil";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.panel5);
+            this.tabPage2.Controls.Add(this.panel4);
+            this.tabPage2.Controls.Add(this.lStandart19);
+            this.tabPage2.Controls.Add(this.bStandart1);
+            this.tabPage2.Controls.Add(this.lStandart18);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(977, 520);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "YAZICI-TERAZİ-KOMİSYON-İŞYERİ BİLGİ";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.lStandart24);
+            this.panel5.Controls.Add(this.lStandart23);
+            this.panel5.Controls.Add(this.lStandart22);
+            this.panel5.Controls.Add(this.tIsyeriEposta);
+            this.panel5.Controls.Add(this.tIsyeriAdSoyad);
+            this.panel5.Controls.Add(this.tIsyeriAdres);
+            this.panel5.Controls.Add(this.tIsyeriUnvan);
+            this.panel5.Controls.Add(this.tIsyeriTelefon);
+            this.panel5.Controls.Add(this.lStandart20);
+            this.panel5.Controls.Add(this.lStandart21);
+            this.panel5.Location = new System.Drawing.Point(574, 47);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(304, 364);
+            this.panel5.TabIndex = 28;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lStandart9);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.lStandart10);
+            this.panel4.Controls.Add(this.lStandart11);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Location = new System.Drawing.Point(27, 47);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(304, 384);
+            this.panel4.TabIndex = 27;
+            // 
+            // lStandart9
+            // 
+            this.lStandart9.AutoSize = true;
+            this.lStandart9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart9.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart9.Location = new System.Drawing.Point(14, 3);
+            this.lStandart9.Name = "lStandart9";
+            this.lStandart9.Size = new System.Drawing.Size(126, 20);
+            this.lStandart9.TabIndex = 1;
+            this.lStandart9.Text = "Yazıcı Aktif/Pasif";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.chYazmaDurumu);
+            this.panel1.Location = new System.Drawing.Point(14, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(183, 69);
+            this.panel1.TabIndex = 0;
+            // 
+            // chYazmaDurumu
+            // 
+            this.chYazmaDurumu.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chYazmaDurumu.AutoSize = true;
+            this.chYazmaDurumu.BackColor = System.Drawing.Color.Firebrick;
+            this.chYazmaDurumu.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkOliveGreen;
+            this.chYazmaDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chYazmaDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chYazmaDurumu.ForeColor = System.Drawing.Color.White;
+            this.chYazmaDurumu.Location = new System.Drawing.Point(3, 3);
+            this.chYazmaDurumu.Name = "chYazmaDurumu";
+            this.chYazmaDurumu.Size = new System.Drawing.Size(168, 27);
+            this.chYazmaDurumu.TabIndex = 0;
+            this.chYazmaDurumu.Text = "Yazma Durumu Pasif";
+            this.chYazmaDurumu.UseVisualStyleBackColor = false;
+            this.chYazmaDurumu.CheckedChanged += new System.EventHandler(this.chYazmaDurumu_CheckedChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.bKartKomisyonAyarla);
+            this.panel2.Controls.Add(this.tKartKomisyon);
+            this.panel2.Location = new System.Drawing.Point(14, 147);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(183, 69);
+            this.panel2.TabIndex = 2;
+            // 
+            // bKartKomisyonAyarla
+            // 
+            this.bKartKomisyonAyarla.BackColor = System.Drawing.Color.YellowGreen;
+            this.bKartKomisyonAyarla.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.bKartKomisyonAyarla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bKartKomisyonAyarla.Image = ((System.Drawing.Image)(resources.GetObject("bKartKomisyonAyarla.Image")));
+            this.bKartKomisyonAyarla.Location = new System.Drawing.Point(105, 3);
+            this.bKartKomisyonAyarla.Name = "bKartKomisyonAyarla";
+            this.bKartKomisyonAyarla.Size = new System.Drawing.Size(66, 35);
+            this.bKartKomisyonAyarla.TabIndex = 14;
+            this.bKartKomisyonAyarla.UseVisualStyleBackColor = false;
+            this.bKartKomisyonAyarla.Click += new System.EventHandler(this.bKartKomisyonAyarla_Click);
             // 
             // tKartKomisyon
             // 
@@ -630,16 +620,49 @@
             this.tKartKomisyon.TabIndex = 0;
             this.tKartKomisyon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lStandart9
+            // lStandart10
             // 
-            this.lStandart9.AutoSize = true;
-            this.lStandart9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lStandart9.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lStandart9.Location = new System.Drawing.Point(22, 48);
-            this.lStandart9.Name = "lStandart9";
-            this.lStandart9.Size = new System.Drawing.Size(126, 20);
-            this.lStandart9.TabIndex = 1;
-            this.lStandart9.Text = "Yazıcı Aktif/Pasif";
+            this.lStandart10.AutoSize = true;
+            this.lStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart10.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart10.Location = new System.Drawing.Point(15, 121);
+            this.lStandart10.Name = "lStandart10";
+            this.lStandart10.Size = new System.Drawing.Size(110, 20);
+            this.lStandart10.TabIndex = 3;
+            this.lStandart10.Text = "Kart Komisyon";
+            // 
+            // lStandart11
+            // 
+            this.lStandart11.AutoSize = true;
+            this.lStandart11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart11.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart11.Location = new System.Drawing.Point(15, 243);
+            this.lStandart11.Name = "lStandart11";
+            this.lStandart11.Size = new System.Drawing.Size(136, 20);
+            this.lStandart11.TabIndex = 3;
+            this.lStandart11.Text = "Terazi Ön Ek Ayar";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.tTeraziOnEk);
+            this.panel3.Controls.Add(this.bTeraziOnEkSil);
+            this.panel3.Controls.Add(this.bTeraziOnEkKaydet);
+            this.panel3.Controls.Add(this.cmbTeraziOnEk);
+            this.panel3.Location = new System.Drawing.Point(15, 269);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(201, 90);
+            this.panel3.TabIndex = 4;
+            // 
+            // tTeraziOnEk
+            // 
+            this.tTeraziOnEk.BackColor = System.Drawing.Color.White;
+            this.tTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tTeraziOnEk.Location = new System.Drawing.Point(3, 48);
+            this.tTeraziOnEk.Name = "tTeraziOnEk";
+            this.tTeraziOnEk.Size = new System.Drawing.Size(115, 26);
+            this.tTeraziOnEk.TabIndex = 16;
+            this.tTeraziOnEk.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // bTeraziOnEkSil
             // 
@@ -654,12 +677,176 @@
             this.bTeraziOnEkSil.UseVisualStyleBackColor = false;
             this.bTeraziOnEkSil.Click += new System.EventHandler(this.bTeraziOnEkSil_Click);
             // 
+            // bTeraziOnEkKaydet
+            // 
+            this.bTeraziOnEkKaydet.BackColor = System.Drawing.Color.YellowGreen;
+            this.bTeraziOnEkKaydet.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
+            this.bTeraziOnEkKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bTeraziOnEkKaydet.Image = ((System.Drawing.Image)(resources.GetObject("bTeraziOnEkKaydet.Image")));
+            this.bTeraziOnEkKaydet.Location = new System.Drawing.Point(124, 45);
+            this.bTeraziOnEkKaydet.Name = "bTeraziOnEkKaydet";
+            this.bTeraziOnEkKaydet.Size = new System.Drawing.Size(68, 35);
+            this.bTeraziOnEkKaydet.TabIndex = 15;
+            this.bTeraziOnEkKaydet.UseVisualStyleBackColor = false;
+            this.bTeraziOnEkKaydet.Click += new System.EventHandler(this.bTeraziOnEkKaydet_Click);
+            // 
+            // cmbTeraziOnEk
+            // 
+            this.cmbTeraziOnEk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbTeraziOnEk.FormattingEnabled = true;
+            this.cmbTeraziOnEk.Location = new System.Drawing.Point(3, 7);
+            this.cmbTeraziOnEk.Name = "cmbTeraziOnEk";
+            this.cmbTeraziOnEk.Size = new System.Drawing.Size(115, 28);
+            this.cmbTeraziOnEk.TabIndex = 0;
+            // 
+            // lStandart19
+            // 
+            this.lStandart19.AutoSize = true;
+            this.lStandart19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart19.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart19.Location = new System.Drawing.Point(616, 21);
+            this.lStandart19.Name = "lStandart19";
+            this.lStandart19.Size = new System.Drawing.Size(215, 20);
+            this.lStandart19.TabIndex = 26;
+            this.lStandart19.Text = "İŞYERİ BİLGİ DÜZENLEME";
+            // 
+            // bStandart1
+            // 
+            this.bStandart1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.bStandart1.FlatAppearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
+            this.bStandart1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bStandart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bStandart1.ForeColor = System.Drawing.Color.White;
+            this.bStandart1.Image = ((System.Drawing.Image)(resources.GetObject("bStandart1.Image")));
+            this.bStandart1.Location = new System.Drawing.Point(738, 415);
+            this.bStandart1.Margin = new System.Windows.Forms.Padding(1);
+            this.bStandart1.Name = "bStandart1";
+            this.bStandart1.Size = new System.Drawing.Size(113, 71);
+            this.bStandart1.TabIndex = 20;
+            this.bStandart1.Text = "Kaydet";
+            this.bStandart1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bStandart1.UseVisualStyleBackColor = false;
+            this.bStandart1.Click += new System.EventHandler(this.bIsyeriKaydet_Click);
+            // 
+            // lStandart18
+            // 
+            this.lStandart18.AutoSize = true;
+            this.lStandart18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart18.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart18.Location = new System.Drawing.Point(23, 21);
+            this.lStandart18.Name = "lStandart18";
+            this.lStandart18.Size = new System.Drawing.Size(321, 20);
+            this.lStandart18.TabIndex = 5;
+            this.lStandart18.Text = "YAZICI - TERAZİ - KOMİSYON İŞLEMLERİ";
+            // 
+            // lStandart21
+            // 
+            this.lStandart21.AutoSize = true;
+            this.lStandart21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart21.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart21.Location = new System.Drawing.Point(23, 69);
+            this.lStandart21.Name = "lStandart21";
+            this.lStandart21.Size = new System.Drawing.Size(55, 20);
+            this.lStandart21.TabIndex = 25;
+            this.lStandart21.Text = "Ünvan";
+            // 
+            // lStandart20
+            // 
+            this.lStandart20.AutoSize = true;
+            this.lStandart20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart20.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart20.Location = new System.Drawing.Point(23, 131);
+            this.lStandart20.Name = "lStandart20";
+            this.lStandart20.Size = new System.Drawing.Size(51, 20);
+            this.lStandart20.TabIndex = 24;
+            this.lStandart20.Text = "Adres";
+            // 
+            // tIsyeriTelefon
+            // 
+            this.tIsyeriTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tIsyeriTelefon.Location = new System.Drawing.Point(27, 259);
+            this.tIsyeriTelefon.Mask = "(999) 000-0000";
+            this.tIsyeriTelefon.Name = "tIsyeriTelefon";
+            this.tIsyeriTelefon.Size = new System.Drawing.Size(250, 26);
+            this.tIsyeriTelefon.TabIndex = 18;
+            // 
+            // tIsyeriUnvan
+            // 
+            this.tIsyeriUnvan.BackColor = System.Drawing.Color.White;
+            this.tIsyeriUnvan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tIsyeriUnvan.Location = new System.Drawing.Point(27, 92);
+            this.tIsyeriUnvan.Name = "tIsyeriUnvan";
+            this.tIsyeriUnvan.Size = new System.Drawing.Size(250, 26);
+            this.tIsyeriUnvan.TabIndex = 16;
+            // 
+            // tIsyeriAdres
+            // 
+            this.tIsyeriAdres.BackColor = System.Drawing.Color.White;
+            this.tIsyeriAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tIsyeriAdres.Location = new System.Drawing.Point(27, 154);
+            this.tIsyeriAdres.Multiline = true;
+            this.tIsyeriAdres.Name = "tIsyeriAdres";
+            this.tIsyeriAdres.Size = new System.Drawing.Size(250, 76);
+            this.tIsyeriAdres.TabIndex = 16;
+            // 
+            // tIsyeriAdSoyad
+            // 
+            this.tIsyeriAdSoyad.BackColor = System.Drawing.Color.White;
+            this.tIsyeriAdSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tIsyeriAdSoyad.Location = new System.Drawing.Point(27, 33);
+            this.tIsyeriAdSoyad.Name = "tIsyeriAdSoyad";
+            this.tIsyeriAdSoyad.Size = new System.Drawing.Size(250, 26);
+            this.tIsyeriAdSoyad.TabIndex = 16;
+            // 
+            // tIsyeriEposta
+            // 
+            this.tIsyeriEposta.BackColor = System.Drawing.Color.White;
+            this.tIsyeriEposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tIsyeriEposta.Location = new System.Drawing.Point(27, 323);
+            this.tIsyeriEposta.Name = "tIsyeriEposta";
+            this.tIsyeriEposta.Size = new System.Drawing.Size(250, 26);
+            this.tIsyeriEposta.TabIndex = 19;
+            // 
+            // lStandart22
+            // 
+            this.lStandart22.AutoSize = true;
+            this.lStandart22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart22.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart22.Location = new System.Drawing.Point(23, 300);
+            this.lStandart22.Name = "lStandart22";
+            this.lStandart22.Size = new System.Drawing.Size(65, 20);
+            this.lStandart22.TabIndex = 23;
+            this.lStandart22.Text = "E Posta";
+            // 
+            // lStandart23
+            // 
+            this.lStandart23.AutoSize = true;
+            this.lStandart23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart23.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart23.Location = new System.Drawing.Point(23, 233);
+            this.lStandart23.Name = "lStandart23";
+            this.lStandart23.Size = new System.Drawing.Size(62, 20);
+            this.lStandart23.TabIndex = 22;
+            this.lStandart23.Text = "Telefon";
+            // 
+            // lStandart24
+            // 
+            this.lStandart24.AutoSize = true;
+            this.lStandart24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lStandart24.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lStandart24.Location = new System.Drawing.Point(23, 3);
+            this.lStandart24.Name = "lStandart24";
+            this.lStandart24.Size = new System.Drawing.Size(78, 20);
+            this.lStandart24.TabIndex = 21;
+            this.lStandart24.Text = "Ad Soyad";
+            // 
             // fAyarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1222, 546);
+            this.ClientSize = new System.Drawing.Size(985, 546);
             this.Controls.Add(this.tabControl1);
             this.Name = "fAyarlar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -672,16 +859,20 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridListeKullanici)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridListeKullanici)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -733,5 +924,20 @@
         private System.Windows.Forms.ComboBox cmbTeraziOnEk;
         private tNumeric tTeraziOnEk;
         private System.Windows.Forms.Button bTeraziOnEkSil;
+        private lStandart lStandart18;
+        private lStandart lStandart19;
+        private bStandart bStandart1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private lStandart lStandart24;
+        private lStandart lStandart23;
+        private lStandart lStandart22;
+        private tStandart tIsyeriEposta;
+        private tStandart tIsyeriAdSoyad;
+        private tStandart tIsyeriAdres;
+        private tStandart tIsyeriUnvan;
+        private System.Windows.Forms.MaskedTextBox tIsyeriTelefon;
+        private lStandart lStandart20;
+        private lStandart lStandart21;
     }
 }
