@@ -970,6 +970,7 @@
             this.bYedektenYukle.Text = "YEDEKTEN YÜKLE(RESTORE)";
             this.bYedektenYukle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bYedektenYukle.UseVisualStyleBackColor = false;
+            this.bYedektenYukle.Click += new System.EventHandler(this.bYedektenYukle_Click);
             // 
             // lStandart13
             // 
