@@ -93,6 +93,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Barkod.cs">
@@ -109,6 +112,12 @@
     </Compile>
     <Compile Include="fAyarlar.Designer.cs">
       <DependentUpon>fAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBarkodYazdir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBarkodYazdir.Designer.cs">
+      <DependentUpon>fBarkodYazdir.cs</DependentUpon>
     </Compile>
     <Compile Include="fBaslangic.cs">
       <SubType>Form</SubType>
@@ -239,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fAyarlar.resx">
       <DependentUpon>fAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBarkodYazdir.resx">
+      <DependentUpon>fBarkodYazdir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fBaslangic.resx">
       <DependentUpon>fBaslangic.cs</DependentUpon>
