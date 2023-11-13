@@ -121,18 +121,18 @@
   <data name="bBarkodYazdir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnBxYRFAlKUfN/AAACXElEQVRYR8WWTUgVURSAn2am4iYo
-        aJHULpTIRdJKaNMmWkSbaFEQLhLTFm0UpJW4cCGRK3Fnoit3RT87F0EQQVKWgkoRaEUhpLiK8vWde8+8
-        d98w7+feGfSDD+ede86Z48y8NzdXK/l8/hNG9Gh4/+CkH+25DX0a3j846YEPsGTPbTiQAT7YcxuqDkDO
-        EWzSj+mhWU0DsHYeJ/AnntVwemj2HiNKBuDzKRzCNVl06NCU9NBs0fY09OFxvIdvJBDjN05hs5anh2bu
-        AJ/xjz0sIJ+f4nVswhZMPwBN6vEi/sIk5ArIlZArcggv4TTuYPgzQPE5HMOvGEcesFE8o7mdOI6b6NJu
-        mvlAUS+63/kkBvAkDmJS7g98iP63gCL3v4ju6w103wXf8J89LLCLs3gZG7SdPxR/x9fYj8dQ7us13MY4
-        f/El3sRWbZEOGrXp3wv4CGWgOF/wPp4wRVlCU3miV7ESA5qePTSX+xsh93UOr+CKBJS7ml4Vcu/YEsO6
-        hstD0gY+x5L7yrH7tPsMMGxLDAsaLg9JR/WwBOKhA8zYEsNjDftDcdB+gFx5YCN6NewPxd5XgLwum17g
-        tC75Q7H3FSDPvfyLGg6DBl4DkNONeybbckuXwqBBzQOwLq9iN19eaI26HAYNahqAtcP4zGQVuarL4dCk
-        6gDEW3HeZBQJ/+q50KjiAMRkT7BsVou8wmy2ZTRKHIDjdpQdUPz1/A4Tf9SCoJk7wBOcRHer7iLvjxYt
-        zQYaugOUQ15kt7UkW2hcaQDZJT/AbDYlSdD8rZxJ2cIXOIKyY67TNE9yuf92rPNp7XEnzAAAAABJRU5E
-        rkJggg==
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCw0NCTMk5SFaAAACkUlEQVRYR82XT6gNURzHL7vHio0S
+        GxZKCUlZWsizUESsvLJBiXpFshBRSmL5FkpWFv4sWHgLKUmxIRsLfyJSRArP/yTj85l7Tp255r437851
+        7/vWp3vub+b8zndmzpzzm0YVZVm2Pvx+h8lqME/SqUiwFd6FtgZuwEZjsGAcDoCqbWAZLIXZ8Bs+wiP4
+        BffH4QWozg3Q2YEvwWWICe/BlgqMgKplYLCZo6CXcKYCt0DVNvAeTrTwCqqqtoHXsLOFp/AZ5sGsNhwD
+        VdvAF3DmpzgR8zejnTi+A1RtA89gRQsPQN2BVnORN6DGN8AJA1B2C2eCBuKr5xrwDT7Bj/BrTNKY5xiz
+        j33NYa6yMQY0MAZlOgd2fgiuAYdgNyyEUzAX9gVsG/OY53iufexrDnOVaUwD7dQLA9mUNOBKtw4WQ7cM
+        mMucLtEFlRnYA5vARGUGVsNZWAWpAZdejx2G05AasJ8590JBZQbiFbR7BCfhNhyH1MBF8NgVuA6pAXPF
+        /gVVMfAWjoJJTZ4auBawbSw1YB/7TmjA3S5lLcRHEHfDOpjDXOY0d+G4Btb0k7JH0FNp4EM/CTtCH1Xm
+        qpdMiTkQZdG5DUpnaxdxjFjgFgxsAL8BygrMbuIYflfkSg2shKvN5n+VYzhWrnYG3BFvNpu5rHTOw9f8
+        X5b9gV0wB44YCLJUWwRL4IkBtBliBWTVNKEBy6gZMB38/FLD4Y2Jle7j/BVCtKeBhasaCmHjw81QXhs+
+        D2j8HwOjzWbhDuyH7aAZ5UeGEyju596J+WEg13oTq5EQ09SFPJJlByFOwJ+QGhj1ZLdS38nUQBX5weJO
+        6PdBqruQFh7uknHz8YKiAR9rfhGaGILlMBkDncoxHIvH1Wj8BUndFd7QQs4/AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bRaporAl.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

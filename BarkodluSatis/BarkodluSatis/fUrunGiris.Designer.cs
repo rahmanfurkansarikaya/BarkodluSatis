@@ -33,15 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.bBarkodYazdir = new BarkodluSatis.bStandart();
             this.chUrunTipi = new System.Windows.Forms.CheckBox();
+            this.tKdvOrani = new BarkodluSatis.tNumeric();
             this.tAlisFiyati = new System.Windows.Forms.TextBox();
             this.tSatisFiyati = new System.Windows.Forms.TextBox();
-            this.cmbUrunGrubu = new System.Windows.Forms.ComboBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bBarkodYazdir = new BarkodluSatis.bStandart();
-            this.tKdvOrani = new BarkodluSatis.tNumeric();
             this.lKullanici = new BarkodluSatis.lStandart();
             this.tUrunSayisi = new BarkodluSatis.tNumeric();
             this.lStandart10 = new BarkodluSatis.lStandart();
@@ -61,16 +57,20 @@
             this.tUrunAdi = new BarkodluSatis.tStandart();
             this.tBarkod = new BarkodluSatis.tStandart();
             this.lStandart4 = new BarkodluSatis.lStandart();
+            this.cmbUrunGrubu = new System.Windows.Forms.ComboBox();
             this.lStandart3 = new BarkodluSatis.lStandart();
             this.lStandart2 = new BarkodluSatis.lStandart();
             this.lStandart1 = new BarkodluSatis.lStandart();
             this.gridUrunler = new BarkodluSatis.gridOzel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -119,6 +119,24 @@
             this.splitContainer1.SplitterDistance = 306;
             this.splitContainer1.TabIndex = 0;
             // 
+            // bBarkodYazdir
+            // 
+            this.bBarkodYazdir.BackColor = System.Drawing.Color.SlateGray;
+            this.bBarkodYazdir.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.bBarkodYazdir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bBarkodYazdir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bBarkodYazdir.ForeColor = System.Drawing.Color.White;
+            this.bBarkodYazdir.Image = ((System.Drawing.Image)(resources.GetObject("bBarkodYazdir.Image")));
+            this.bBarkodYazdir.Location = new System.Drawing.Point(360, 185);
+            this.bBarkodYazdir.Margin = new System.Windows.Forms.Padding(1);
+            this.bBarkodYazdir.Name = "bBarkodYazdir";
+            this.bBarkodYazdir.Size = new System.Drawing.Size(130, 73);
+            this.bBarkodYazdir.TabIndex = 0;
+            this.bBarkodYazdir.Text = "Barkod Yazdır";
+            this.bBarkodYazdir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bBarkodYazdir.UseVisualStyleBackColor = false;
+            this.bBarkodYazdir.Click += new System.EventHandler(this.bBarkodYazdir_Click);
+            // 
             // chUrunTipi
             // 
             this.chUrunTipi.Appearance = System.Windows.Forms.Appearance.Button;
@@ -136,6 +154,17 @@
             this.chUrunTipi.Text = "Barkodlu Ürün İşlemi";
             this.chUrunTipi.UseVisualStyleBackColor = false;
             this.chUrunTipi.CheckedChanged += new System.EventHandler(this.chUrunTipi_CheckedChanged);
+            // 
+            // tKdvOrani
+            // 
+            this.tKdvOrani.BackColor = System.Drawing.Color.White;
+            this.tKdvOrani.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tKdvOrani.Location = new System.Drawing.Point(499, 153);
+            this.tKdvOrani.Name = "tKdvOrani";
+            this.tKdvOrani.Size = new System.Drawing.Size(115, 26);
+            this.tKdvOrani.TabIndex = 7;
+            this.tKdvOrani.Text = "0";
+            this.tKdvOrani.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tAlisFiyati
             // 
@@ -158,66 +187,6 @@
             this.tSatisFiyati.Text = "0";
             this.tSatisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tSatisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tSatisFiyati_KeyPress);
-            // 
-            // cmbUrunGrubu
-            // 
-            this.cmbUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbUrunGrubu.FormattingEnabled = true;
-            this.cmbUrunGrubu.Location = new System.Drawing.Point(115, 153);
-            this.cmbUrunGrubu.Name = "cmbUrunGrubu";
-            this.cmbUrunGrubu.Size = new System.Drawing.Size(250, 28);
-            this.cmbUrunGrubu.TabIndex = 3;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.silToolStripMenuItem,
-            this.düzenleToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 48);
-            // 
-            // silToolStripMenuItem
-            // 
-            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.silToolStripMenuItem.Text = "Sil";
-            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
-            // 
-            // düzenleToolStripMenuItem
-            // 
-            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.düzenleToolStripMenuItem.Text = "Düzenle";
-            this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
-            // 
-            // bBarkodYazdir
-            // 
-            this.bBarkodYazdir.BackColor = System.Drawing.Color.SlateGray;
-            this.bBarkodYazdir.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.bBarkodYazdir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bBarkodYazdir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bBarkodYazdir.ForeColor = System.Drawing.Color.White;
-            this.bBarkodYazdir.Image = ((System.Drawing.Image)(resources.GetObject("bBarkodYazdir.Image")));
-            this.bBarkodYazdir.Location = new System.Drawing.Point(726, 237);
-            this.bBarkodYazdir.Margin = new System.Windows.Forms.Padding(1);
-            this.bBarkodYazdir.Name = "bBarkodYazdir";
-            this.bBarkodYazdir.Size = new System.Drawing.Size(114, 57);
-            this.bBarkodYazdir.TabIndex = 0;
-            this.bBarkodYazdir.Text = "Barkod Yazdır";
-            this.bBarkodYazdir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.bBarkodYazdir.UseVisualStyleBackColor = false;
-            this.bBarkodYazdir.Click += new System.EventHandler(this.bBarkodYazdir_Click);
-            // 
-            // tKdvOrani
-            // 
-            this.tKdvOrani.BackColor = System.Drawing.Color.White;
-            this.tKdvOrani.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tKdvOrani.Location = new System.Drawing.Point(499, 153);
-            this.tKdvOrani.Name = "tKdvOrani";
-            this.tKdvOrani.Size = new System.Drawing.Size(115, 26);
-            this.tKdvOrani.TabIndex = 7;
-            this.tKdvOrani.Text = "0";
-            this.tKdvOrani.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lKullanici
             // 
@@ -337,10 +306,10 @@
             this.bBarkodOlustur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bBarkodOlustur.ForeColor = System.Drawing.Color.White;
             this.bBarkodOlustur.Image = ((System.Drawing.Image)(resources.GetObject("bBarkodOlustur.Image")));
-            this.bBarkodOlustur.Location = new System.Drawing.Point(253, 185);
+            this.bBarkodOlustur.Location = new System.Drawing.Point(234, 185);
             this.bBarkodOlustur.Margin = new System.Windows.Forms.Padding(1);
             this.bBarkodOlustur.Name = "bBarkodOlustur";
-            this.bBarkodOlustur.Size = new System.Drawing.Size(112, 73);
+            this.bBarkodOlustur.Size = new System.Drawing.Size(124, 73);
             this.bBarkodOlustur.TabIndex = 11;
             this.bBarkodOlustur.Text = "Barkod Oluştur";
             this.bBarkodOlustur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -459,6 +428,15 @@
             this.lStandart4.TabIndex = 4;
             this.lStandart4.Text = "Ürün Grubu";
             // 
+            // cmbUrunGrubu
+            // 
+            this.cmbUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbUrunGrubu.FormattingEnabled = true;
+            this.cmbUrunGrubu.Location = new System.Drawing.Point(115, 153);
+            this.cmbUrunGrubu.Name = "cmbUrunGrubu";
+            this.cmbUrunGrubu.Size = new System.Drawing.Size(250, 28);
+            this.cmbUrunGrubu.TabIndex = 3;
+            // 
             // lStandart3
             // 
             this.lStandart3.AutoSize = true;
@@ -537,6 +515,28 @@
             this.gridUrunler.TabIndex = 0;
             this.gridUrunler.TabStop = false;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.silToolStripMenuItem,
+            this.düzenleToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 48);
+            // 
+            // silToolStripMenuItem
+            // 
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
+            // 
+            // düzenleToolStripMenuItem
+            // 
+            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.düzenleToolStripMenuItem.Text = "Düzenle";
+            this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
+            // 
             // fUrunGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,8 +553,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -581,7 +581,6 @@
         private lStandart lStandart10;
         private tStandart tUrunAra;
         private gridOzel gridUrunler;
-        internal tStandart tBarkod;
         internal lStandart lKullanici;
         public System.Windows.Forms.ComboBox cmbUrunGrubu;
         private System.Windows.Forms.TextBox tSatisFiyati;
@@ -594,5 +593,6 @@
         private bStandart bBarkodYazdir;
         private tStandart tUrunAdi;
         private tNumeric tMiktar;
+        internal tStandart tBarkod;
     }
 }
