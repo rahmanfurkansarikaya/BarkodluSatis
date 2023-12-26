@@ -39,6 +39,7 @@
             this.lBarkod = new BarkodluSatis.lStandart();
             this.lStandart1 = new BarkodluSatis.lStandart();
             this.tBarkod = new BarkodluSatis.tStandart();
+            this.lKullanici = new BarkodluSatis.lStandart();
             this.SuspendLayout();
             // 
             // bKaydet
@@ -164,12 +165,24 @@
             this.tBarkod.TabIndex = 0;
             this.tBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tBarkod_KeyDown);
             // 
+            // lKullanici
+            // 
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lKullanici.Location = new System.Drawing.Point(12, 295);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(72, 20);
+            this.lKullanici.TabIndex = 16;
+            this.lKullanici.Text = "Barkod : ";
+            // 
             // fFiyatGuncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(303, 324);
+            this.Controls.Add(this.lKullanici);
             this.Controls.Add(this.lStandart5);
             this.Controls.Add(this.bKaydet);
             this.Controls.Add(this.tYeniFiyat);
@@ -205,5 +218,6 @@
         private tNumeric tYeniFiyat;
         private System.Windows.Forms.Button bKaydet;
         private lStandart lStandart5;
+        internal lStandart lKullanici;
     }
 }

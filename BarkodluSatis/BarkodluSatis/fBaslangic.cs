@@ -62,6 +62,7 @@ namespace BarkodluSatis
         {
             Cursor.Current= Cursors.WaitCursor;
             fFiyatGuncelle f = new fFiyatGuncelle();
+            f.lKullanici.Text= lKullanici.Text;
             f.ShowDialog();
             Cursor.Current = Cursors.Default;
         }
@@ -70,6 +71,7 @@ namespace BarkodluSatis
         {
             Cursor.Current = Cursors.WaitCursor;
             fAyarlar f = new fAyarlar();
+            f.lKullanici.Text= lKullanici.Text;
             f.ShowDialog();
             Cursor.Current = Cursors.Default;
         }
@@ -77,6 +79,13 @@ namespace BarkodluSatis
         private void bYedekleme_Click(object sender, EventArgs e)
         {
             Islemler.Backup();
+        }
+
+        private void bKullaniciDegistir_Click(object sender, EventArgs e)
+        {
+            fLogin login = new fLogin();
+            login.Show();
+            this.Hide();
         }
     }
 }

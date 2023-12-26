@@ -113,6 +113,7 @@
             this.Controls.Add(this.listUrunGrup);
             this.Controls.Add(this.tUrunGrupAd);
             this.Controls.Add(this.lStandart1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fUrunGrubuEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fUrunGrubuEkle";

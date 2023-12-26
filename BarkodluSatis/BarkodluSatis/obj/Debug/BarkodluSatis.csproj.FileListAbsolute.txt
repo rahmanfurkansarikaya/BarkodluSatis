@@ -108,3 +108,4 @@ C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\D
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fAyarlar.resources
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\bin\Debug\Zen.Barcode.Core.dll
 C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fBarkodYazdir.resources
+C:\Users\Furkan\Documents\GitHub\BarkodluSatis\BarkodluSatis\BarkodluSatis\obj\Debug\BarkodluSatis.fLogin.resources

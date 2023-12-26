@@ -42,6 +42,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSatis));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -272,7 +273,7 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.gridBekle.EnableHeadersVisualStyles = false;
-            this.gridBekle.Location = new System.Drawing.Point(387, 3);
+            this.gridBekle.Location = new System.Drawing.Point(648, 34);
             this.gridBekle.Name = "gridBekle";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
@@ -395,7 +396,7 @@
             this.lKullanici.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lKullanici.AutoSize = true;
             this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lKullanici.Location = new System.Drawing.Point(666, 12);
+            this.lKullanici.Location = new System.Drawing.Point(651, 12);
             this.lKullanici.Name = "lKullanici";
             this.lKullanici.Size = new System.Drawing.Size(62, 13);
             this.lKullanici.TabIndex = 5;
@@ -1892,9 +1893,12 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1620, 780);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "fSatis";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BARKODLU SATIŞ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fSatis_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.fSatis_KeyDown);
             this.splitContainer1.Panel1.ResumeLayout(false);

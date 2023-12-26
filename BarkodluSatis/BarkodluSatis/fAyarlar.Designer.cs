@@ -35,6 +35,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lKullanici = new BarkodluSatis.lStandart();
             this.lKullaniciId = new BarkodluSatis.lStandart();
             this.lStandart8 = new BarkodluSatis.lStandart();
             this.chYedekleme = new System.Windows.Forms.CheckBox();
@@ -130,7 +131,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(985, 546);
+            this.tabControl1.Size = new System.Drawing.Size(985, 558);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -139,7 +140,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(977, 520);
+            this.tabPage1.Size = new System.Drawing.Size(977, 532);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "KULLANICI";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -153,6 +154,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lKullanici);
             this.splitContainer1.Panel1.Controls.Add(this.lKullaniciId);
             this.splitContainer1.Panel1.Controls.Add(this.lStandart8);
             this.splitContainer1.Panel1.Controls.Add(this.chYedekleme);
@@ -181,9 +183,20 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridListeKullanici);
-            this.splitContainer1.Size = new System.Drawing.Size(971, 514);
+            this.splitContainer1.Size = new System.Drawing.Size(971, 526);
             this.splitContainer1.SplitterDistance = 461;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // lKullanici
+            // 
+            this.lKullanici.AutoSize = true;
+            this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lKullanici.Location = new System.Drawing.Point(25, 504);
+            this.lKullanici.Name = "lKullanici";
+            this.lKullanici.Size = new System.Drawing.Size(87, 20);
+            this.lKullanici.TabIndex = 18;
+            this.lKullanici.Text = "YETKİLER";
             // 
             // lKullaniciId
             // 
@@ -494,7 +507,7 @@
             this.gridListeKullanici.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.gridListeKullanici.RowTemplate.Height = 28;
             this.gridListeKullanici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridListeKullanici.Size = new System.Drawing.Size(506, 514);
+            this.gridListeKullanici.Size = new System.Drawing.Size(506, 526);
             this.gridListeKullanici.TabIndex = 3;
             this.gridListeKullanici.TabStop = false;
             // 
@@ -529,7 +542,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(977, 520);
+            this.tabPage2.Size = new System.Drawing.Size(977, 532);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "YAZICI / TERAZİ / KOMİSYON / İŞYERİ BİLGİ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -863,7 +876,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(977, 520);
+            this.tabPage3.Size = new System.Drawing.Size(977, 532);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "YEDEKLEME / YÜKLEME";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -988,8 +1001,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(985, 546);
+            this.ClientSize = new System.Drawing.Size(985, 558);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fAyarlar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AYARLAR";
@@ -1097,5 +1111,6 @@
         private lStandart lStandart14;
         private lStandart lStandart16;
         private System.Windows.Forms.Button bYedekleme;
+        internal lStandart lKullanici;
     }
 }

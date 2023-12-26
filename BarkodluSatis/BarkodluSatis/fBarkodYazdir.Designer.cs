@@ -92,6 +92,7 @@
             this.tUrunMiktari.Name = "tUrunMiktari";
             this.tUrunMiktari.Size = new System.Drawing.Size(188, 26);
             this.tUrunMiktari.TabIndex = 3;
+            this.tUrunMiktari.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tBarkod
             // 
@@ -101,6 +102,7 @@
             this.tBarkod.Name = "tBarkod";
             this.tBarkod.Size = new System.Drawing.Size(188, 26);
             this.tBarkod.TabIndex = 1;
+            this.tBarkod.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // pictureBox1
             // 
@@ -161,6 +163,7 @@
             this.Controls.Add(this.lStandart3);
             this.Controls.Add(this.lStandart2);
             this.Controls.Add(this.lStandart1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fBarkodYazdir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fBarkodYazdir";

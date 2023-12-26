@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(deneme));
             this.gridOzel1 = new BarkodluSatis.gridOzel();
             ((System.ComponentModel.ISupportInitialize)(this.gridOzel1)).BeginInit();
             this.SuspendLayout();
@@ -51,8 +52,9 @@
             this.gridOzel1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridOzel1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridOzel1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gridOzel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridOzel1.EnableHeadersVisualStyles = false;
-            this.gridOzel1.Location = new System.Drawing.Point(70, 36);
+            this.gridOzel1.Location = new System.Drawing.Point(0, 0);
             this.gridOzel1.Name = "gridOzel1";
             this.gridOzel1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridOzel1.RowHeadersVisible = false;
@@ -62,7 +64,7 @@
             this.gridOzel1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.gridOzel1.RowTemplate.Height = 28;
             this.gridOzel1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridOzel1.Size = new System.Drawing.Size(542, 357);
+            this.gridOzel1.Size = new System.Drawing.Size(800, 450);
             this.gridOzel1.TabIndex = 0;
             // 
             // deneme
@@ -71,6 +73,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gridOzel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "deneme";
             this.Text = "deneme";
             ((System.ComponentModel.ISupportInitialize)(this.gridOzel1)).EndInit();

@@ -141,7 +141,7 @@
             this.bRaporAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bRaporAl.ForeColor = System.Drawing.Color.White;
             this.bRaporAl.Image = ((System.Drawing.Image)(resources.GetObject("bRaporAl.Image")));
-            this.bRaporAl.Location = new System.Drawing.Point(930, 200);
+            this.bRaporAl.Location = new System.Drawing.Point(930, 191);
             this.bRaporAl.Margin = new System.Windows.Forms.Padding(1);
             this.bRaporAl.Name = "bRaporAl";
             this.bRaporAl.Size = new System.Drawing.Size(134, 63);
@@ -157,7 +157,7 @@
             this.lKullanici.AutoSize = true;
             this.lKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lKullanici.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lKullanici.Location = new System.Drawing.Point(926, 179);
+            this.lKullanici.Location = new System.Drawing.Point(13, 211);
             this.lKullanici.Name = "lKullanici";
             this.lKullanici.Size = new System.Drawing.Size(66, 20);
             this.lKullanici.TabIndex = 14;
@@ -605,6 +605,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1083, 578);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fRapor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RAPORLAMA SAYFASI";
