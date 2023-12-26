@@ -206,10 +206,13 @@ namespace BarkodluSatis
                     db.Urun.Remove(urun);
                     db.SaveChanges();
                     var hizliurun = db.HizliUrun.Where(x => x.Barkod == barkod).SingleOrDefault();
-                    hizliurun.Barkod = "-";
-                    hizliurun.UrunAd = "-";
-                    hizliurun.Fiyat = 0;
-                    db.SaveChanges();
+                    if (hizliurun!=null)
+                    {
+                        hizliurun.Barkod = "-";
+                        hizliurun.UrunAd = "-";
+                        hizliurun.Fiyat = 0;
+                        db.SaveChanges();
+                    }                   
                     MessageBox.Show("Ürün Silindi");
                     gridUrunler.DataSource = db.Urun.OrderByDescending(a => a.UrunId).Take(20).ToList();
                     Islemler.GridDuzenle(gridUrunler);
