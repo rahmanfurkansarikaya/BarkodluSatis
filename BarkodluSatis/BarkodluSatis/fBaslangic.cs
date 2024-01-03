@@ -87,5 +87,10 @@ namespace BarkodluSatis
             login.Show();
             this.Hide();
         }
+
+        private void fBaslangic_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

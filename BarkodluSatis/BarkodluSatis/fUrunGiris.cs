@@ -266,5 +266,10 @@ namespace BarkodluSatis
             f.ShowDialog();
             Cursor.Current = Cursors.Default;
         }
+
+        private void bRaporAl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

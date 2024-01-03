@@ -1,0 +1,11 @@
+C:\Users\Furkan\source\repos\ProgramRestore\ProgramRestore\bin\Debug\ProgramRestore.exe.config
+C:\Users\Furkan\source\repos\ProgramRestore\ProgramRestore\bin\Debug\ProgramRestore.exe
+C:\Users\Furkan\source\repos\ProgramRestore\ProgramRestore\bin\Debug\ProgramRestore.pdb
+C:\Users\Furkan\source\repos\ProgramRestore\ProgramRestore\obj\Debug\ProgramRestore.csproj.AssemblyReference.cache
+C:\Users\Furkan\source\repos\ProgramRestore\ProgramRestore\obj\Debug\ProgramRestore.csproj.SuggestedBindingRedirects.cache
+C:\Users\Furkan\source\repos\ProgramRestore\ProgramRestore\obj\Debug\ProgramRestore.Form1.resources
+C:\Users\Furkan\source\repos\ProgramRestore\ProgramRestore\obj\Debug\ProgramRestore.Properties.Resources.resources
+C:\Users\Furkan\source\repos\ProgramRestore\ProgramRestore\obj\Debug\ProgramRestore.csproj.GenerateResource.cache
+C:\Users\Furkan\source\repos\ProgramRestore\ProgramRestore\obj\Debug\ProgramRestore.csproj.CoreCompileInputs.cache
+C:\Users\Furkan\source\repos\ProgramRestore\ProgramRestore\obj\Debug\ProgramRestore.exe
+C:\Users\Furkan\source\repos\ProgramRestore\ProgramRestore\obj\Debug\ProgramRestore.pdb
